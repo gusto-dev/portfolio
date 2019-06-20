@@ -7,14 +7,13 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      header:{title:'WEB', sub:'World Wid Web!'}
+      header:{title:"HeeGeun's Portfolio List"}
     }
   }
   render() {
     return (
       <div className="App">
-        <HEADER title={this.state.header.title}
-          sub={this.state.header.sub}></HEADER>
+        <HEADER title={this.state.header.title}></HEADER>
         <LISTS></LISTS>
       </div>
     );

@@ -1,5 +1,27 @@
-@import url("./reset.css");
-body{
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('./reset.css');
+
+.App{
+  margin: 80px;
+  font-size: 12px;
   text-align: center;
-  font-size: 11px;
+}
+
+header h1{
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+.lists{
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+}
+.lists p{
+  font-size: 14px;
+  color: #666;
+}
+.table-wrap{
+  margin-top: 20px;
+  color: blue;
 }
