@@ -3,7 +3,6 @@
 
 .App{
   margin: 80px;
-  font-size: 12px;
   text-align: center;
 }
 
@@ -13,15 +12,37 @@ header h1{
 }
 
 .lists{
-  text-align: left;
-  width: 80%;
+  width: 100%;
+  max-width: 1120px;
   margin: 0 auto;
 }
 .lists p{
   font-size: 14px;
   color: #666;
+  text-align: left;
 }
 .table-wrap{
   margin-top: 20px;
-  color: blue;
+  display: table;
+  width: 100%;
+}
+.table-wrap .group-item{
+  display: table-row;
+}
+.table-wrap .group-item.tit span{
+  font-size: 15px;
+  color: #333;
+  border-top: 1px sold #dadce0;
+  background: rgba(0,0,0,.2);
+}
+.table-wrap .group-item span{
+  display: table-cell;
+  padding: 8px;
+  font-size: 14px;
+  color: #666;
+  border-right: 1px solid #dadce0;
+  border-bottom: 1px solid #dadce0;
+}
+.table-wrap .group-item span:first-child{
+  border-left: 1px solid #dadce0;
 }

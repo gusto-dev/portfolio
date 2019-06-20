@@ -18,6 +18,12 @@ class LISTS extends Component{
             <span>뭐</span>
             <span>뭐</span>
           </div>
+          <div className="group-item">
+            <span>뭐</span>
+            <span>뭐</span>
+            <span>뭐</span>
+            <span>뭐</span>
+          </div>
         </div>
       </section>
     );
