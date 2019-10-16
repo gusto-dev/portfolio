@@ -1,0 +1,222 @@
+@charset "utf-8";
+/*상승하락*/
+.gain,
+.fall {padding-left:11px;font-size:12px;background-repeat:no-repeat;background-position:left top 3px;background-size:8px;}
+.gain {color:#ed3124;background-image:url(../../images/icon_gain.png);}
+.fall {color:#4a90e2;background-image:url(../../images/icon_fall.png);}
+
+/*실시간예매순위*/
+.ranking-box {overflow:hidden;overflow-x:auto;}
+.ranking-box .list {width:100%;white-space:nowrap;}
+.ranking-box .list:after {content:'';display:block;clear:both;}
+.ranking-box li {display:inline-block;position:relative;width:24%;margin:5px;}
+.ranking-box li.active {transform: scale(1.1);}
+.ranking-box li.active .num {bottom:-6px;}
+.ranking-box li:first-child {margin-left:0;}
+.ranking-box li:last-child {margin-right:0;}
+.ranking-box li .num {position:absolute;bottom:-4px;left:5px;font-size:22px;font-style: italic;color:#fff;}
+.ranking-box li img {width:100%;height:100%;box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);}
+
+/*영화실적 영화정보*/
+.movie-info-box .info-tit .lank {display:inline-block;margin-right:10px;padding:5px 8px 4px;border-radius:3px;background:#fb4357;font-size:16px;font-weight:700;color:#fff;}
+.movie-info-box .info-tit .tit {display:inline-block;width:100%;font-size:18px;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;}
+.movie-info-box .info-tit .txt {display:inline-block;margin-top:3px;font-size:13px;font-weight:400;color:#9197a3;vertical-align:top;}
+.movie-info-box .info-tit .txt.spectators-12:after {content:'12';display:inline-block;width:22px;height:22px;margin-left:5px;border-radius:50%;background:#0072bc;font-size:13px;color:#fff;text-align:center;line-height:22px;}
+.movie-info-box .info {margin-top:20px;}
+.movie-info-box .info:after {content:'';display:block;clear:both;}
+.movie-info-box .info img {float: left;width:50%;margin-right:20px;box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);}
+.movie-info-box .info .list {float: left;width:calc(50% - 20px);font-size:15px;}
+.movie-info-box .info .list .date {font-size:16px;font-weight:700;}
+.movie-info-box .info .list .time-country {margin-top:13px;}
+.movie-info-box .info .list .time-country .time:after {content:'';display:inline-block;width:1px;height:12px;margin:-3px 0 0 8px;background:#bdc1c8;vertical-align:middle;}
+.movie-info-box .info .list .time-country .country {padding-left:4px;}
+.movie-info-box .info .list .genre,
+.movie-info-box .info .list .director,
+.movie-info-box .info .list .actor,
+.movie-info-box .info .list .audience {margin-top:5px;padding-left:26px;background-size:16px;background-position: left top; background-repeat:no-repeat;}
+.movie-info-box .info .list .genre {margin-top:13px;background-image:url(../../images/icon_movie_genre.png);}
+.movie-info-box .info .list .director {background-image:url(../../images/icon_movie_director.png);}
+.movie-info-box .info .list .actor {background-image:url(../../images/icon_movie_actor.png);}
+.movie-info-box .info .list .actor span {display:block;margin-top:4px;font-size:13px;}
+.movie-info-box .info .list .audience {background-image:url(../../images/icon_movie_audience.png);}
+.movie-info-box .info .list .audience strong {font-size:15px;}
+.movie-info-box .info .list .audience .num {display:block;margin-top:5px;font-size:12px;font-weight:700;}
+.movie-info-box .info .list .audience span {font-size:16px;}
+
+/*관람객 랭킹*/
+.audience-ranking:after {content:'';display:block;clear:both;}
+.audience-ranking li {position:relative;float:left;width:33.33%;text-align:center;}
+.audience-ranking li:after {content:'';position:absolute;top:8px;right:0;width:1px;height:74px;background:#dee0e3;}
+.audience-ranking li:last-child:after {display:none;}
+.audience-ranking li .ranking {display:inline-block;height:32px;padding-left:35px;padding-top:6px;font-size:18px;font-weight:700;background-repeat:no-repeat;background-position:left center;background-size:32px;}
+.audience-ranking li.ranking-1st .ranking {background-image:url(../../images/icon_ranking_1st.png);}
+.audience-ranking li.ranking-2nd .ranking {background-image:url(../../images/icon_ranking_2nd.png);}
+.audience-ranking li.ranking-3rd .ranking {background-image:url(../../images/icon_ranking_3rd.png);}
+.audience-ranking li.ranking-1st .ranking,
+.audience-ranking li.ranking-1st .num {color:#fb4357;}
+.audience-ranking li.ranking-2nd .ranking,
+.audience-ranking li.ranking-2nd .num {color:#4a90e2;}
+.audience-ranking li.ranking-3rd .ranking,
+.audience-ranking li.ranking-3rd .num {color:#9197a3;}
+.audience-ranking li.ranking-1st .place {font-weight:700;}
+.audience-ranking li .place {display:block;margin-top:6px;font-size:15px;}
+.audience-ranking li .num {display:block;margin-top:11px;font-size:18px;font-weight:700;}
+
+/* 애니피커 */
+.ap-layout-popup .ap-cont {border-radius: 8px;}
+.ap-theme-default .ap-header {padding:0; margin: 0 15px;border-bottom: 1px solid #4b4f56;}
+.ap-footer.ap-footer-bottom {display:flex;width:100%;padding:0;justify-content:center;margin-top:15px;}
+.ap-theme-default .ap-button-cont {display:flex;float:none;width: 100%;}
+.ap-theme-default .ap-button-cont .ap-button {display:flex;width:100%;height:50px;margin:0;padding:0;align-items:center;justify-content: center;background:#4b4f56;font-size: 18px;font-weight: bold;color:#fff;}
+.ap-theme-default .ap-button-cont .ap-button:first-child {width:61.4%;border-radius: 0 0 0 8px;}
+.ap-theme-default .ap-button-cont .ap-button:last-child {width:39.6%;border-radius: 0 0 8px 0;background:#9197a3;}
+.ap-component-selector {border-top:1px solid #bdc1c8!important;;border-bottom:1px solid #bdc1c8!important;;font-size: 25px;}
+.ap-header .ap-header__title,
+.ap-header .ap-header__title02 {font-size:18px;color:#373e46;}
+.ap-theme-default .ap-footer {padding:0!important;}
+
+/* 데이트피커 */
+.calendar-title span {color: #373e46;font-size: 18px;}
+.ui-datepicker {padding-bottom:10px;}
+.ui-datepicker-calendar {width: 100%;}
+.calendar-header {position: relative;text-align: center;margin-left: 15px;margin-right: 15px;padding-top: 20px;padding-bottom: 22px;}
+.ui-datepicker-calendar th {/* height: 25px; */padding: 5px 0;}
+.ui-datepicker-calendar th span{text-transform: uppercase;color: #9197a3;font-size: 12px;font-weight: 700;}
+.ui-datepicker-calendar th.week-end span{color: #e87582;}
+.ui-datepicker-calendar td {width: 14.2%;padding-top: 10px;padding-bottom: 10px;text-align: center;}
+.ui-datepicker-calendar td span {display: inline-block;width: 24px;height: 24px;border-radius: 50%;color: #bdc1c8;font-size: 12px;font-weight: 700;line-height: 24px;}
+.ui-datepicker-calendar td a{display: inline-block;width: 24px;height: 24px;border-radius: 50%;color: #4b4f56;font-size: 12px;font-weight: 700;line-height: 24px;}
+.ui-datepicker-calendar > tbody td.ui-datepicker-week-end:first-child a { color: #fa4357; }
+.ui-datepicker-calendar > tbody td.ui-datepicker-week-end:last-child a { color: #4a90e2; }
+.ui-datepicker-calendar .ui-datepicker-week-end a {color: #e87582;font-size: 12px;font-weight: 700;}
+.ui-datepicker-calendar .ui-datepicker-week-end .ui-state-active {color: #ffffff !important;}
+.ui-datepicker-calendar .ui-state-active {background: #fb4357;color: #fff;}
+.ui-datepicker-calendar .ui-datepicker-today a{position: relative;background: #d1d3d8;color: #4b4f56;}
+.ui-datepicker-calendar .ui-datepicker-today a:after {position: absolute;top: 18px;left: 0;right: 0;display: block;content: 'TODAY';color: #373e36;font-size: 9px;text-align: center;}
+.ui-datepicker-calendar td.week-end a {color: #e87582;font-size: 12px;font-weight: 700;}
+.ui-datepicker-title {display: inline-block;}
+.ui-datepicker-year {display: inline-block;/* width: 100px; */font-size: 18px;font-weight: bold;}
+.ui-datepicker-month{display: inline-block;/* width: 80px; */margin-left: 5px;font-size: 18px;font-weight: bold;}
+.ui-datepicker-header {position: relative;padding-top:15px;padding-bottom:17px;text-align: center;}
+.ui-datepicker-prev,
+.ui-datepicker-next {width:30px;height:30px;}
+.ui-datepicker-prev {position: absolute;top: 10px;left: 0;}
+.ui-datepicker-next {position: absolute;top: 10px;right: 0;}
+.ui-datepicker-prev span,
+.ui-datepicker-next span {display: inline-block;width:30px;height:30px;right: 0;background-size:14px 17px;background-repeat: no-repeat;background-position:center;}
+.ui-datepicker-prev span {background-image: url(../../images/btn_datepicker_prev.png);}
+.ui-datepicker-next span {background-image: url(../../images/btn_datepicker_next.png);}
+/*피커 인풋 스타일*/
+.picker-box {margin:-5px 0;text-align:center;}
+.picker-box button {display:inline-block;width:40px;height:40px;margin:-10px 0;border:none;font-size: 0;background-repeat:no-repeat;background-position:center;background-color:transparent;vertical-align:middle;}
+.picker-box button.btn-prev {background-image:url(../../images/btn_prev.png);background-size:10px;}
+.picker-box button.btn-next {background-image:url(../../images/btn_next.png);background-size:10px;}
+input[type="text"].anypicker-input,
+input[type="text"].datepicker-input {width:95px;padding-left:24px;border:none;background:url(../../images/icon_calendar.png) no-repeat left center / 20px 18px;font-size:16px;color:#fff;}
+input[type="text"].datepicker-input {width:120px;}
+input[type="text"].datepicker-input + .btn-next,
+input[type="text"].anypicker-input + .btn-next {visibility:hidden;}
+
+/*차트 스와이퍼*/
+.chart-swiper-box.swiper-container {padding-bottom:15px;}
+.chart-swiper-box .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {bottom:0!important;}
+.chart-swiper-box .swiper-pagination-bullet {width:10px;height:10px;}
+.chart-swiper-box .swiper-pagination-bullet-active {background:#fb4357;}
+.chart-swiper-box .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {margin:0 6px}
+.chart-swiper-box .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {bottom:0;}
+.chart-swiper-box {padding-bottom:30px;}
+.chart-swiper-box .swiper-slide:after {content:'';display:block;clear:both;}
+.chart-swiper-box .swiper-slide .info {float:left;height:100%;}
+.chart-swiper-box .swiper-slide .tit-box {text-align:center;}
+.chart-swiper-box .swiper-slide .tit-box:after {content:'';display:block;clear:both;}
+.chart-swiper-box .swiper-slide .tit-box .chart-tit {display:inline-block;float:left;font-size:15px;font-weight:700;color:#4b4f56;}
+.chart-swiper-box .swiper-slide .anichart1 {width:100%;height:129px;text-align: center;padding-top: 71px;}
+.chart-swiper-box .swiper-slide .anichart1.gain-box {background:url(../../images/bg_pop01.gif) no-repeat center;background-size:contain;}
+.chart-swiper-box .swiper-slide .anichart1.fall-box {background:url(../../images/bg_pop02.gif) no-repeat center;background-size:contain;}
+.chart-swiper-box .swiper-slide .anichart1 strong {display:block;font-size:20px;color:#ed3124;}
+
+.chart-list01:after {content:'';display:block;clear:both;}
+.chart-list01 li {float:left;width:50%;padding:15px 13px 7px;font-size:10px;color:#9197a3;}
+.chart-list01 li:nth-child(1),
+.chart-list01 li:nth-child(2) {border-bottom:1px solid #bdc1c8;}
+.chart-list01 li:nth-child(1),
+.chart-list01 li:nth-child(3) {border-right:1px solid #bdc1c8;text-align:right;}
+.chart-list01 li .tit {display:block;font-size:14px;font-weight:400; color:#9197a3;}
+.chart-list01 li .num {display:inline-block;margin-top:5px;margin-right:3px;font-size:19px;color:#4a90e2;}
+.chart-list02 {margin-top:20px;}
+.chart-list02 li {margin-top:7px;}
+.chart-list02 .tit {display:inline-block;font-size:13px;font-weight:400;color:#4b4f56;}
+.chart-list02 .num {color:#4a90e2;}
+.chart-list02 .num.gain,
+.chart-list02 .num.fall {padding-left:11px;background-repeat:no-repeat;background-position:left top 3px;background-size:8px;font-size:13px;}
+.chart-list02 .num.gain {color:#ed3124;background-image:url(../../images/icon_gain.png);}
+.chart-list02 .num.fall {color:#4a90e2;background-image:url(../../images/icon_fall.png);}
+.chart-list03 .lgnd-tit {font-size:13px;}
+.chart-list03 .lgnd-tit:before {content:'';display:inline-block;width:13px;height:13px;margin-right:3px;border-radius:50%;vertical-align:middle;}
+.chart-list03 .lgnd-tit.bg-style01:before {background:#fb4357;}
+.chart-list03 .lgnd-tit.bg-style02:before {background:#4a90e2;}
+.chart-list03 .lgnd-tit.bg-style03:before {background:#bdc1c8;}
+.chart-list03 li + li {margin-top:16px;}
+.chart-list03 .chart-list02 {margin-top:4px;padding-left:16px;}
+.chart-list03 .chart-list02 li {margin-top:1px;}
+.chart-list03 .chart-list02 li .tit {font-size:12px;}
+
+/*차트영역*/
+.scroll_chart {overflow:hidden;overflow-x:auto;height:195px;margin:0 -15px;}
+.scroll_chart > div {height:100%;text-align:center;}
+.chart-area01 {height:60px;margin:0 -15px;}
+.chart-area01 > div {height:100%;}
+.chart-area02 {height:145px;font-size:13px;}
+.chart-area02:after {content:'';display:block;clear:both;}
+.chart-area02 > div {float: left;width:calc(100% - 40px);height:100%;}
+.chart-area02 .tit {float: left;width:40px;height:100%;padding-top:60px;background:#ededed;text-align:center;}
+.chart-area03 {height:185px;margin:0 -15px;}
+.chart-area03 > div {height:100%;}
+.chart-area04 {height:auto;margin:0 -15px;}
+
+/*범례영역*/
+.lgnd-area {display:inline-block;vertical-align: top;}
+.lgnd-area li {display:inline-block;margin-left:18px;font-size:12px;}
+.lgnd-area li:first-child{margin-left:0;}
+.lgnd-area li:before {content:'';display:inline-block;width:13px;height:13px;margin-right:4px;border-radius:50%;vertical-align: middle;}
+.lgnd-area li.color01:before {background:#fb4357;}
+.lgnd-area li.color02:before {background:#4a90e2;}
+.lgnd-area li.color03:before {background:#bdc1c8;}
+.lgnd-area li.color04:before {border:1px dashed #bdc1c8;}
+.lgnd-area02:after {content:'';display:block;clear:both;}
+.lgnd-area02 {display:flex;border:1px solid #bdc1c8;}
+.lgnd-area02 li {flex:1;padding:6px 3px;border-left:1px solid #bdc1c8;font-size:11px;text-align:center;}
+.lgnd-area02 li:first-child {border-left:none;}
+.lgnd-area02 li .tit {display:block;font-weight:400;}
+.lgnd-area02 li .tit:before {content:'';display:inline-block;width:9px;height:9px;margin-right:3px;vertical-align:middle;}
+.lgnd-area02 li .tit.color01:before {background:#fc6979}
+.lgnd-area02 li .tit.color02:before {background:#fd8e9a}
+.lgnd-area02 li .tit.color03:before {background:#fed2d7}
+.lgnd-area02 li .tit.color04:before {background:#9197a3}
+.lgnd-area02 li .tit.color05:before {background:#bdc1c8}
+.lgnd-area02 li .num {display:inline-block;margin-top:7px;font-weight:700;}
+.lgnd-area03 {width:100%;height:20px;}
+
+/*토탈영역*/
+.total-txt {margin-top:18px;font-size:12px;color:#4b4f56;text-align:right;}
+.total-txt strong {margin-right:3px;font-size:18px;color:#fb4357;}
+.total-txt02 {text-align: right;}
+.total-txt02 li {display:inline-block;margin-left:5px;font-size:12px;}
+.total-txt02 li + li::before {content:'';display:inline-block;width:1px;height:13px;margin-right:5px;background:#bdc1c8;vertical-align:middle;}
+.total-txt02 li strong {margin-left:4px;font-size:16px;color:#fb4357;}
+
+/*검색팝업*/
+.search-box {position:relative;}
+.search-box input[type="text"] {width:100%;height:35px;}
+.search-box .btn-inputclear {display:none;position:absolute;top:0;right:10px;width:35px;height:35px;background:url(../../images/btn_inputclear.png) no-repeat center / 22px;font-size:0;}
+.drop-options {position: absolute;max-height:180px;overflow-y:auto;border:1px solid #9197a3;border-top:0;background:#fff;z-index:1050;margin:0;padding: 0;list-style: none;box-sizing: content-box;-webkit-overflow-scrolling:touch;}
+.drop-options li {position: relative;margin:0;padding:7px 0;background:#fff;border:1px solid transparent;color:#9197a3;font-size:15px;text-indent: 15px;font-weight: 700;}
+
+/*데이터없음*/
+.no-data01 {width:100%;height:100%;min-height:110px;padding-top:65px;background:url(../../images/bg_nodata.png) no-repeat top 15px center / 34px; font-size:13px;text-align:center;color:#9197a3;}
+.no-data02 {width:100%;height:100%;padding-top:28px;background:url(../../images/bg_nodata.png) no-repeat top center / 24px;font-size:13px;color:#9197a3;text-align:center;}
+
+/* 로딩바 */
+.page-mask {display:none;position:absolute;left:0;top:0;z-index:9000;background-color:#000000;}
+.loading-img {display:none;position:absolute;left:50%;top:50%;width:65px;height:65px;transform:translate(-50%, -50%);z-index:9999999;background:url(../../images/loading.gif) no-repeat;background-size:cover;font-size:0;}
+

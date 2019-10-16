@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>CGV</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:site_name" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<meta property="og:image:width" content="">
+<meta property="og:image:height" content="">
+
+<!-- JQUERY UI -->
+<!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+<!-- css -->
+<link rel="stylesheet" href="../../../resources/result/asset/styles/lib/swiper.css" />
+<link rel="stylesheet" href="../../../resources/result/asset/styles/lib/multifreezer.css" />
+<link rel="stylesheet" href="../../../resources/result/asset/styles/global.css" /> 
+<link rel="stylesheet" href="../../../resources/result/asset/styles/layout.css" />
+<link rel="stylesheet" href="../../../resources/result/asset/styles/lib/anypicker-all.min.css">
+
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/multifreezer.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/swiper.min.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/anypicker.min.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/core.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/charts.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/common_pub.js"></script>
+
+<style type="text/css">
+.lstipt li {margin-top:10px;}
+.lstipt li input, .lstipt li select {margin-top:5px;}
+.row > h4 {margin-bottom:8px;font-size:15px;}
+.row > h5 {margin-bottom:8px;font-size:13px;}
+hr {margin-top:20px;}
+.lnk a:first-child {margin-left:0;}
+.lnk a {display:inline-block;color:blue;margin-left:20px;}
+</style>
+</head>
+<body>
+<div id="wrapper">
+
+	<!-- header -->
+	<header>
+		<div class="head">
+			<a class="nav-sub">
+				<i class="icon icon-home">이전페이지보기</i> <!-- 191016 class 변경 -->
+			</a>
+			<h3 class="title">실적</h3> <!-- 191016 위치 및 텍스트 변경 -->
+			<a class="nav-srh">영화</a>
+		</div>
+		<nav id="gnb">
+        <ul>
+          <li><a href="#" class="active">실시간관람객</a></li>
+          <li><a href="#">Daily관람객</a></li>
+          <li><a href="#">Monthly관람객</a></li>
+      </ul>
+		</nav>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<section id="container">
+		<div id="contents">
+			<div class="content-wrap">
+					
+				<div class="content-timeline">
+					<div class="time">
+						<i class="icon date"></i> 2019-08-01 00:00:00
+					</div>
+					<a href="#" class="btn btn-refresh">새로고침</a>
+				</div>
+			
+				<div class="row">
+					<div class="tab-ui">
+					<ul>
+						<li class="active">SUMMARY</li>
+							<li>일자별</li>
+							<li>RS/SITE</li>
+					</ul>						
+					</div>
+					
+					<div id="tabcont1" class="tabPage" style="height:1000px;">
+						<a href="#" onclick="layer_popup('#textpopup'); return false;" style="font-size: 25px;">팝업보기</a><br>
+            <a href="#" onclick="layer_popup('#textfullpopup'); return false;" style="font-size: 25px;">풀팝업보기</a><br>
+            <a href="#" onclick="layer_popup('#searchpopup'); return false;" style="font-size: 25px;">검색팝업보기</a>
+					</div>
+		
+				</div>
+										
+			</div>
+		</div>
+	</section>	
+	<!-- //container -->
+	
+  <!-- TOP버튼 S -->
+  <button type="button" class="btn_top">TOP</button> 
+
+   <!-- 공통딤 -->
+  <div class="pop-dimed"></div>
+  
+</div> <!-- wrapper E -->
+
+<!-- 팝업 S -->
+  <div id="textpopup" class="pop-house">
+    <div class="pop-head">
+      <h4><span class="f-color01">실시간</span> RS상세</h4>
+      <button type="button" class="btn-close">닫기</button>
+    </div>
+    <div class="pop-container">
+      <!-- 헤더고정테이블 S -->
+      <div class="row">
+        <div class="table-info tbl-popfix-style">
+          <table class="tbl-popfix-thead align-form01"> <!-- ".align-form01" 첫번째 td left 정렬 -->
+            <colgroup>
+              <col width="20%">
+              <col width="20%">
+              <col width="20%">
+              <col width="20%">
+              <col width="20%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>RS/SITE</th>
+                <th>관람객</th>
+                <th>객석율</th>
+                <th>회차수</th> 
+                <th>좌석수</th>
+              </tr>
+              <tr class="point-bg">
+                <th>서울서부</th>
+                <th>999,999</th>
+                <th>99.9%</th>
+                <th>9,999</th> 
+                <th>999,999</th>
+              </tr>
+            </thead>
+          </table>
+          <table class="tbl-popfix-tbody align-form01">
+            <colgroup>
+              <col width="20%">
+              <col width="20%">
+              <col width="20%">
+              <col width="20%">
+              <col width="20%">
+            </colgroup>
+            <tbody>
+              <tr>
+                <td>구로</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td> 
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>등촌</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td> 
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>목동</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td> 
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>신촌아트레온</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td> 
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>영등포</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td> 
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>홍대</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td> 
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>등촌</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td>
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>신촌아트레온</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td>
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>영등포</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td>
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>홍대</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td>
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>등촌</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td>
+                <td>999,999</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- 헤더고정테이블 E -->
+
+    </div>
+    <div class="popbtm">
+      <div class="btn-group btn-list2"> 
+        <a class="btn btn-success-pop" role="button">확인</a>
+        <a class="btn btn-secondary-pop popClose" role="button" >취소</a>
+      </div>
+    </div>
+  </div>
+<!-- 팝업 E -->
+
+<!-- 풀팝업 S -->
+  <div id="textfullpopup" class="pop-house pop-house-full">
+    <div class="pop-head">
+      <h4><span class="txt-red">실시간</span> RS상세</h4>
+      <button type="button" class="btn-close">닫기</button>
+    </div>
+    <div class="pop-container">
+      <!-- 헤더고정테이블 S -->
+        <div class="table-info tbl-popfix-style">
+          <table class="tbl-popfix-thead align-form01"><!-- ".align-form01" 첫번째 td left 정렬 -->
+            <colgroup>
+              <col width="20%">
+              <col width="20%">
+              <col width="20%">
+              <col width="20%">
+              <col width="20%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>RS/SITE</th>
+                <th>관람객</th>
+                <th>객석율</th>
+                <th>회차수</th> 
+                <th>좌석수</th>
+              </tr>
+              <tr class="point-bg">
+                <th>서울서부</th>
+                <th>999,999</th>
+                <th>99.9%</th>
+                <th>9,999</th> 
+                <th>999,999</th>
+              </tr>
+            </thead>
+          </table>
+          <table class="tbl-popfix-tbody align-form01"><!-- ".align-form01" 첫번째 td left 정렬 -->
+            <colgroup>
+              <col width="20%">
+              <col width="20%">
+              <col width="20%">
+              <col width="20%">
+              <col width="20%">
+            </colgroup>
+            <tbody>
+              <tr>
+                <td>구로</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td> 
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>등촌</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td> 
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>목동</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td> 
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>신촌아트레온</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td> 
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>영등포</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td> 
+                <td>999,999</td>
+              </tr>
+              <tr>
+                <td>홍대</td>
+                <td>999,999</td>
+                <td>99.9%</td>
+                <td>9,999</td> 
+                <td>999,999</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      <!-- 헤더고정테이블 E -->
+    </div>
+  </div>
+<!-- 풀팝업 E -->
+
+
+<!-- 검색팝업 S -->
+<div id="searchpopup" class="pop-house">
+    <div class="pop-head">
+      <h4>SITE 검색</h4>
+      <button type="button" class="btn-close">닫기</button>
+    </div>
+    <div class="pop-container">
+      <div class="row">
+        <div class="search-box">
+          <input type="text" class="autoCmpl" placeholder="test">
+          <span class="btn-inputclear">입력지우기</span>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 검색팝업 E -->
+</body>
+</html> 

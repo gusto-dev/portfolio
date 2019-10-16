@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>CGV</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta property="og:type" content="website">
+<meta property="og:title" content="">
+<meta property="og:site_name" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:image" content="">
+<meta property="og:image:width" content="">
+<meta property="og:image:height" content="">
+
+<!-- JQUERY UI -->
+<!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+<!-- css -->
+<link rel="stylesheet" href="../../../resources/result/asset/styles/lib/swiper.css" />
+<link rel="stylesheet" href="../../../resources/result/asset/styles/lib/multifreezer.css" />
+<link rel="stylesheet" href="../../../resources/result/asset/styles/global.css" /> 
+<link rel="stylesheet" href="../../../resources/result/asset/styles/layout.css" />
+<link rel="stylesheet" href="../../../resources/result/asset/styles/lib/anypicker-all.min.css">
+
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/multifreezer.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/swiper.min.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/anypicker.min.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/core.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/charts.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/common_pub.js"></script>
+
+<style type="text/css">
+.lstipt li {margin-top:10px;}
+.lstipt li input, .lstipt li select {margin-top:5px;}
+.row > h4 {margin-bottom:8px;font-size:15px;}
+.row > h5 {margin-bottom:8px;font-size:13px;}
+hr {margin-top:20px;}
+.lnk a:first-child {margin-left:0;}
+.lnk a {display:inline-block;color:blue;margin-left:20px;}
+.tbl-topfix-style {height:200px;background:#ddd;}
+</style>
+</head>
+<body>
+<div id="wrapper"> <!-- class="has-bottom-btn"-->
+
+	<!-- header -->
+	<header>
+		<div class="head">
+			<a class="nav-sub">
+				<i class="icon icon-home">이전페이지보기</i> <!-- 191016 class 변경 -->
+			</a>
+			<h3 class="title">실적</h3> <!-- 191016 위치 및 텍스트 변경 -->
+			<a class="nav-srh">영화</a>
+		</div>
+		
+		<nav id="gnb">
+			<ul>
+				<li><a href="#">실시간관람객</a></li>
+				<li><a href="#">Daily관람객</a></li>
+				<li><a href="#" class="active">Monthly관람객</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- //header -->
+
+	<!-- container -->
+	<section id="container">
+		<div id="contents">
+			<div class="content-wrap">
+					
+				<!-- 기본 베너 S -->
+				<div class="content-timeline">
+					<div class="time">
+						<i class="icon date"></i> 
+						<span class="dateinfo">2019-08-01 00:00:00</span>
+					</div>
+					<a href="#" class="btn btn-refresh">새로고침</a>
+				</div>
+				<!-- 기본 베너 E -->
+
+				<div class="row">
+					<div class="sub-title">
+						<h4>애니피커</h4>
+					</div>
+				</div>
+				<!-- 애니피커 베너 S -->
+				<div class="content-timeline">
+					<div class="picker-box">
+						<button type="button" class="btn-prev">이전</button>
+						<input type="text" class="anypicker-input" />
+						<button type="button" class="btn-next">다음</button>
+					</div>
+				</div>
+				<!-- 애니피커 베너 E -->
+
+				<div class="row">
+					<div class="sub-title">
+						<h4>데이트피커</h4>
+					</div>
+				</div>
+				<!-- 데이트피커 베너 S -->
+				<div class="content-timeline">
+					<div class="picker-box">
+						<button type="button" class="btn-prev">이전</button>
+						<input type="text" id="dp" class="datepicker-input" />
+						<button type="button" class="btn-next">다음</button>
+					</div>
+				</div>
+				<!-- 데이트피커 베너 E -->
+				<div class="row">
+					<h4 id="font">바로가기</h4>
+					<div class="dv lnk">
+						<a href="#tab">탭</a>
+						<a href="#font">폰트칼라</a> <a href="#fontSize">폰트사이즈</a>
+						<a href="#input">input typle</a>
+						<a href="#width">width px</a>
+						<a href="#width2">width %</a>
+						<a href="#button">버튼</a>
+						<a href="#input">input style</a>
+						<a href="#align">정렬</a>
+					</div>
+				</div>
+		
+				<div class="row">
+					<div class="tab-ui">
+						<ul>
+							<li class="active">SUMMARY</li>
+							<li>일자별</li>
+							<li>RS/SITE</li>
+						</ul>						
+					
+						<div id="tabcont1" class="tabPage">
+						
+							<div class="row">
+								<div class="tab-ui2">
+									<div>
+										<ul>
+											<li class="active">예매량</li>
+											<li>좌석비중</li>
+											<li>관색비중</li>
+											<li>예매 오픈율</li>
+										</ul>
+									</div>
+									<div class="table table-info with-border tbl-topfix-style">
+										<div id="fxcont1" class="tabcont active">
+											<div class="row">
+												테이블 컨텐츠 영역 예제1
+											</div>
+										</div>
+										<div id="fxcont1" class="tabcont">
+											<div class="row">
+												테이블 컨텐츠 영역 예제2
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="sub-title">
+									<h4><span class="f-color01">$RS명 or  SITE 명$</span> 실적 요약</h4>
+									<div class="r">
+										<select>
+											<option>전체</option>
+											<option>RS</option>
+											<option>RSSITE</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						
+							<div class="row">
+								<div class="sub-title">
+									<h4><span class="f-color01">$RS명 or  SITE 명$</span> 실적 요약</h4>
+									<div class="r">
+										<span class="txt-regend">(매출 : 천원)</span>
+									</div>
+								</div>
+							</div>
+					
+										
+							<div class="row">
+								<div class="sub-title">
+									<h4><span class="f-color01">$RS명 or  SITE 명$</span> 실적 요약</h4>
+									<div class="r">
+										<a href="#" class="btn btn-primary">개봉일 기준</a>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="sub-title">
+									<h4><span class="f-color01">$RS명 or  SITE 명$</span> 실적 요약</h4>
+									<div class="r tab-ui3">
+										<ul class="tab-right">
+											<li class="active">시간별</li>
+											<li>회차별</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="sub-title left-style">
+									<h4><span class="f-color01">$RS명</span> 실적 요약</h4>
+									<p class="txt-regend">개봉 후 전일까지의 누계 실적</p>
+								</div>
+							</div>
+							
+							<div class="row">
+								<h4 id="flex">display flex</h4>	
+								<div class="row">
+									<h5>좌측,센터,우측 정렬</h5>
+									<div class="align-between" style="height:30px;">
+										<div style="background:red;color:#fff;">col1</div>
+										<div style="background:red;color:#fff;">col2</div>
+										<div style="background:red;color:#fff;">col3</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<h5>중앙 정렬</h5>					
+									<div class="align-center" style="height:30px;">
+										<div style="background:red;color:#fff;">col1</div>
+										<div style="background:red;color:#fff;">col2</div>
+										<div style="background:red;color:#fff;">col3</div>
+									</div>
+								</div>
+
+								<div class="row">					
+									<h5>일정한 간격 중앙 정렬</h5>					
+									<div class="align-around" style="height:30px;">
+										<div style="background:red;color:#fff;">col1</div>
+										<div style="background:red;color:#fff;">col2</div>
+										<div style="background:red;color:#fff;">col3</div>
+									</div>
+								</div>
+							</div>
+									
+							<div class="row">
+								<h4 id="font">폰트칼라</h4>
+								<div class="dv">
+									<span class="f-color01">f-color01</span>
+									<span class="f-color02">f-color02</span>
+									<span class="f-color03">f-color03</span>
+									<span class="f-color04">f-color04</span>
+									<span class="f-color05">f-color05</span>
+									<span class="f-color06" style="background:#000;">f-color06</span>
+								</div>
+							</div>
+							
+							<div class="row">
+								<h4 id="fontSize">폰트사이즈</h4>
+								<div class="dv">
+									<span class="txt-small">txt-small</span>
+									<span class="txt-medium">txt-medium</span>
+									<span class="txt-larg">txt-larg</span>
+								</div>
+							</div>
+							
+							<div class="row">
+								<h4 id="button">버튼</h4>
+								<div class="dv">
+									<a href="#" class="btn btn-primary">btn-primary</a>
+									<!-- <a href="#" class="btn btn-success">btn-success</a>
+									<a href="#" class="btn btn-warning">btn-warning</a>
+									<a href="#" class="btn btn-danger">btn-danger</a>
+									<a href="#" class="btn btn-secondary">btn-secondary</a>
+									
+									<a href="#" class="btn btn-secondary btn-sm">btn-secondary</a>
+									<a href="#" class="btn btn-secondary btn-lg">btn-secondary</a> -->
+								</div>
+								<div class="dv">
+									<a href="#" class="btn btn-more">더보기</a>
+								</div>
+							</div>
+							
+							<div class="row">
+								<h4 id="input">input style</h4>
+								<div class="dv">
+									<ul class="lstipt">
+										<!-- <li>
+											<span class="chkItem"><input type="checkbox" id="ex1" name="ex1"><label for="ex1">선택</label></span>
+											<span class="chkItem"><input type="checkbox" id="ex2" name="ex2"><label for="ex2">선택</label></span>
+											<span class="chkItem"><input type="checkbox" id="ex3" name="ex3"><label for="ex3">선택</label></span>
+											<span class="chkItem"><input type="checkbox" id="ex4" name="ex4"><label for="ex4">선택</label></span>
+										</li> -->
+										<li>
+											<span class="chkItem"><input type="radio" id="ex_rd1" name="ex_rd"> <label for="ex_rd1">RS</label></span>
+											<span class="chkItem"><input type="radio" id="ex_rd2" name="ex_rd"> <label for="ex_rd2">SITE</label></span>
+											<span class="chkItem"><input type="radio" id="ex_rd3" name="ex_rd"> <label for="ex_rd3">선택</label></span>
+											<span class="chkItem"><input type="radio" id="ex_rd4" name="ex_rd"> <label for="ex_rd4">선택</label></span>
+										</li>
+										<li>
+											<input type="text" id="" name="" class="w100">
+										</li>
+										<li>
+											<select class="w100">
+												<option></option>
+											</select>
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="row">
+								<h4 id="width1">width px</h4>
+								<div class="dv">
+									<ul class="lstipt">
+										<li>
+											<input type="text" id="" name="" placeholder="w7p" class="w7p">
+											<input type="text" id="" name="" placeholder="w15p" class="w15p">
+											<input type="text" id="" name="" placeholder="w19p" class="w19p">
+											<input type="text" id="" name="" placeholder="w20p" class="w20p">
+											<input type="text" id="" name="" placeholder="w22p" class="w22p">
+											<input type="text" id="" name="" placeholder="w25p" class="w25p">
+											<input type="text" id="" name="" placeholder="w30p" class="w30p">
+											<input type="text" id="" name="" placeholder="w38p" class="w38p">
+											<input type="text" id="" name="" placeholder="w40p" class="w40p">
+											<input type="text" id="" name="" placeholder="w55p" class="w55p">
+											<input type="text" id="" name="" placeholder="w60p" class="w60p">
+											<input type="text" id="" name="" placeholder="w64p" class="w64p">
+											<input type="text" id="" name="" placeholder="w68p" class="w68p">
+											<input type="text" id="" name="" placeholder="w72p" class="w72p">
+											<input type="text" id="" name="" placeholder="w80p" class="w72p">
+											<input type="text" id="" name="" placeholder="w100p" class="w100p">
+											<input type="text" id="" name="" placeholder="w108p" class="w108p">
+											<input type="text" id="" name="" placeholder="w130p" class="w130p">
+											<input type="text" id="" name="" placeholder="w140p" class="w140p">
+											<input type="text" id="" name="" placeholder="w280p" class="w280p">
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="row">
+								<h4 id="width2">width %(5단위 100까지)</h4>
+								<div class="dv">
+									<ul class="lstipt">
+										<li>
+											<input type="text" id="" name="" placeholder="w5" class="w5">
+											<input type="text" id="" name="" placeholder="w10" class="w10">
+											<input type="text" id="" name="" placeholder="w15" class="w15">
+											<input type="text" id="" name="" placeholder="w20" class="w20">
+											<input type="text" id="" name="" placeholder="w25" class="w25">
+											<input type="text" id="" name="" placeholder="w50" class="w50">
+											<input type="text" id="" name="" placeholder="w70" class="w70">
+											<input type="text" id="" name="" placeholder="w100" class="w100">
+							
+										</li>
+									</ul>
+								</div>
+							</div>
+							
+							<div class="row">
+								<h4 id="align">align</h4>
+								<div class="dv">
+								<ul>
+									<li class="align-l">class="align-l"</li>
+									<li class="align-c">class="align-c"</li>
+									<li class="align-r">class="align-r"</li>
+									<li style="height:30px;">
+										<div class="float-l" style="line-height:30px;">class="float-l"</div>
+										<div class="float-r" style="line-height:30px;">class="float-r"</div>
+									</li>
+									<li>
+										<div class="align-between">
+											<div class="flex-left">flex-left</div>
+											<div class="flex-center">flex-center</div>
+										</div>
+									</li>
+								</ul>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+										
+			</div>
+		</div>
+	</section>	
+	<!-- //container -->
+	
+	<!-- TOP버튼 S -->
+	<button type="button" class="btn-top">TOP</button>
+	
+	<!-- 데이트피커 팝업 S -->
+	<div class="pop-house" id="p_datepicker">
+		<div class="pop-head">
+			<h4>날짜선택</h4>
+			<a class="btn-close">닫기</a>
+		</div>
+		<div class="pop-container">
+			<div class="date-picker" id="datepicker"></div>
+		</div>
+	</div>
+	<!-- 데이트피커 팝업 E -->
+	<!-- <footer>
+		<div class="bottom-menu"> 
+			<ul class="menu"> 
+				<li class="home">
+					<a href="#" class="bottom_btn">홈</a>
+				</li>
+				<li class="menu">
+					<a href="#" class="bottom_btn">전체메뉴</a>
+				</li>
+				<li class="more">
+					<button type="button" class="bottom_btn">메뉴더보기</button>
+				</li>
+				<li class="search">
+					<a href="#" class="bottom_btn">고객조회</a>
+				</li>
+				<li class="push"> 
+					<a href="#" class="bottom_btn">알림내역</a>
+				</li>
+			</ul>
+			<div class="more-box">
+				<h4 class="tit">바로가기   
+					<button type="button" class="btn-edit">편집</button>
+				</h4>
+				<div class="swiper-container foot-slide-area"> 
+					<div class="swiper-wrapper menu-slide">
+						<div class="swiper-slide slide-items">
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-mis1"></i>미소지기조회
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-mis2"></i>일일근태관리
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-mis3"></i>근무스케줄
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-mis4"></i>스케줄변경관리
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-mis5"></i>마일리지지급
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-mis6"></i>휴가승인
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-mis7"></i>긴급문자발송
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-mis8"></i>입사서류
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide slide-items">
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-scr1"></i>상영스케줄
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-scr2"></i>상영영화정보
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-scr3"></i>좌석판매현황
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-scr4"></i>VIP좌석설정
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-cut2"></i>VOC통합조회
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-cut3"></i>분실물관리
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-mtn1"></i>업무메모
+								</a>
+							</div>
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-mtn2"></i>나의 스케줄
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide slide-items">
+							<div class="slide-item">
+								<a href="#">
+									<i class="icon-result1"></i>실적
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="menu-slide-btns"> 
+						<div class="menu-swiper-pagination"></div>
+						<a href="#" class="btn-menu-setting"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer> -->
+
+	<div class="pop-dimed"></div> <!-- 공통딤 -->
+</div><!-- wrapper E -->
+
+<script type="text/javascript"> 
+	$(function(){
+		//애니피커
+		// var option = {minDate :["2019","03"], maxDate:["2020","12"] , format : "yyyy-MM"};
+		$(".anypicker-input").dateAnyPicker({ 
+			  maxDate : [fn_getFlagDate("m").split("-")[0],fn_getFlagDate("m").split("-")[1]-1]
+			, format  : "yyyy-MM" 
+			, onChange: function(date){
+				fn_isOverDate (date)
+				console.log("onChange",date)
+			}
+		});
+
+		//데이트피커호출
+		gfn_setDatepicker($("#dp"));
+
+		// 하단푸터
+		// var menuSlider = new Swiper('.foot-slide-area', {
+		// 	speed: 500,
+		// 	pagination: {
+		// 	el: '.menu-swiper-pagination',
+		// 	type: 'bullets',
+		// 	},
+		// });
+
+	});
+</script>
+
+</body>
+</html>
