@@ -33,7 +33,6 @@
 <script type="text/javascript" src="../../../resources/result/asset/scripts/lib/anypicker.min.js"></script>
 <script type="text/javascript" src="../../../resources/result/asset/scripts/lib/core.js"></script>
 <script type="text/javascript" src="../../../resources/result/asset/scripts/lib/charts.js"></script>
-<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/noBounce.js"></script>
 <script type="text/javascript" src="../../../resources/result/asset/scripts/common_pub.js"></script>
 
 <style type="text/css">
@@ -145,94 +144,12 @@ hr {margin-top:20px;}
 									</table>
 								</div>
 							</div>
-							
-							<div class="row">
-								<div class="sub-title">
-									<h4>스크롤좌측고정테이블</h4>
-								</div>
-							</div>
-							<div class="row">
-							<!-- 좌측고정테이블 s -->
-							<div class="table-info">
-								<div id="freezer-example">
-									<span class="icon-x-scroll">x-scroll</span>
-									<table class="table-freeze-multi txt-c" id="no-bounce" data-scroll-height="auto" data-cols-number="1">
-									<colgroup>
-										<col>
-										<col>
-										<col>
-										<col>
-										<col>
-										<col>
-										<col>
-									</colgroup>
-									<thead>
-										<tr>
-											<th rowspan="2">일자</th>
-											<th colspan="3">관객 MS</th>
-											<th colspan="3">OB MS</th>
-										</tr>
-										<tr>
-											<th>실적</th>
-											<th>계획</th>
-											<th>계획차</th>
-											<th>실적</th>
-											<th>계획</th>
-											<th>계획차</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr class="total">
-											<td>총계</td>
-											<td>999,999</td>
-											<td>999,999</td>
-											<td><span class="fall">107.6%</span></td>
-											<td>99.9%</td>
-											<td>999,999</td>
-											<td><span class="fall">107.6%</span></td>
-										</tr>
-										<tr>
-											<td>08-08(목)</td>
-											<td>999,999</td>
-											<td>999,999</td>
-											<td><span class="fall">107.6%</span></td>
-											<td>99.9%</td>
-											<td>999,999</td>
-											<td><span class="fall">107.6%</span></td>
-										</tr>
-										<tr>
-											<td>08-07(수)</td>
-											<td>999,999</td>
-											<td>999,999</td>
-											<td><span class="gain">107.6%</span></td>
-											<td>99.9%</td>
-											<td>999,999</td>
-											<td><span class="fall">107.6%</span></td>
-										</tr>
-									</tbody>
-									</table>
-								</div>
-							</div>
-							<!-- 좌측고정테이블 E -->
-							</div>
-							<script type="text/javascript">
-							window.onload = function() {
-								noBounce.init({
-									animate: false,
-									element: document.getElementById("no-bounce")
-								});
-							}
-							</script>
-							<style>
-								/* #freezer-example {-webkit-overflow-scrolling:touch;} */
-							</style>
 
 							<div class="row">
 								<div class="sub-title">
 									<h4>라인테이블01</h4>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="table-info line-style01">
 									<table>
@@ -310,13 +227,11 @@ hr {margin-top:20px;}
 									</table>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="sub-title">
 									<h4>라인테이블02</h4>
 								</div>
 							</div>
-
 							<div class="row">
 								<div class="table-info line-style02">
 									<table>
@@ -373,7 +288,273 @@ hr {margin-top:20px;}
 									</table>
 								</div>
 							</div>
+							<div class="row">
+								<div class="sub-title">
+									<h4>스크롤상단고정테이블</h4>
+								</div>
+							</div>
+							<div class="row">
+								<!-- 상단고정영역 S (테이블헤더와 함께 고정영역 있을 시 fixed-area class추가 )-->
+								<div class="tab-ui2">
+									<div class="fixed-area">
+										<ul>
+											<li class="active">예매량</li>
+											<li>좌석비중</li>
+											<li>관람비중</li>
+											<li>예매 오픈율</li>
+										</ul>
+									</div>
+									<div id="fxcont1" class="tabcont active">
+										<div class="row">
+											<!-- 헤더고정테이블 S -->
+											<div class="table-info">
+												<div class="fixed-area">
+													<table>
+														<colgroup>
+															<col width="20%">
+															<col width="20%">
+															<col width="20%">
+															<col width="20%">
+															<col width="20%">
+														</colgroup>
+														<thead>
+														<tr>
+															<th>영화명</th>
+															<th>08-29(목)</th>
+															<th>08-30(금)</th>
+															<th class="f-color02">08-30(토)</th> 
+															<th class="f-color01">09-01(일)</th>
+														</tr>
+														</thead>
+													</table>
+												</div>
+												<div>
+													<table>
+														<colgroup>
+														<col width="20%">
+														<col width="20%">
+														<col width="20%">
+														<col width="20%">
+														<col width="20%">
+														</colgroup>
+														<tbody>
+														<tr class="total">
+															<td><strong>총계</strong></td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>1. 엑시트엑시트엑시트엑시트엑시트엑시트엑시트엑시트엑시트엑시트엑시트</td>
+															<td>999,999<span class="s-font f-color04">99.99%</span></td>
+															<td>999,999<span class="s-font f-color04">99.99%</span></td>
+															<td>999,999<span class="s-font f-color04">99.99%</span></td>
+															<td>999,999<span class="s-font f-color04">99.99%</span></td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>2. 알라딘</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+														</tr>
+														<tr class="point-bg">
+															<td class="movie-name" title>3. 토이스토리</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>4. 라이온킹</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+														</tr>
+														<tr class="f-color03">
+															<td class="movie-name down" title>IMAX</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr class="f-color03">
+															<td class="movie-name down" title>ScreenX</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr class="f-color03">
+															<td class="movie-name down" title>4DX</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>5.마이펫의 이중생활</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>6. 레드슈즈()</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>7. 스파이더맨</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>8.마이펫의 이중생활</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>9. 레드슈즈()</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>10. 스파이더맨</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>11.마이펫의 이중생활</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>12. 레드슈즈()</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>13. 스파이더맨</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<!-- 헤더고정테이블 E -->
+											<a href="#" class="btn btn-more">더보기</a>
+										</div>
+									</div>
+								</div>
+								<!-- 상단고정영역 E -->
+							</div>
 
+							<div class="row">
+								<div class="sub-title">
+									<h4>스크롤좌측고정테이블</h4>
+								</div>
+							</div>
+							<div class="row">
+							<!-- 좌측고정테이블 s -->
+							<div class="table-info">
+								<div id="freezer-example">
+									<span class="icon-x-scroll">x-scroll</span>
+									<table class="table-freeze-multi txt-c" data-scroll-height="auto" data-cols-number="1">
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th rowspan="2">일자</th>
+											<th colspan="3">관객 MS</th>
+											<th colspan="3">OB MS</th>
+										</tr>
+										<tr>
+											<th>실적</th>
+											<th>계획</th>
+											<th>계획차</th>
+											<th>실적</th>
+											<th>계획</th>
+											<th>계획차</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="total">
+											<td>총계</td>
+											<td>999,999</td>
+											<td>999,999</td>
+											<td><span class="fall">107.6%</span></td>
+											<td>99.9%</td>
+											<td>999,999</td>
+											<td><span class="fall">107.6%</span></td>
+										</tr>
+										<tr>
+											<td>08-08(목)</td>
+											<td>999,999</td>
+											<td>999,999</td>
+											<td><span class="fall">107.6%</span></td>
+											<td>99.9%</td>
+											<td>999,999</td>
+											<td><span class="fall">107.6%</span></td>
+										</tr>
+										<tr>
+											<td>08-07(수)</td>
+											<td>999,999</td>
+											<td>999,999</td>
+											<td><span class="gain">107.6%</span></td>
+											<td>99.9%</td>
+											<td>999,999</td>
+											<td><span class="fall">107.6%</span></td>
+										</tr>
+									</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- 좌측고정테이블 E -->
+							</div>
+							<script>
+								// $(window).load(function(){
+								// 	$('.freeze-multi-scroll-table-body').scroll(function(){
+								// 		$(this).on('scroll', function(e){
+								// 			var scrollValue = $(this).scrollLeft();
+								// 			if (scrollValue === 0) {
+								// 				e.preventDefault();
+								// 				e.stopPropagation();
+								// 			} else {
+								// 				$('scroll').unbind();
+								// 			}
+								// 		});
+								// 	});
+								// });
+							</script>
+						
+						
 	
 						</div>
 					</div>
