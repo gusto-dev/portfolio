@@ -34,7 +34,6 @@
 <script type="text/javascript" src="../../../resources/result/asset/scripts/lib/core.js"></script>
 <script type="text/javascript" src="../../../resources/result/asset/scripts/lib/charts.js"></script>
 <script type="text/javascript" src="../../../resources/result/asset/scripts/lib/noBounce.js"></script>
-<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/inobounce.js"></script>
 <script type="text/javascript" src="../../../resources/result/asset/scripts/common_pub.js"></script>
 
 <style type="text/css">
@@ -541,13 +540,22 @@ hr {margin-top:20px;}
 							<!-- 좌측고정테이블 E -->
 							</div>
 							<script type="text/javascript">
-								// noBounce.init({
-								// 	animate: true, //default setting
-								// 	element: document.getElementById("freezer-example") // default is document
-								// });
+							$(window).load(function(){
+								$('.freeze-multi-scroll-table-body').scroll(function(){
+									$(this).on('scroll', function(e){
+										var scrollValue = $(this).scrollLeft();
+										if (scrollValue === 0) {
+											e.preventDefault();
+											e.stopPropagation();
+										} else {
+											$('scroll').unbind();
+										}
+									});
+								});
+							});
 							</script>
 							<style>
-								#freezer-example {overflow:auto;-webkit-overflow-scrolling:touch;}
+								.freeze-multi-scroll-table-body {-webkit-overflow-scrolling:touch;}
 							</style>
 						
 	
