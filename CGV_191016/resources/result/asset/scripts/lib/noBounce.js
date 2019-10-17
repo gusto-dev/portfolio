@@ -119,7 +119,7 @@ var noBounce = function() {
     vector.skalarMult(velocity, 0.95);
     if (vector.length(velocity) > 0.2) {
       requestAnimFrame(animate);
-    }
+	}
   }
 
   //Returns true if it is a DOM element
