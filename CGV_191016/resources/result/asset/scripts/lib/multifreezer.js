@@ -79,8 +79,7 @@ $('.table-freeze-multi').each(function () {
     });
     leftblock.on('mousewheel', false);
 
-});
-
+	});
 });
 
 // @see https://davidwalsh.name/detect-scrollbar-width
