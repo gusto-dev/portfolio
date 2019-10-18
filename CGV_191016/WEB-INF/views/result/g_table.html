@@ -216,20 +216,11 @@ hr {margin-top:20px;}
 							</div>
 							<script type="text/javascript">
 							$(window).load(function(){
-								var lastX;
-								$('.freeze-multi-scroll-table-body').bind('touchmove', function(e){
+								$('.freeze-multi-scroll-table-body').scroll(function(e){
 									var scrollValue = $(this).scrollLeft();
-									var currentX = e.originalEvent.touches[0].clientX;
-									if (currentX > lastX) {
-										if (scrollValue == 0) {
-											$(this).addClass('nScroll');
-										}
-									} else if (currentX < lastX) {
-										if ($(this).hasClass('nScroll')) {
-											$(this).removeClass('nScroll');
-										}
+									if (scrollValue == 0) {
+										$(this).scrollLeft(1);
 									}
-									lastX = currentX;
 								});
 							});
 							</script>
