@@ -84,8 +84,11 @@ $('.table-freeze-multi').each(function () {
 	var myScroll = new IScroll('.freeze-multi-scroll-table-body',{
 		// mouseWheel: true,
 		// scrollbars: true,
-		bounce:false,
+        bounce: false,
+        scrollX: true
     });
+    myScroll.refresh();
+    console.log(myScroll.options);
     
 	});
 // });
