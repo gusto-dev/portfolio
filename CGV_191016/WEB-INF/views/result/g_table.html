@@ -217,11 +217,16 @@ hr {margin-top:20px;}
 							</div>
 							<script type="text/javascript">
 							window.onload = function() {
-								myScroll = new IScroll('.freeze-multi-scroll-table', { touchmove: true, bounce: false, scrollX: true, scrollY: true });
+								var myScroll = new IScroll('.freeze-multi-scroll-wrapper', { 
+									mouseWheel: false, 
+									touchmove: true, 
+									bounce: false, 
+									scrollX: true, 
+									scrollY: false 
+								});
 							};
 							</script>
 							<style>
-								.freeze-multi-scroll-table {overflow:auto;}
 							</style>
 
 							<div class="row">
