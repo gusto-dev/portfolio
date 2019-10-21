@@ -215,12 +215,31 @@ hr {margin-top:20px;}
 							<!-- 좌측고정테이블 E -->
 							</div>
 							<script type="text/javascript">
+							// $(window).load(function(){
+							// 	$('.freeze-multi-scroll-table-body').scroll(function(e){
+							// 		var scrollValue = $(this).scrollLeft();
+							// 		if (scrollValue == 0) {
+							// 			$(this).addClass('nScroll');
+							// 		}
+							// 	});
+							// });
 							$(window).load(function(){
-								$('.freeze-multi-scroll-table-body').scroll(function(e){
+								var lastX;
+								$('.freeze-multi-scroll-table-body').bind('touchmove', function(e){
 									var scrollValue = $(this).scrollLeft();
-									if (scrollValue == 0) {
-										$(this).scrollLeft(1);
+									var currentX = e.originalEvent.touches[0].clientX;
+									if (currentX > lastX) {
+										if (scrollValue == 0) {
+											$(this).addClass('nScroll');
+										}
+									} else if (currentX <= lastX) {
+										// console.log('currentX : ',currentX);
+										// console.log('lastX : ',lastX);
+										if (scrollValue == 0) {
+											$(this).removeClass('nScroll');
+										}
 									}
+									lastX = currentX;
 								});
 							});
 							</script>
@@ -228,8 +247,6 @@ hr {margin-top:20px;}
 								.freeze-multi-scroll-table-body {-webkit-overflow-scrolling:touch;}
 								.freeze-multi-scroll-table-body.nScroll {overflow:hidden;}
 							</style>
-
-
 
 							<div class="row">
 								<div class="sub-title">
