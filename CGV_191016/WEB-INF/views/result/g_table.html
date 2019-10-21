@@ -155,7 +155,7 @@ hr {margin-top:20px;}
 							<div class="table-info">
 								<div id="freezer-example">
 									<span class="icon-x-scroll">x-scroll</span>
-									<table class="table-freeze-multi txt-c" id="no-bounce" data-scroll-height="auto" data-cols-number="1">
+									<table class="table-freeze-multi txt-c" data-scroll-height="auto" data-cols-number="1">
 									<colgroup>
 										<col>
 										<col>
@@ -215,36 +215,14 @@ hr {margin-top:20px;}
 							<!-- 좌측고정테이블 E -->
 							</div>
 							<script type="text/javascript">
-							// $(window).load(function(){
-							// 	$('.freeze-multi-scroll-table-body').scroll(function(e){
-							// 		var scrollValue = $(this).scrollLeft();
-							// 		if (scrollValue == 0) {
-							// 			$(this).addClass('nScroll');
-							// 		}
-							// 	});
-							// });
 							$(window).load(function(){
-								var lastX;
-								$('.freeze-multi-scroll-table-body').bind('touchmove', function(e){
-									var scrollValue = $(this).scrollLeft();
-									var currentX = e.originalEvent.touches[0].clientX;
-									if (currentX > lastX) {
-										if (scrollValue == 0) {
-											$(this).addClass('nScroll');
-										}
-									} else if (currentX < lastX) {
-										if (scrollValue == 0) {
-											$(this).removeClass('nScroll');
-										}
-									}
-									lastX = currentX;
+								$('.freeze-multi-scroll-table-body').attr('id', 'no-bounce');
+								noBounce.init({
+									animate: true,
+									element: document.getElementById("no-bounce")
 								});
 							});
 							</script>
-							<style>
-								.freeze-multi-scroll-table-body {-webkit-overflow-scrolling:touch;}
-								.freeze-multi-scroll-table-body.nScroll {overflow:hidden;}
-							</style>
 
 							<div class="row">
 								<div class="sub-title">
