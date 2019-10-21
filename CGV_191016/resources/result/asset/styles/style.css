@@ -13,8 +13,8 @@
 .ranking-box li.active {transform: scale(1.1);}
 .ranking-box li.active .num {bottom:-6px;}
 .ranking-box li:first-child {margin-left:0;}
-.ranking-box li:last-child {margin-right:0;}
 .ranking-box li .num {position:absolute;bottom:-4px;left:5px;font-size:22px;font-style: italic;color:#fff;}
+.ranking-box li.no-img .num {color:#bdc1c8;}
 .ranking-box li img {width:100%;height:100%;box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);}
 
 /*영화실적 영화정보*/
@@ -45,7 +45,7 @@
 
 /*관람객 랭킹*/
 .audience-ranking:after {content:'';display:block;clear:both;}
-.audience-ranking li {position:relative;float:left;width:33.33%;text-align:center;}
+.audience-ranking li {position:relative;float:left;width:33.33%;min-height:75px;text-align:center;}
 .audience-ranking li:after {content:'';position:absolute;top:8px;right:0;width:1px;height:74px;background:#dee0e3;}
 .audience-ranking li:last-child:after {display:none;}
 .audience-ranking li .ranking {display:inline-block;height:32px;padding-left:35px;padding-top:6px;font-size:18px;font-weight:700;background-repeat:no-repeat;background-position:left center;background-size:32px;}
@@ -106,6 +106,7 @@
 .ui-datepicker-next span {display: inline-block;width:30px;height:30px;right: 0;background-size:14px 17px;background-repeat: no-repeat;background-position:center;}
 .ui-datepicker-prev span {background-image: url(../../images/btn_datepicker_prev.png);}
 .ui-datepicker-next span {background-image: url(../../images/btn_datepicker_next.png);}
+
 /*피커 인풋 스타일*/
 .picker-box {margin:-5px 0;text-align:center;}
 .picker-box button {display:inline-block;width:40px;height:40px;margin:-10px 0;border:none;font-size: 0;background-repeat:no-repeat;background-position:center;background-color:transparent;vertical-align:middle;}
@@ -135,6 +136,7 @@ input[type="text"].anypicker-input + .btn-next {visibility:hidden;}
 .chart-swiper-box .swiper-slide .anichart1.fall-box {background:url(../../images/bg_pop02.gif) no-repeat center;background-size:contain;}
 .chart-swiper-box .swiper-slide .anichart1 strong {display:block;font-size:20px;color:#ed3124;}
 
+/* 차트리스트 */
 .chart-list01:after {content:'';display:block;clear:both;}
 .chart-list01 li {float:left;width:50%;padding:15px 13px 7px;font-size:10px;color:#9197a3;}
 .chart-list01 li:nth-child(1),
@@ -143,6 +145,7 @@ input[type="text"].anypicker-input + .btn-next {visibility:hidden;}
 .chart-list01 li:nth-child(3) {border-right:1px solid #bdc1c8;text-align:right;}
 .chart-list01 li .tit {display:block;font-size:14px;font-weight:400; color:#9197a3;}
 .chart-list01 li .num {display:inline-block;margin-top:5px;margin-right:3px;font-size:19px;color:#4a90e2;}
+
 .chart-list02 {margin-top:20px;}
 .chart-list02 li {margin-top:7px;}
 .chart-list02 .tit {display:inline-block;font-size:13px;font-weight:400;color:#4b4f56;}
@@ -151,6 +154,7 @@ input[type="text"].anypicker-input + .btn-next {visibility:hidden;}
 .chart-list02 .num.fall {padding-left:11px;background-repeat:no-repeat;background-position:left top 3px;background-size:8px;font-size:13px;}
 .chart-list02 .num.gain {color:#ed3124;background-image:url(../../images/icon_gain.png);}
 .chart-list02 .num.fall {color:#4a90e2;background-image:url(../../images/icon_fall.png);}
+
 .chart-list03 .lgnd-tit {font-size:13px;}
 .chart-list03 .lgnd-tit:before {content:'';display:inline-block;width:13px;height:13px;margin-right:3px;border-radius:50%;vertical-align:middle;}
 .chart-list03 .lgnd-tit.bg-style01:before {background:#fb4357;}
@@ -161,18 +165,42 @@ input[type="text"].anypicker-input + .btn-next {visibility:hidden;}
 .chart-list03 .chart-list02 li {margin-top:1px;}
 .chart-list03 .chart-list02 li .tit {font-size:12px;}
 
+.chart-list04 li:after {content:'';display:block;clear:both;}
+.chart-list04 li {margin-top:5px;}
+.chart-list04 li .tit {float:left;width:44%;margin-top:3px;font-size:14px;text-align: right;color:#9197a3;}
+.chart-list04 li .num {float:right; width:55%;font-size:12px;text-align: right;color:#9197a3;}
+.chart-list04 li .num .f-color01 {font-size:20px;}
+
+.chart-list05:after {content:'';display:block;clear:both;}
+.chart-list05 li {position:relative;float:left;width:50%;padding:10px 10px 7px;font-size:12px;color:#9197a3;text-align:center;}
+.chart-list05 li:nth-child(1),
+.chart-list05 li:nth-child(2) {border-bottom:1px solid #bdc1c8;}
+.chart-list05 li:nth-child(1),
+.chart-list05 li:nth-child(3) {border-right:1px solid #bdc1c8;}
+.chart-list05 li .tit {display:block;font-size:14px;font-weight:400; color:#9197a3;text-align:left;}
+.chart-list05 li .num {display:inline-block;margin-top:5px;margin-right:3px;font-size:25px;color:#4a90e2;}
+.chart-list05 li .gain,
+.chart-list05 li .fall {display:inline-block;position:absolute;top:8px;right:10px;padding:3px 5px 2px;border-radius:20px;font-size:12px;color:#fff;}
+.chart-list05 li .gain {background:#ed3124;}
+.chart-list05 li .fall {background:#4a90e2;}
+.chart-list05 li .gain:before,
+.chart-list05 li .fall:before {content:'';display:inline-block;width:9px;height:9px;margin-right:5px;}
+.chart-list05 li .gain:before {background-image:url(../../images/icon_gain_arrow.png);background-size:cover;}
+.chart-list05 li .fall:before {background-image:url(../../images/icon_fall_arrow.png);background-size:cover;}
+
 /*차트영역*/
 .scroll_chart {overflow:hidden;overflow-x:auto;height:195px;margin:0 -15px;}
 .scroll_chart > div {height:100%;text-align:center;}
 .chart-area01 {height:60px;margin:0 -15px;}
 .chart-area01 > div {height:100%;}
-.chart-area02 {height:145px;font-size:13px;}
+.chart-area02 {height:145px;border:1px solid #bdc1c8;font-size:13px;}
 .chart-area02:after {content:'';display:block;clear:both;}
-.chart-area02 > div {float: left;width:calc(100% - 40px);height:100%;}
-.chart-area02 .tit {float: left;width:40px;height:100%;padding-top:60px;background:#ededed;text-align:center;}
+.chart-area02 > div {float: left;width:calc(100% - 38px);height:100%;}
+.chart-area02 .tit {float: left;width:40px;height:calc(100% + 2px);margin:-1px;padding-top:60px;background:#ededed;text-align:center;}
 .chart-area03 {height:185px;margin:0 -15px;}
 .chart-area03 > div {height:100%;}
 .chart-area04 {height:auto;margin:0 -15px;}
+.chart-area05 {width:100%;height:116px;;border:1px solid #bdc1c8;}
 
 /*범례영역*/
 .lgnd-area {display:inline-block;vertical-align: top;}
@@ -204,6 +232,9 @@ input[type="text"].anypicker-input + .btn-next {visibility:hidden;}
 .total-txt02 li {display:inline-block;margin-left:5px;font-size:12px;}
 .total-txt02 li + li::before {content:'';display:inline-block;width:1px;height:13px;margin-right:5px;background:#bdc1c8;vertical-align:middle;}
 .total-txt02 li strong {margin-left:4px;font-size:16px;color:#fb4357;}
+.total-txt03 {margin-top:10px;font-size:12px;text-align: right;color:#4b4f56;}
+.total-txt03 strong {margin-right:5px;font-size:25px;color:#fb4357;}
+.total-txt03 + .chart-list02 {margin-top:10px;}
 
 /*검색팝업*/
 .search-box {position:relative;}

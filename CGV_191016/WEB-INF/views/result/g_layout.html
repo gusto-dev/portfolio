@@ -53,17 +53,23 @@ hr {margin-top:20px;}
 	<header>
 		<div class="head">
 			<a class="nav-sub">
-				<i class="icon icon-home">이전페이지보기</i> <!-- 191016 class 변경 -->
+				<i class="icon icon-home">메인으로가기</i> <!-- 191016 class 변경 -->
 			</a>
 			<h3 class="title">실적</h3> <!-- 191016 위치 및 텍스트 변경 -->
 			<a class="nav-srh">영화</a>
 		</div>
 		
-		<nav id="gnb">
+		<nav id="gnb" class="gnb-scroll-type">
 			<ul>
 				<li><a href="#">실시간관람객</a></li>
 				<li><a href="#">Daily관람객</a></li>
 				<li><a href="#" class="active">Monthly관람객</a></li>
+				<li><a href="#">Daily F&B</a></li>
+				<li><a href="#">Monthly F&B</a></li>
+				<li><a href="#">손익</a></li>
+				<li><a href="#">Daily Report</a></li>
+				<li><a href="#">Monthly Report</a></li>
+				<li><a href="#">Biz.Report</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -147,16 +153,71 @@ hr {margin-top:20px;}
 											<li>예매 오픈율</li>
 										</ul>
 									</div>
-									<div class="table table-info with-border tbl-topfix-style">
-										<div id="fxcont1" class="tabcont active">
-											<div class="row">
-												테이블 컨텐츠 영역 예제1
-											</div>
+									<div id="fxcont1" class="tabcont active">
+										<div class="row">
+											테이블 컨텐츠 영역 예제1
 										</div>
-										<div id="fxcont1" class="tabcont">
-											<div class="row">
-												테이블 컨텐츠 영역 예제2
-											</div>
+									</div>
+									<div id="fxcont1" class="tabcont">
+										<div class="row">
+											테이블 컨텐츠 영역 예제2
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="tab-ui4">
+									<ul class="tab-left">
+										<li class="active">채널</li>
+										<li>제품</li>
+										<li>프로모션콤보</li>
+									</ul>
+									<ul class="tab-right">
+										<li class="active">전주차</li>
+										<li>전일차</li>
+									</ul>
+								</div>
+								<div id="" class="tabcont active">
+									<div class="row">
+										tab-ui4 테이블 컨텐츠 영역 예제1
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="tab-ui5">
+									<ul>
+										<li class="active">전체</li>
+										<li>SPP</li>
+										<li>SR</li>
+										<li>ASP</li>
+										<li>콤보비중</li>
+									</ul>
+									<div id="fxcont4-1" class="tabcont active">
+										<div class="row">
+											tab-ui5 테이블 컨텐츠 영역 예제1
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="tab-ui5">
+									<div class="scroll-type">
+										<ul>
+											<li class="active">요약</li>
+											<li>매출</li>
+											<li>매출원가</li>
+											<li>매출이익</li>
+											<li>판관비</li>
+											<li>매출</li>
+											<li>매출원가</li>
+										</ul>
+										<span class="icon-x-scroll">x-scroll</span>
+									</div>
+									<div id="fxcont4-1" class="tabcont active">
+										<div class="row">
+											tab-ui5 스크롤 테이블 컨텐츠 영역 예제1
 										</div>
 									</div>
 								</div>
@@ -211,7 +272,10 @@ hr {margin-top:20px;}
 									<p class="txt-regend">개봉 후 전일까지의 누계 실적</p>
 								</div>
 							</div>
-							
+							<div class="row tbl-top-style">
+								<button type="button" class="btn btn-round">항목 전체보기</button>
+								<span class="info">(단위: 천명, 백만원)</span>
+							</div>
 							<div class="row">
 								<h4 id="flex">display flex</h4>	
 								<div class="row">

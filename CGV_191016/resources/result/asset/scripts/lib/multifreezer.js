@@ -1,4 +1,6 @@
-$(document).ready(function () {
+// $(document).ready(function () {
+function fn_freezeTable (){
+
 /*
 jQuery MultiFreezer - scrollable tables with freezed thead and (n) first columns.
 (c) 2017 Jan Renner (http://janrenner.cz, jan.renner@gmail.com)
@@ -79,8 +81,14 @@ $('.table-freeze-multi').each(function () {
     });
     leftblock.on('mousewheel', false);
 
+	var myScroll = new IScroll('.freeze-multi-scroll-table-body',{
+		// mouseWheel: true,
+		// scrollbars: true,
+		bounce:false,
+    });
+    
 	});
-});
+// });
 
 // @see https://davidwalsh.name/detect-scrollbar-width
 // function freezerGetScrollbarWidth () {
@@ -98,3 +106,4 @@ $('.table-freeze-multi').each(function () {
 
 //     return scrollbarWidth;
 // }
+}

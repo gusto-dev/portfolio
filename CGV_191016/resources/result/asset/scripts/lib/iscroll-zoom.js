@@ -252,6 +252,9 @@ function IScroll (el, options) {
 
 	this.options = {
 
+		zoomMin: 1,
+		zoomMax: 4, startZoom: 1,
+
 		resizeScrollbars: true,
 
 		mouseWheelSpeed: 20,
@@ -322,6 +325,8 @@ function IScroll (el, options) {
 	this.directionY = 0;
 	this._events = {};
 
+	this.scale = Math.min(Math.max(this.options.startZoom, this.options.zoomMin), this.options.zoomMax);
+
 // INSERT POINT: DEFAULTS
 
 	this._init();
@@ -336,6 +341,10 @@ IScroll.prototype = {
 
 	_init: function () {
 		this._initEvents();
+
+		if ( this.options.zoom ) {
+			this._initZoom();
+		}
 
 		if ( this.options.scrollbars || this.options.indicators ) {
 			this._initIndicators();
@@ -667,13 +676,11 @@ IScroll.prototype = {
 		this.wrapperHeight	= this.wrapper.clientHeight;
 
 /* REPLACE START: refresh */
+	this.scrollerWidth	= Math.round(this.scroller.offsetWidth * this.scale);
+	this.scrollerHeight	= Math.round(this.scroller.offsetHeight * this.scale);
 
-		this.scrollerWidth	= this.scroller.offsetWidth;
-		this.scrollerHeight	= this.scroller.offsetHeight;
-
-		this.maxScrollX		= this.wrapperWidth - this.scrollerWidth;
-		this.maxScrollY		= this.wrapperHeight - this.scrollerHeight;
-
+	this.maxScrollX		= this.wrapperWidth - this.scrollerWidth;
+	this.maxScrollY		= this.wrapperHeight - this.scrollerHeight;
 /* REPLACE END: refresh */
 
 		this.hasHorizontalScroll	= this.options.scrollX && this.maxScrollX < 0;
@@ -832,11 +839,7 @@ IScroll.prototype = {
 	_translate: function (x, y) {
 		if ( this.options.useTransform ) {
 
-/* REPLACE START: _translate */
-
-			this.scrollerStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px)' + this.translateZ;
-
-/* REPLACE END: _translate */
+/* REPLACE START: _translate */			this.scrollerStyle[utils.style.transform] = 'translate(' + x + 'px,' + y + 'px) scale(' + this.scale + ') ' + this.translateZ;/* REPLACE END: _translate */
 
 		} else {
 			x = Math.round(x);
@@ -1016,6 +1019,176 @@ IScroll.prototype = {
 
 			delete this.indicators;
 		});
+	},
+
+	_initZoom: function () {
+		this.scrollerStyle[utils.style.transformOrigin] = '0 0';
+	},
+
+	_zoomStart: function (e) {
+		var c1 = Math.abs( e.touches[0].pageX - e.touches[1].pageX ),
+			c2 = Math.abs( e.touches[0].pageY - e.touches[1].pageY );
+
+		this.touchesDistanceStart = Math.sqrt(c1 * c1 + c2 * c2);
+		this.startScale = this.scale;
+
+		this.originX = Math.abs(e.touches[0].pageX + e.touches[1].pageX) / 2 + this.wrapperOffset.left - this.x;
+		this.originY = Math.abs(e.touches[0].pageY + e.touches[1].pageY) / 2 + this.wrapperOffset.top - this.y;
+
+		this._execEvent('zoomStart');
+	},
+
+	_zoom: function (e) {
+		if ( !this.enabled || utils.eventType[e.type] !== this.initiated ) {
+			return;
+		}
+
+		if ( this.options.preventDefault ) {
+			e.preventDefault();
+		}
+
+		var c1 = Math.abs( e.touches[0].pageX - e.touches[1].pageX ),
+			c2 = Math.abs( e.touches[0].pageY - e.touches[1].pageY ),
+			distance = Math.sqrt( c1 * c1 + c2 * c2 ),
+			scale = 1 / this.touchesDistanceStart * distance * this.startScale,
+			lastScale,
+			x, y;
+
+		this.scaled = true;
+
+		if ( scale < this.options.zoomMin ) {
+			scale = 0.5 * this.options.zoomMin * Math.pow(2.0, scale / this.options.zoomMin);
+		} else if ( scale > this.options.zoomMax ) {
+			scale = 2.0 * this.options.zoomMax * Math.pow(0.5, this.options.zoomMax / scale);
+		}
+
+		lastScale = scale / this.startScale;
+		x = this.originX - this.originX * lastScale + this.startX;
+		y = this.originY - this.originY * lastScale + this.startY;
+
+		this.scale = scale;
+
+		this.scrollTo(x, y, 0);
+	},
+
+	_zoomEnd: function (e) {
+		if ( !this.enabled || utils.eventType[e.type] !== this.initiated ) {
+			return;
+		}
+
+		if ( this.options.preventDefault ) {
+			e.preventDefault();
+		}
+
+		var newX, newY,
+			lastScale;
+
+		this.isInTransition = 0;
+		this.initiated = 0;
+
+		if ( this.scale > this.options.zoomMax ) {
+			this.scale = this.options.zoomMax;
+		} else if ( this.scale < this.options.zoomMin ) {
+			this.scale = this.options.zoomMin;
+		}
+
+		// Update boundaries
+		this.refresh();
+
+		lastScale = this.scale / this.startScale;
+
+		newX = this.originX - this.originX * lastScale + this.startX;
+		newY = this.originY - this.originY * lastScale + this.startY;
+
+		if ( newX > 0 ) {
+			newX = 0;
+		} else if ( newX < this.maxScrollX ) {
+			newX = this.maxScrollX;
+		}
+
+		if ( newY > 0 ) {
+			newY = 0;
+		} else if ( newY < this.maxScrollY ) {
+			newY = this.maxScrollY;
+		}
+
+		if ( this.x != newX || this.y != newY ) {
+			this.scrollTo(newX, newY, this.options.bounceTime);
+		}
+
+		this.scaled = false;
+
+		this._execEvent('zoomEnd');
+	},
+
+	zoom: function (scale, x, y, time) {
+		if ( scale < this.options.zoomMin ) {
+			scale = this.options.zoomMin;
+		} else if ( scale > this.options.zoomMax ) {
+			scale = this.options.zoomMax;
+		}
+
+		if ( scale == this.scale ) {
+			return;
+		}
+
+		var relScale = scale / this.scale;
+
+		x = x === undefined ? this.wrapperWidth / 2 : x;
+		y = y === undefined ? this.wrapperHeight / 2 : y;
+		time = time === undefined ? 300 : time;
+
+		x = x + this.wrapperOffset.left - this.x;
+		y = y + this.wrapperOffset.top - this.y;
+
+		x = x - x * relScale + this.x;
+		y = y - y * relScale + this.y;
+
+		this.scale = scale;
+
+		this.refresh();		// update boundaries
+
+		if ( x > 0 ) {
+			x = 0;
+		} else if ( x < this.maxScrollX ) {
+			x = this.maxScrollX;
+		}
+
+		if ( y > 0 ) {
+			y = 0;
+		} else if ( y < this.maxScrollY ) {
+			y = this.maxScrollY;
+		}
+
+		this.scrollTo(x, y, time);
+	},
+
+	_wheelZoom: function (e) {
+		var wheelDeltaY,
+			deltaScale,
+			that = this;
+
+		// Execute the zoomEnd event after 400ms the wheel stopped scrolling
+		clearTimeout(this.wheelTimeout);
+		this.wheelTimeout = setTimeout(function () {
+			that._execEvent('zoomEnd');
+		}, 400);
+
+		if ( 'deltaX' in e ) {
+			wheelDeltaY = -e.deltaY / Math.abs(e.deltaY);
+		} else if ('wheelDeltaX' in e) {
+			wheelDeltaY = e.wheelDeltaY / Math.abs(e.wheelDeltaY);
+		} else if('wheelDelta' in e) {
+			wheelDeltaY = e.wheelDelta / Math.abs(e.wheelDelta);
+		} else if ('detail' in e) {
+			wheelDeltaY = -e.detail / Math.abs(e.wheelDelta);
+		} else {
+			return;
+		}
+
+		deltaScale = this.scale + wheelDeltaY / 5;
+
+		this.zoom(deltaScale, e.pageX, e.pageY, 0);
 	},
 
 	_initWheel: function () {
@@ -1535,11 +1708,19 @@ IScroll.prototype = {
 			case 'MSPointerDown':
 			case 'mousedown':
 				this._start(e);
+
+				if ( this.options.zoom && e.touches && e.touches.length > 1 ) {
+					this._zoomStart(e);
+				}
 				break;
 			case 'touchmove':
 			case 'pointermove':
 			case 'MSPointerMove':
 			case 'mousemove':
+				if ( this.options.zoom && e.touches && e.touches[1] ) {
+					this._zoom(e);
+					return;
+				}
 				this._move(e);
 				break;
 			case 'touchend':
@@ -1550,6 +1731,10 @@ IScroll.prototype = {
 			case 'pointercancel':
 			case 'MSPointerCancel':
 			case 'mousecancel':
+				if ( this.scaled ) {
+					this._zoomEnd(e);
+					return;
+				}
 				this._end(e);
 				break;
 			case 'orientationchange':
@@ -1565,19 +1750,18 @@ IScroll.prototype = {
 			case 'wheel':
 			case 'DOMMouseScroll':
 			case 'mousewheel':
+				if ( this.options.wheelAction == 'zoom' ) {
+					this._wheelZoom(e);
+					return;	
+				}
 				this._wheel(e);
 				break;
 			case 'keydown':
 				this._key(e);
 				break;
-			case 'click':
-				if ( !e._constructed ) {
-					e.preventDefault();
-					e.stopPropagation();
-				}
-				break;
 		}
 	}
+
 };
 function createDefaultScrollbar (direction, interactive, type) {
 	var scrollbar = document.createElement('div'),

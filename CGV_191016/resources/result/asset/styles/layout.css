@@ -5,9 +5,9 @@
 
 /* layout */
 #wrapper {overflow:hidden;position:relative;min-width:360px;height:100%;}
-#container {overflow:hidden;overflow-y:auto;height:100%;padding:100px 0 15px 0;}
+#container {overflow:hidden;overflow-y:auto;height:100%;padding:100px 0 5px 0;}
 #contents {display:flex;flex-direction:column;height:100%;flex:1;}
-.content-wrap {position:relative;overflow:hidden;overflow-y:auto;padding:0 15px;-webkit-overflow-scrolling:touch;}
+.content-wrap {position:relative;overflow:hidden;overflow-y:auto;padding:50px 15px 0;-webkit-overflow-scrolling:touch;}
 
 /* header */
 header {position:fixed;z-index:100;width:100%;min-width:360px;height:100px;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border-bottom: 1px solid rgba(145, 151, 163, 0.5);background:#ffffff;}
@@ -24,11 +24,13 @@ header h3.logo-box {height:20px;position:absolute;top:15px;left:calc(50% - 27px)
 header h3.logo-box img {height:100%;}
 header .nav-srh {display:flex;align-items:center;justify-content:space-between;padding-left:28px;background:url(../../images/btn_movie_search.png) no-repeat left center;background-size:20px 20px;font-size:15px;font-weight: 700; color:#373e46;}
 
-
 header nav#gnb ul {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;}
 header nav#gnb ul li {display:flex;flex:1;align-items:center;justify-content:space-between;height:50px;}
 header nav#gnb ul li a {display:block;flex:1;margin:0 10px;padding:15px 0 14px;text-align:center;font-size:15px;color:#90949f;}
 header nav#gnb ul li a.active {border-bottom:2px solid #fb4357;font-weight:700;color:#4b4f56;}
+
+header nav#gnb.gnb-scroll-type ul {display:block;overflow:hidden;overflow-x:auto;white-space:nowrap;}
+header nav#gnb.gnb-scroll-type ul li {display:inline-block;width:calc(100vw / 3);}
 
 .sub-title {display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;}
 .sub-title.left-style {justify-content:left;}
@@ -37,7 +39,7 @@ header nav#gnb ul li a.active {border-bottom:2px solid #fb4357;font-weight:700;c
 .sub-title .r {display:flex;align-items:center;justify-content:space-between;}
 .sub-title .r select {min-width:70px;}
 
-.content-timeline {position:relative;margin:0 -15px;padding:15px 0;background:#4b4f56;}
+.content-timeline {position:fixed;top:100px;right:0;left:0;padding:15px 0;background:#4b4f56;z-index: 10;}
 .content-timeline > div {color:#fff;}
 .content-timeline .time {font-size:16px;text-align:center;}
 .content-timeline .time .dateinfo {margin-left:3px;vertical-align: middle;}

@@ -31,9 +31,12 @@
 <script type="text/javascript" src="../../../resources/result/asset/scripts/lib/multifreezer.js"></script>
 <script type="text/javascript" src="../../../resources/result/asset/scripts/lib/swiper.min.js"></script>
 <script type="text/javascript" src="../../../resources/result/asset/scripts/lib/anypicker.min.js"></script>
+
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/iscroll.js"></script>
+<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/zepto.min.js"></script>
+
 <script type="text/javascript" src="../../../resources/result/asset/scripts/lib/core.js"></script>
 <script type="text/javascript" src="../../../resources/result/asset/scripts/lib/charts.js"></script>
-<script type="text/javascript" src="../../../resources/result/asset/scripts/lib/iscroll.js"></script>
 <script type="text/javascript" src="../../../resources/result/asset/scripts/common_pub.js"></script>
 
 <style type="text/css">
@@ -47,13 +50,14 @@ hr {margin-top:20px;}
 </style>
 </head>
 <body>
+
 <div id="wrapper">
 
 	<!-- header -->
 	<header>
 		<div class="head">
 			<a class="nav-sub">
-				<i class="icon icon-home">이전페이지보기</i> <!-- 191016 class 변경 -->
+				<i class="icon icon-home">메인으로가기</i> <!-- 191016 class 변경 -->
 			</a>
 			<h3 class="title">실적</h3> <!-- 191016 위치 및 텍스트 변경 -->
 			<a class="nav-srh">영화</a>
@@ -106,7 +110,7 @@ hr {margin-top:20px;}
 										</colgroup>
 										<thead>
 											<tr>
-												<th>일자</th>
+												<th class="sort-active">일자</th>
 												<th>당일 예매량</th>
 												<th>누적 예매량</th>
 											</tr>
@@ -145,7 +149,277 @@ hr {margin-top:20px;}
 									</table>
 								</div>
 							</div>
-							
+
+							<div class="row">
+								<div class="sub-title">
+									<h4>라인테이블01</h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="table-info line-style01">
+									<table>
+										<colgroup20%>
+											<col width="12%">
+											<col width="8%">
+											<col width="20%">
+											<col width="20%">
+											<col width="20%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th colspan="2">구분</th>
+												<th class="sort-active">실적</th>
+												<th>계획비</th>
+												<th>
+													<button type="button" class="btn-tbltoggle">전주비·차</button>
+												</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="point-bg">
+												<td rowspan="2">
+													관람객
+													<span class="s-font f-color04">(천원)</span>
+												</td>
+												<td>전국</td>
+												<td>999,999</td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+											</tr>
+											<tr class="point-bg">
+												<td>CGV</td>
+												<td>999,999</td>
+												<td>
+													<span class="fall"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+												<td>
+													<span class="fall"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+											</tr>
+											<tr>
+												<td rowspan="2">MS</td>
+												<td>관객</td>
+												<td>92.1%</td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04"><span>52.9</span>%</span>
+												</td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04"><span>52.9</span>%</span>
+												</td>
+											</tr>
+											<tr>
+												<td>BO</td>
+												<td>52.1%</td>
+												<td>
+													<span class="fall"><span>94.6</span>%</span>
+													<span class="s-font f-color04"><span>9.9</span>%</span>
+												</td>
+												<td>
+													<span class="fall"><span>94.6</span>%</span>
+													<span class="s-font f-color04"><span>9.9</span>%</span>
+												</td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="row">
+								<div class="sub-title">
+									<h4>라인테이블02</h4>
+								</div>
+							</div>
+							<div class="row">
+								<div class="table-info line-style02">
+									<table>
+										<colgroup>
+											<col width="20%">
+											<col width="20%">
+											<col width="20%">
+											<col width="20%">
+											<col width="20%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th rowspan="2">일자</th>
+												<th class="r-line">전국</th>
+												<th colspan="3">CGV용산아이파크</th>
+											</tr>
+											<tr>
+												<th class="r-line">관람객</th>
+												<th>관람객</th>
+												<th>계획비</th>
+												<th><button type="button" class="btn-tbltoggle">전주차</button></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="total">
+												<td>총계</td>
+												<td>999,999</td>
+												<td>999,999</td>
+												<td>
+													<span class="gain">107.6%</span>
+												</td>
+												<td>99.9%</td>
+											</tr>
+											<tr>
+												<td>08-08(목)</td>
+												<td>999,999</td>
+												<td>999,999</td>
+												<td>
+													<span class="fall">107.6%</span>
+												</td>
+												<td>99.9%</td>
+											</tr>
+											<tr>
+												<td>08-07(수)</td>
+												<td>999,999</td>
+												<td>999,999</td>
+												<td>
+													<span class="fall">107.6%</span>
+												</td>
+												<td>99.9%</td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="row">
+								<div class="sub-title">
+									<h4>스크롤상단고정테이블</h4>
+								</div>
+							</div>
+							<div class="row">
+								<!-- 상단고정영역 S (테이블헤더와 함께 고정영역 있을 시 fixed-area class추가 )-->
+								<div class="tab-ui2">
+									<div class="fixed-area">
+										<ul>
+											<li class="active">예매량</li>
+											<li>좌석비중</li>
+											<li>관람비중</li>
+											<li>예매 오픈율</li>
+										</ul>
+									</div>
+									<div id="fxcont1" class="tabcont active">
+										<div class="row">
+											<!-- 헤더고정테이블 S -->
+											<div class="table-info more-type">
+												<div class="fixed-area">
+													<table>
+														<colgroup>
+															<col width="20%">
+															<col width="20%">
+															<col width="20%">
+															<col width="20%">
+															<col width="20%">
+														</colgroup>
+														<thead>
+														<tr>
+															<th>영화명</th>
+															<th>08-29(목)</th>
+															<th>08-30(금)</th>
+															<th class="f-color02">08-30(토)</th> 
+															<th class="f-color01">09-01(일)</th>
+														</tr>
+														</thead>
+													</table>
+												</div>
+												<div>
+													<table>
+														<colgroup>
+														<col width="20%">
+														<col width="20%">
+														<col width="20%">
+														<col width="20%">
+														<col width="20%">
+														</colgroup>
+														<tbody>
+														<tr class="total">
+															<td><strong>총계</strong></td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>1. 엑시트엑시트엑시트엑시트엑시트엑시트엑시트엑시트엑시트엑시트엑시트</td>
+															<td>999,999<span class="s-font f-color04">99.99%</span></td>
+															<td>999,999<span class="s-font f-color04">99.99%</span></td>
+															<td>999,999<span class="s-font f-color04">99.99%</span></td>
+															<td>999,999<span class="s-font f-color04">99.99%</span></td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>2. 알라딘</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+														</tr>
+														<tr class="point-bg">
+															<td class="movie-name" title>3. 토이스토리</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>4. 라이온킹</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+															<td>999,999</td>
+														</tr>
+														<tr class="f-color03">
+															<td class="indent" title>IMAX</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr class="f-color03">
+															<td class="indent" title>ScreenX</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr class="f-color03">
+															<td class="indent" title>4DX</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														<tr>
+															<td class="movie-name" title>5.마이펫의 이중생활</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+															<td>99,999</td>
+														</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+											<!-- 헤더고정테이블 E -->
+											<a href="#" class="btn btn-more">더보기</a>
+										</div>
+									</div>
+								</div>
+								<!-- 상단고정영역 E -->
+							</div>
+
 							<div class="row">
 								<div class="sub-title">
 									<h4>스크롤좌측고정테이블</h4>
@@ -156,7 +430,7 @@ hr {margin-top:20px;}
 							<div class="table-info">
 								<div id="freezer-example">
 									<span class="icon-x-scroll">x-scroll</span>
-									<table class="table-freeze-multi txt-c" id="no-bounce" data-scroll-height="auto" data-cols-number="1">
+									<table class="table-freeze-multi txt-c" data-scroll-height="auto" data-cols-number="1">
 									<colgroup>
 										<col>
 										<col>
@@ -215,169 +489,323 @@ hr {margin-top:20px;}
 							</div>
 							<!-- 좌측고정테이블 E -->
 							</div>
-							<script type="text/javascript">
-							window.onload = function() {
-								var myScroll = new IScroll('.freeze-multi-scroll-table-body ,.freeze-multi-scroll-table-head', { 
-									touchmove: true, 
-									bounce: false, 
-									scrollX: true, 
-									scrollY: true,
-									scrollbars: false,
-								});
-							};
-							</script>
-							<style>
-								.freeze-multi-scroll-table {overflow:auto;}
-								.freeze-multi-scroll-table-head {overflow:auto;}
-							</style>
-
 							<div class="row">
-								<div class="sub-title">
-									<h4>라인테이블01</h4>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="table-info line-style01">
-									<table>
-										<colgroup20%>
-											<col width="12%">
-											<col width="8%">
-											<col width="20%">
-											<col width="20%">
-											<col width="20%">
+								<div class="table-info indent-type">
+									<table><!-- ".align-form01" 첫번째 td left 정렬 -->
+										<colgroup>
+											<col width="30%">
+											<col width="16%">
+											<col width="16%">
+											<col width="17%">
+											<col width="17%">
 										</colgroup>
 										<thead>
 											<tr>
-												<th colspan="2">구분</th>
-												<th>실적</th>
-												<th>계획비</th>
-												<th>
-													<button type="button" class="btn-tbltoggle">전주비·차</button>
-													<button type="button" class="btn-tbltoggle">전일비·차</button>
-												</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr class="point-bg">
-												<td rowspan="2">관람객</td>
-												<td>전국</td>
-												<td>999,999</td>
-												<td>
-													<span class="gain"><span>107.6</span>%</span>
-													<span class="s-font f-color04">999,999</span>
-												</td>
-												<td>
-													<span class="gain"><span>107.6</span>%</span>
-													<span class="s-font f-color04">999,999</span>
-												</td>
-											</tr>
-											<tr class="point-bg">
-												<td>CGV</td>
-												<td>999,999</td>
-												<td>
-													<span class="fall"><span>107.6</span>%</span>
-													<span class="s-font f-color04">999,999</span>
-												</td>
-												<td>
-													<span class="fall"><span>107.6</span>%</span>
-													<span class="s-font f-color04">999,999</span>
-												</td>
-											</tr>
-											<tr>
-												<td rowspan="2">MS</td>
-												<td>관객</td>
-												<td>92.1%</td>
-												<td>
-													<span class="gain"><span>107.6</span>%</span>
-													<span class="s-font f-color04"><span>52.9</span>%</span>
-												</td>
-												<td>
-													<span class="gain"><span>107.6</span>%</span>
-													<span class="s-font f-color04"><span>52.9</span>%</span>
-												</td>
-											</tr>
-											<tr>
-												<td>BO</td>
-												<td>52.1%</td>
-												<td>
-													<span class="fall"><span>94.6</span>%</span>
-													<span class="s-font f-color04"><span>9.9</span>%</span>
-												</td>
-												<td>
-													<span class="fall"><span>94.6</span>%</span>
-													<span class="s-font f-color04"><span>9.9</span>%</span>
-												</td>
-											</tr>
-											
-										</tbody>
-									</table>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="sub-title">
-									<h4>라인테이블02</h4>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="table-info line-style02">
-									<table>
-										<colgroup20%>
-											<col width="20%">
-											<col width="20%">
-											<col width="20%">
-											<col width="20%">
-											<col width="20%">
-										</colgroup>
-										<thead>
-											<tr>
-												<th rowspan="2">일자</th>
-												<th class="r-line">전국</th>
-												<th colspan="3">CGV용산아이파크</th>
-											</tr>
-											<tr>
-												<th class="r-line">관람객</th>
-												<th>관람객</th>
-												<th>계획비</th>
-												<th>객석률</th>
+												<th>채널</th>
+												<th>매출<span class="s-font">(백만원)</span></th>
+												<th>SPP</th>
+												<th>SR</th> 
+												<th>ASP</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr class="total">
 												<td>총계</td>
-												<td>999,999</td>
-												<td>999,999</td>
 												<td>
-													<span class="gain">107.6%</span>
+													<span>226,226</span>
+													<span class="s-font f-color04"><span>99.99</span>%</span>
 												</td>
-												<td>99.9%</td>
-											</tr>
-											<tr>
-												<td>08-08(목)</td>
-												<td>999,999</td>
-												<td>999,999</td>
 												<td>
-													<span class="fall">107.6%</span>
+													<span>2,794</span><br>
+													<span class="s-font gain">107.6</span>
 												</td>
-												<td>99.9%</td>
-											</tr>
-											<tr>
-												<td>08-07(수)</td>
-												<td>999,999</td>
-												<td>999,999</td>
 												<td>
-													<span class="fall">107.6%</span>
+													<span>9,999</span>%<br>
+													<span class="s-font fall"><span>99.99</span>%</span></td>
+												</td> 
+												<td>
+													<span>22,226</span><br>
+													<span class="s-font fall">99.99</span>
 												</td>
-												<td>99.9%</td>
 											</tr>
-											
+											<tr class="point-bg02">
+												<td>일반</td>
+												<td>
+													<span>204,123</span>
+													<span class="s-font f-color04"><span>49.9</span>%</span>
+												</td>
+												<td>
+													<span>2,794</span><br>
+													<span class="s-font gain">107.6</span>
+												</td>
+												<td>
+													<span>9,999</span>%<br>
+													<span class="s-font fall"><span>99.99</span>%</span></td>
+												</td> 
+												<td>
+													<span>22,226</span><br>
+													<span class="s-font fall">99.99</span>
+												</td>
+											</tr>
+											<tr class="inner">
+												<td>일반</td>
+												<td>
+													<span>204,123</span>
+													<span class="s-font f-color04"><span>49.9</span>%</span>
+												</td>
+												<td>
+													<span>2,794</span><br>
+													<span class="s-font gain">107.6</span>
+												</td>
+												<td>
+													<span>9,999</span>%<br>
+													<span class="s-font fall"><span>99.99</span>%</span></td>
+												</td> 
+												<td>
+													<span>22,226</span><br>
+													<span class="s-font fall">99.99</span>
+												</td>
+											</tr>
+											<tr class="inner">
+												<td>매점키오스크</td>
+												<td>
+													<span>204,123</span>
+													<span class="s-font f-color04"><span>49.9</span>%</span>
+												</td>
+												<td>
+													<span>2,794</span><br>
+													<span class="s-font gain">107.6</span>
+												</td>
+												<td>
+													<span>9,999</span>%<br>
+													<span class="s-font fall"><span>99.99</span>%</span></td>
+												</td> 
+												<td>
+													<span>22,226</span><br>
+													<span class="s-font fall">99.99</span>
+												</td>
+											</tr>
+											<tr class="point-bg02">
+												<td>직영 F&B</td>
+												<td>
+													<span>204,123</span>
+													<span class="s-font f-color04"><span>49.9</span>%</span>
+												</td>
+												<td>
+													<span>2,794</span><br>
+													<span class="s-font gain">107.6</span>
+												</td>
+												<td>
+													<span>9,999</span>%<br>
+													<span class="s-font fall"><span>99.99</span>%</span></td>
+												</td> 
+												<td>
+													<span>22,226</span><br>
+													<span class="s-font fall">99.99</span>
+												</td>
+											</tr>
+											<tr class="inner">
+												<td>일반</td>
+												<td>
+													<span>204,123</span>
+													<span class="s-font f-color04"><span>49.9</span>%</span>
+												</td>
+												<td>
+													<span>2,794</span><br>
+													<span class="s-font gain">6</span>
+												</td>
+												<td>
+													<span>9,999</span>%<br>
+													<span class="s-font fall"><span>99.99</span>%</span></td>
+												</td> 
+												<td>
+													<span>22,226</span><br>
+													<span class="s-font fall">99.99</span>
+												</td>
+											</tr>
+											<tr class="inner">
+												<td>이동식매대</td>
+												<td>
+													<span>204,123</span>
+													<span class="s-font f-color04"><span>49.9</span>%</span>
+												</td>
+												<td>
+													<span>2,794</span><br>
+													<span class="s-font gain">107.6</span>
+												</td>
+												<td>
+													<span>9,999</span>%<br>
+													<span class="s-font fall"><span>99.99</span>%</span></td>
+												</td> 
+												<td>
+													<span>22,226</span><br>
+													<span class="s-font fall">99.99</span>
+												</td>
+											</tr>
 										</tbody>
 									</table>
 								</div>
 							</div>
-
+							<div class="row tbl-top-style">
+								<button type="button" class="btn btn-round full-view">항목 전체보기</button>
+								<span class="info">(단위: 천명, 백만원)</span>
+							</div>	
+							<div class="row">
+								<div class="table-info accordion-type">
+									<table>
+										<colgroup>
+											<col>
+											<col>
+											<col>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th>실적</th>
+												<th>계획비·차</th>
+												<th>전년비·차</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="group-top">
+												<td>
+													관람객
+													<button type="button" class="btn btn-accordion"></button>
+												</td>
+												<td>
+													<span>999,999</span>
+												</td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+											</tr>
+											<tr class="group-bottom">
+												<td class="indent01">관람객01</td>
+												<td>
+													<span>999,999</span>
+												</td>
+												<td>
+													<span class="fall"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+												<td>
+													<span class="fall"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+											</tr>
+											<tr class="group-bottom">
+												<td class="indent01">
+													관람객02
+												</td>
+												<td><span>999,999</span></td>
+												<td>
+													<span class="fall"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+												<td>
+													<span class="fall"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													관람객
+												</td>
+												<td>
+													<span>999,999</span>
+												</td>
+												<td>
+													<span class="fall"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+											</tr>
+											<tr class="group-top">
+												<td>
+													매출
+													<button type="button" class="btn btn-accordion"></button>
+												</td>
+												<td>
+													<span>999,999</span>
+												</td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+											</tr>
+														
+											<tr class="group-bottom">
+												<td class="indent02">매출</td>
+												<td>
+													<span>999,999</span>
+												</td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+												<td>
+													<span class="fall"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+											</tr>
+											<tr class="group-bottom">
+												<td class="indent02">매출</td>
+												<td>
+													<span>999,999</span>
+												</td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+												<td>
+													<span class="fall"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+											</tr>
+											<tr class="group-bottom">
+												<td class="indent01">매출원가</td>
+												<td>
+													<span>999,999</span>
+												</td>
+												<td>
+													<span class="fall"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+												<td>
+													<span class="fall"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+											</tr>
+											<tr class="group-bottom">
+												<td class="indent01">
+													매출이익
+												</td>
+												<td><span>999,999</span></td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+												<td>
+													<span class="gain"><span>107.6</span>%</span>
+													<span class="s-font f-color04">999,999</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
 	
 						</div>
 					</div>
@@ -394,7 +822,9 @@ hr {margin-top:20px;}
 	<!-- 공통딤 -->
 	<div class="pop-dimed"></div>
 
+
 </div><!-- wrapper E -->
 
 </body>
+
 </html>
