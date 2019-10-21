@@ -81,14 +81,7 @@ $('.table-freeze-multi').each(function () {
     });
     leftblock.on('mousewheel', false);
 
-	var myScroll = new IScroll('.freeze-multi-scroll-table-body',{
-		// mouseWheel: true,
-		// scrollbars: true,
-        bounce: false,
-        scrollX: true
-    });
-    myScroll.refresh();
-    console.log(myScroll.options);
+	var myScroll = new IScroll('.freeze-multi-scroll-table');
     
 	});
 // });
