@@ -55,6 +55,7 @@ https://jsfiddle.net/2oj9c5q2/21
 }
 .freeze-multi-scroll-table-body {
     position: relative;
+    overflow: auto;
     width: 100%;
 }
 .freeze-multi-scroll-left {
