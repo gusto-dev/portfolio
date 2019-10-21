@@ -232,9 +232,7 @@ hr {margin-top:20px;}
 										if (scrollValue == 0) {
 											$(this).addClass('nScroll');
 										}
-									} else if (currentX <= lastX) {
-										// console.log('currentX : ',currentX);
-										// console.log('lastX : ',lastX);
+									} else if (currentX < lastX) {
 										if (scrollValue == 0) {
 											$(this).removeClass('nScroll');
 										}
