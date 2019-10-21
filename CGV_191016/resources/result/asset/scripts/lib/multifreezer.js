@@ -81,7 +81,10 @@ $('.table-freeze-multi').each(function () {
     });
     leftblock.on('mousewheel', false);
 
-	var myScroll = new IScroll('.freeze-multi-scroll-table');
+	var myScroll = new IScroll('.freeze-multi-scroll-wrapper', {
+        scrollX: true,
+        scrollY: false
+    });
     
 	});
 // });
