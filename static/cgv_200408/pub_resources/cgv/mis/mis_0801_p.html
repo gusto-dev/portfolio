@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+ 
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+  <div class="cgv-mobile has-bottom-btn"> <!-- 190711 class 추가 (페이지 일괄적용)  --> 
+
+    <!-- header -->
+    <header>
+      <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">근무스케줄변경관리</h3>
+      </a>
+       <!-- 190712 버튼 제거 -->
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <section class="content-sub">
+      <div class="content-title">
+      </div>
+      <div class="content-full person-list-box">
+      </div>
+    </section>
+    <footer>
+    </footer>
+  </div>
+  <!-- 팝업(맞교대신청-정직원) -->
+  <div class="pop-dimed show-pop">
+    <div class="pop-bg"></div>
+    <div data-pop="#apply01" class="pop-house">
+      <div class="pop-layer">
+        <h3>맞교대신청<i class="icon icon-close pop-close"></i></h3>
+        <div class="pop-container">
+          <div class="con"> 
+            <div class="table table-info line-style02 mg-t12">
+              <table>
+                <caption>맞교대신청내역</caption>
+                <colgroup>
+                  <col width="28%" />
+                  <col width="36%" />
+                  <col width="36%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th class="w32 txt-c" scope="col">구분</th>
+                    <th class="w34 txt-c" scope="col">신청자</th>
+                    <th class="w34 txt-c" scope="col">수락자</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">이름</th>
+                    <td class="txt-c">박서준</td>
+                    <td class="txt-c">정해인</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">소정근로시간</th>
+                    <td class="txt-c">5</td>
+                    <td class="txt-c">5</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">기존근무일</th>
+                    <td><i class="icon icon-input-calendar mg-r4"></i>2019.06.01</td>
+                    <td><i class="icon icon-input-calendar mg-r4"></i>2019.06.21</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">기존근무시간</th>
+                    <td><i class="icon icon-input-clock mg-r4"></i>08:00~13:00</td>
+                    <td><i class="icon icon-input-clock mg-r4"></i>11:00~18:00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">변경근무일</th>
+                    <td><i class="icon icon-input-calendar mg-r4"></i>2019.06.01</td>
+                    <td><i class="icon icon-input-calendar mg-r4"></i>2019.06.21</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">변경근무시간</th>
+                    <td><i class="icon icon-input-clock mg-r4"></i>08:00~13:00</td>
+                    <td><i class="icon icon-input-clock mg-r4"></i>11:00~18:00</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">신청사유</th>
+                    <td colspan="2">
+                      <div class="input-wrap">
+                        <input type="text" name="">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">반려사유</th>
+                    <td colspan="2">
+                      <div class="input-wrap">
+                        <input type="text" name="">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- <div class="input-title">
+              <h4>반려사유</h4>
+            </div>
+            <div class="textarea-box">
+              <textarea></textarea>
+            </div> -->
+
+          </div>
+        </div>
+        <!-- 버튼 disabled 시 class "disabled" 추가 -->
+        <div class="btn-group btn-list3">
+          <button class="disabled" type="button" role="button">승인</button>
+          <button class="disabled" type="button" role="button">반려</button>
+          <button type="button" role="button">승인취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

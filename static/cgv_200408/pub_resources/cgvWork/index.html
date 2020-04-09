@@ -1,0 +1,2696 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>CGV 작업내역</title>
+  <link rel="stylesheet" type="text/css" href="work.css">
+
+</head>
+<style>
+  .txt-red {
+  color: #ed3124 !important;
+}
+.bg-warning {
+  background: #000;
+  opacity: 0.6;
+}
+
+.delete,
+.modal-close {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(10, 10, 10, 0.2);
+  border: none;
+  border-radius: 290486px;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  width: 20px;
+}
+
+.delete::before,
+.modal-close::before,
+.delete::after,
+.modal-close::after {
+  background-color: white;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.delete::before,
+.modal-close::before {
+  height: 2px;
+  width: 50%;
+}
+
+.delete::after,
+.modal-close::after {
+  height: 50%;
+  width: 2px;
+}
+
+.delete:hover,
+.modal-close:hover,
+.delete:focus,
+.modal-close:focus {
+  background-color: rgba(10, 10, 10, 0.3);
+}
+
+.delete:active,
+.modal-close:active {
+  background-color: rgba(10, 10, 10, 0.4);
+}
+
+.is-small.delete,
+.is-small.modal-close {
+  height: 16px;
+  max-height: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  min-width: 16px;
+  width: 16px;
+}
+
+.is-medium.delete,
+.is-medium.modal-close {
+  height: 24px;
+  max-height: 24px;
+  max-width: 24px;
+  min-height: 24px;
+  min-width: 24px;
+  width: 24px;
+}
+
+.is-large.delete,
+.is-large.modal-close {
+  height: 32px;
+  max-height: 32px;
+  max-width: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  width: 32px;
+}
+
+.button.is-loading::after,
+.select.is-loading::after,
+.control.is-loading::after,
+.loader {
+  -webkit-animation: spinAround 500ms infinite linear;
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid #dbdbdb;
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  position: relative;
+  width: 1em;
+}
+
+.is-overlay,
+.image.is-square img,
+.image.is-1by1 img,
+.image.is-5by4 img,
+.image.is-4by3 img,
+.image.is-3by2 img,
+.image.is-5by3 img,
+.image.is-16by9 img,
+.image.is-2by1 img,
+.image.is-3by1 img,
+.image.is-4by5 img,
+.image.is-3by4 img,
+.image.is-2by3 img,
+.image.is-3by5 img,
+.image.is-9by16 img,
+.image.is-1by2 img,
+.image.is-1by3 img,
+.modal,
+.modal-background,
+.hero-video {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.button,
+.input,
+.textarea,
+.select select,
+.file-cta,
+.file-name,
+.pagination-previous,
+.pagination-next,
+.pagination-link,
+.pagination-ellipsis {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.25em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding-bottom: calc(0.375em - 1px);
+  padding-left: calc(0.625em - 1px);
+  padding-right: calc(0.625em - 1px);
+  padding-top: calc(0.375em - 1px);
+  position: relative;
+  vertical-align: top;
+}
+
+.button:focus,
+.input:focus,
+.textarea:focus,
+.select select:focus,
+.file-cta:focus,
+.file-name:focus,
+.pagination-previous:focus,
+.pagination-next:focus,
+.pagination-link:focus,
+.pagination-ellipsis:focus,
+.is-focused.button,
+.is-focused.input,
+.is-focused.textarea,
+.select select.is-focused,
+.is-focused.file-cta,
+.is-focused.file-name,
+.is-focused.pagination-previous,
+.is-focused.pagination-next,
+.is-focused.pagination-link,
+.is-focused.pagination-ellipsis,
+.button:active,
+.input:active,
+.textarea:active,
+.select select:active,
+.file-cta:active,
+.file-name:active,
+.pagination-previous:active,
+.pagination-next:active,
+.pagination-link:active,
+.pagination-ellipsis:active,
+.is-active.button,
+.is-active.input,
+.is-active.textarea,
+.select select.is-active,
+.is-active.file-cta,
+.is-active.file-name,
+.is-active.pagination-previous,
+.is-active.pagination-next,
+.is-active.pagination-link,
+.is-active.pagination-ellipsis {
+  outline: none;
+}
+
+.button[disabled],
+.input[disabled],
+.textarea[disabled],
+.select select[disabled],
+.file-cta[disabled],
+.file-name[disabled],
+.pagination-previous[disabled],
+.pagination-next[disabled],
+.pagination-link[disabled],
+.pagination-ellipsis[disabled] {
+  cursor: not-allowed;
+}
+
+/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+audio,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+html {
+  background-color: white;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+code,
+pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: monospace;
+}
+
+body {
+  color: #909090;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+a {
+  color: #fa4356;
+  border-bottom: 1px solid #fa4356;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a strong {
+  color: currentColor;
+}
+
+a:hover {
+  color: #d91e44;
+  border-bottom: 1px solid #d91e44;
+}
+
+code {
+  background-color: whitesmoke;
+  color: #ff3860;
+  font-size: 0.875em;
+  font-weight: normal;
+  padding: 0.25em 0.5em 0.25em;
+}
+
+hr {
+  background-color: whitesmoke;
+  border: none;
+  display: block;
+  height: 2px;
+  margin: 1.5rem 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: baseline;
+}
+
+small {
+  font-size: 0.875em;
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+strong {
+  color: #363636;
+  font-weight: 700;
+}
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  background-color: whitesmoke;
+  color: #4a4a4a;
+  font-size: 0.875em;
+  overflow-x: auto;
+  padding: 1.25rem 1.5rem;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+pre code {
+  background-color: transparent;
+  color: currentColor;
+  font-size: 1em;
+  padding: 0;
+}
+
+table td,
+table th {
+  text-align: left;
+  vertical-align: top;
+}
+
+table th {
+  color: #363636;
+}
+
+.clearfix::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+/* ÃƒÂ­Ã¢â‚¬Â¦Ã‚ÂÃƒÂ¬Ã…Â Ã‚Â¤ÃƒÂ­Ã…Â Ã‚Â¸ */
+.is-size-1 {
+  font-size: 3rem !important;
+}
+
+.is-size-2 {
+  font-size: 2.5rem !important;
+}
+
+.is-size-3 {
+  font-size: 2rem !important;
+}
+
+.is-size-4 {
+  font-size: 1.5rem !important;
+}
+
+.is-size-5 {
+  font-size: 1.25rem !important;
+}
+
+.is-size-6 {
+  font-size: 1rem !important;
+}
+
+.is-size-7 {
+  font-size: 0.75rem !important;
+}
+
+@media screen and (max-width: 768px) {
+  .is-size-1-mobile {
+    font-size: 3rem !important;
+  }
+  .is-size-2-mobile {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3-mobile {
+    font-size: 2rem !important;
+  }
+  .is-size-4-mobile {
+    font-size: 1.5rem !important;
+  }
+  .is-size-5-mobile {
+    font-size: 1.25rem !important;
+  }
+  .is-size-6-mobile {
+    font-size: 1rem !important;
+  }
+  .is-size-7-mobile {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  .is-size-1-tablet {
+    font-size: 3rem !important;
+  }
+  .is-size-2-tablet {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3-tablet {
+    font-size: 2rem !important;
+  }
+  .is-size-4-tablet {
+    font-size: 1.5rem !important;
+  }
+  .is-size-5-tablet {
+    font-size: 1.25rem !important;
+  }
+  .is-size-6-tablet {
+    font-size: 1rem !important;
+  }
+  .is-size-7-tablet {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (max-width: 1087px) {
+  .is-size-1-touch {
+    font-size: 3rem !important;
+  }
+  .is-size-2-touch {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3-touch {
+    font-size: 2rem !important;
+  }
+  .is-size-4-touch {
+    font-size: 1.5rem !important;
+  }
+  .is-size-5-touch {
+    font-size: 1.25rem !important;
+  }
+  .is-size-6-touch {
+    font-size: 1rem !important;
+  }
+  .is-size-7-touch {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (min-width: 1088px) {
+  .is-size-1-desktop {
+    font-size: 3rem !important;
+  }
+  .is-size-2-desktop {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3-desktop {
+    font-size: 2rem !important;
+  }
+  .is-size-4-desktop {
+    font-size: 1.5rem !important;
+  }
+  .is-size-5-desktop {
+    font-size: 1.25rem !important;
+  }
+  .is-size-6-desktop {
+    font-size: 1rem !important;
+  }
+  .is-size-7-desktop {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .is-size-1-widescreen {
+    font-size: 3rem !important;
+  }
+  .is-size-2-widescreen {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3-widescreen {
+    font-size: 2rem !important;
+  }
+  .is-size-4-widescreen {
+    font-size: 1.5rem !important;
+  }
+  .is-size-5-widescreen {
+    font-size: 1.25rem !important;
+  }
+  .is-size-6-widescreen {
+    font-size: 1rem !important;
+  }
+  .is-size-7-widescreen {
+    font-size: 0.75rem !important;
+  }
+}
+
+@media screen and (min-width: 1472px) {
+  .is-size-1-fullhd {
+    font-size: 3rem !important;
+  }
+  .is-size-2-fullhd {
+    font-size: 2.5rem !important;
+  }
+  .is-size-3-fullhd {
+    font-size: 2rem !important;
+  }
+  .is-size-4-fullhd {
+    font-size: 1.5rem !important;
+  }
+  .is-size-5-fullhd {
+    font-size: 1.25rem !important;
+  }
+  .is-size-6-fullhd {
+    font-size: 1rem !important;
+  }
+  .is-size-7-fullhd {
+    font-size: 0.75rem !important;
+  }
+}
+
+
+.is-text-bold {
+  font-weight: bold;
+}
+
+.modal {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  z-index: 40;
+}
+
+.modal.is-active {
+  display: flex;
+}
+
+.modal-background {
+  background-color: rgba(10, 10, 10, 0.86);
+}
+
+.modal-content,
+.modal-card {
+  margin: 0 20px;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px), print {
+  .modal-content,
+  .modal-card {
+    margin: 0 auto;
+    max-height: calc(100vh - 40px);
+    width: 640px;
+  }
+}
+
+.modal-close {
+  background: none;
+  height: 40px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+}
+
+.modal-card {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 40px);
+  overflow: hidden;
+  -ms-overflow-y: visible;
+}
+
+.modal-card-head,
+.modal-card-foot {
+  align-items: center;
+  background-color: whitesmoke;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-card-head {
+  border-bottom: 1px solid #dbdbdb;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.modal-card-title {
+  color: #363636;
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.modal-card-foot {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top: 1px solid #dbdbdb;
+}
+
+.modal-card-foot .button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.modal-card-body {
+  -webkit-overflow-scrolling: touch;
+  background-color: white;
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow: auto;
+  padding: 20px;
+}
+
+
+.section {
+  padding: 3rem 1.5rem;
+}
+
+@media screen and (min-width: 1088px) {
+  .section.is-medium {
+    padding: 9rem 1.5rem;
+  }
+  .section.is-large {
+    padding: 18rem 1.5rem;
+  }
+}
+
+.footer {
+  background-color: #fafafa;
+  padding: 3rem 1.5rem 6rem;
+}
+/*# sourceMappingURL=bulma.css.map */
+
+#wrap {
+  padding: 1rem 2rem 5rem;
+}
+.content .table {
+  width: 100%;
+}
+.content .table th,
+.content .table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table {
+  font-size: 0.875rem;
+}
+.table th {
+  border: 1px solid #dbdbdb;
+  border-width: 0 0 1px;
+  padding: 0.5em 0.75em;
+  vertical-align: top;
+  font-weight: normal;
+}
+
+.table.is-bordered td, 
+.table.is-bordered th {
+  border-width: 1px;
+}
+.content table thead td, 
+.content table thead th {
+  border-width: 0 0 2px;
+  color: #fff;
+}
+.content table th {
+  color: #363636;
+  text-align: left;
+  font-size: 14px;
+}
+.content table td {
+  font-size: 12px;
+}
+
+.content table td, 
+.content table th {
+  border: 1px solid #dbdbdb;
+  border-width: 0 0 1px;
+  padding: 0.5em 0.75em;
+  vertical-align: top;
+  color: #909090;
+}
+
+/* ÃƒÂ«Ã‚Â°Ã‚Â±ÃƒÂªÃ‚Â·Ã‚Â¸ÃƒÂ«Ã‚ÂÃ‚Â¼ÃƒÂ¬Ã…Â¡Ã‚Â´ÃƒÂ«Ã¢â‚¬Å“Ã…â€œ */
+.bg-whitesmoke {
+  background: #fa4356;
+}
+
+
+
+
+/* ÃƒÂ­Ã†â€™Ã…â€œÃƒÂªÃ‚Â·Ã‚Â¸ */
+
+.tag:not(body) {
+  align-items: center;
+}
+  .delete,
+  .modal-close {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: rgba(10, 10, 10, 0.2);
+    border: none;
+    border-radius: 290486px;
+    cursor: pointer;
+    pointer-events: auto;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 0;
+    height: 20px;
+    max-height: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    min-width: 20px;
+    outline: none;
+    position: relative;
+    vertical-align: top;
+    width: 20px;
+  }
+  
+  .delete::before,
+  .modal-close::before,
+  .delete::after,
+  .modal-close::after {
+    background-color: white;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+  }
+  
+  .delete::before,
+  .modal-close::before {
+    height: 2px;
+    width: 50%;
+  }
+  
+  .delete::after,
+  .modal-close::after {
+    height: 50%;
+    width: 2px;
+  }
+  
+  .delete:hover,
+  .modal-close:hover,
+  .delete:focus,
+  .modal-close:focus {
+    background-color: rgba(10, 10, 10, 0.3);
+  }
+  
+  .delete:active,
+  .modal-close:active {
+    background-color: rgba(10, 10, 10, 0.4);
+  }
+  
+  .is-small.delete,
+  .is-small.modal-close {
+    height: 16px;
+    max-height: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    min-width: 16px;
+    width: 16px;
+  }
+  
+  .is-medium.delete,
+  .is-medium.modal-close {
+    height: 24px;
+    max-height: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    min-width: 24px;
+    width: 24px;
+  }
+  
+  .is-large.delete,
+  .is-large.modal-close {
+    height: 32px;
+    max-height: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    min-width: 32px;
+    width: 32px;
+  }
+  
+  .button.is-loading::after,
+  .select.is-loading::after,
+  .control.is-loading::after,
+  .loader {
+    -webkit-animation: spinAround 500ms infinite linear;
+    animation: spinAround 500ms infinite linear;
+    border: 2px solid #dbdbdb;
+    border-radius: 290486px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: "";
+    display: block;
+    height: 1em;
+    position: relative;
+    width: 1em;
+  }
+  
+  .is-overlay,
+  .image.is-square img,
+  .image.is-1by1 img,
+  .image.is-5by4 img,
+  .image.is-4by3 img,
+  .image.is-3by2 img,
+  .image.is-5by3 img,
+  .image.is-16by9 img,
+  .image.is-2by1 img,
+  .image.is-3by1 img,
+  .image.is-4by5 img,
+  .image.is-3by4 img,
+  .image.is-2by3 img,
+  .image.is-3by5 img,
+  .image.is-9by16 img,
+  .image.is-1by2 img,
+  .image.is-1by3 img,
+  .modal,
+  .modal-background,
+  .hero-video {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .button,
+  .input,
+  .textarea,
+  .select select,
+  .file-cta,
+  .file-name,
+  .pagination-previous,
+  .pagination-next,
+  .pagination-link,
+  .pagination-ellipsis {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.25em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(0.375em - 1px);
+    padding-left: calc(0.625em - 1px);
+    padding-right: calc(0.625em - 1px);
+    padding-top: calc(0.375em - 1px);
+    position: relative;
+    vertical-align: top;
+  }
+  
+  .button:focus,
+  .input:focus,
+  .textarea:focus,
+  .select select:focus,
+  .file-cta:focus,
+  .file-name:focus,
+  .pagination-previous:focus,
+  .pagination-next:focus,
+  .pagination-link:focus,
+  .pagination-ellipsis:focus,
+  .is-focused.button,
+  .is-focused.input,
+  .is-focused.textarea,
+  .select select.is-focused,
+  .is-focused.file-cta,
+  .is-focused.file-name,
+  .is-focused.pagination-previous,
+  .is-focused.pagination-next,
+  .is-focused.pagination-link,
+  .is-focused.pagination-ellipsis,
+  .button:active,
+  .input:active,
+  .textarea:active,
+  .select select:active,
+  .file-cta:active,
+  .file-name:active,
+  .pagination-previous:active,
+  .pagination-next:active,
+  .pagination-link:active,
+  .pagination-ellipsis:active,
+  .is-active.button,
+  .is-active.input,
+  .is-active.textarea,
+  .select select.is-active,
+  .is-active.file-cta,
+  .is-active.file-name,
+  .is-active.pagination-previous,
+  .is-active.pagination-next,
+  .is-active.pagination-link,
+  .is-active.pagination-ellipsis {
+    outline: none;
+  }
+  
+  .button[disabled],
+  .input[disabled],
+  .textarea[disabled],
+  .select select[disabled],
+  .file-cta[disabled],
+  .file-name[disabled],
+  .pagination-previous[disabled],
+  .pagination-next[disabled],
+  .pagination-link[disabled],
+  .pagination-ellipsis[disabled] {
+    cursor: not-allowed;
+  }
+  
+  /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+  html,
+  body,
+  p,
+  ol,
+  ul,
+  li,
+  dl,
+  dt,
+  dd,
+  blockquote,
+  figure,
+  fieldset,
+  legend,
+  textarea,
+  pre,
+  iframe,
+  hr,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 100%;
+    font-weight: normal;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  button,
+  input,
+  select,
+  textarea {
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  img,
+  audio,
+  video {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  iframe {
+    border: 0;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  td,
+  th {
+    padding: 0;
+    text-align: left;
+  }
+  
+  html {
+    background-color: white;
+    font-size: 16px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  article,
+  aside,
+  figure,
+  footer,
+  header,
+  hgroup,
+  section {
+    display: block;
+  }
+  
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+      "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  }
+  
+  code,
+  pre {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    font-family: monospace;
+  }
+  
+  body {
+    color: #909090;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  a {
+    color: #fa4356;
+    border-bottom: 1px solid #fa4356;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  a strong {
+    color: currentColor;
+  }
+  
+  a:hover {
+    color: #fa4356;
+  }
+  
+  code {
+    background-color: whitesmoke;
+    color: #ff3860;
+    font-size: 0.875em;
+    font-weight: normal;
+    padding: 0.25em 0.5em 0.25em;
+  }
+  
+  hr {
+    background-color: whitesmoke;
+    border: none;
+    display: block;
+    height: 2px;
+    margin: 1.5rem 0;
+  }
+  
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    vertical-align: baseline;
+  }
+  
+  small {
+    font-size: 0.875em;
+  }
+  
+  span {
+    font-style: inherit;
+    font-weight: inherit;
+  }
+  
+  strong {
+    color: #363636;
+    font-weight: 700;
+  }
+  
+  pre {
+    -webkit-overflow-scrolling: touch;
+    background-color: whitesmoke;
+    color: #4a4a4a;
+    font-size: 0.875em;
+    overflow-x: auto;
+    padding: 1.25rem 1.5rem;
+    white-space: pre;
+    word-wrap: normal;
+  }
+  
+  pre code {
+    background-color: transparent;
+    color: currentColor;
+    font-size: 1em;
+    padding: 0;
+  }
+  
+  table td,
+  table th {
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  table th {
+    color: #363636;
+  }
+  
+  .clearfix::after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+  
+  /* ÃƒÆ’Ã‚Â­ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¬Ãƒâ€¦Ã‚Â Ãƒâ€šÃ‚Â¤ÃƒÆ’Ã‚Â­Ãƒâ€¦Ã‚Â Ãƒâ€šÃ‚Â¸ */
+  .is-size-1 {
+    font-size: 3rem !important;
+  }
+  
+  .is-size-2 {
+    font-size: 2.5rem !important;
+  }
+  
+  .is-size-3 {
+    font-size: 2rem !important;
+  }
+  
+  .is-size-4 {
+    font-size: 1.5rem !important;
+  }
+  
+  .is-size-5 {
+    font-size: 1.25rem !important;
+  }
+  
+  .is-size-6 {
+    font-size: 1rem !important;
+  }
+  
+  .is-size-7 {
+    font-size: 0.75rem !important;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .is-size-1-mobile {
+      font-size: 3rem !important;
+    }
+    .is-size-2-mobile {
+      font-size: 2.5rem !important;
+    }
+    .is-size-3-mobile {
+      font-size: 2rem !important;
+    }
+    .is-size-4-mobile {
+      font-size: 1.5rem !important;
+    }
+    .is-size-5-mobile {
+      font-size: 1.25rem !important;
+    }
+    .is-size-6-mobile {
+      font-size: 1rem !important;
+    }
+    .is-size-7-mobile {
+      font-size: 0.75rem !important;
+    }
+  }
+  
+  @media screen and (min-width: 769px), print {
+    .is-size-1-tablet {
+      font-size: 3rem !important;
+    }
+    .is-size-2-tablet {
+      font-size: 2.5rem !important;
+    }
+    .is-size-3-tablet {
+      font-size: 2rem !important;
+    }
+    .is-size-4-tablet {
+      font-size: 1.5rem !important;
+    }
+    .is-size-5-tablet {
+      font-size: 1.25rem !important;
+    }
+    .is-size-6-tablet {
+      font-size: 1rem !important;
+    }
+    .is-size-7-tablet {
+      font-size: 0.75rem !important;
+    }
+  }
+  
+  @media screen and (max-width: 1087px) {
+    .is-size-1-touch {
+      font-size: 3rem !important;
+    }
+    .is-size-2-touch {
+      font-size: 2.5rem !important;
+    }
+    .is-size-3-touch {
+      font-size: 2rem !important;
+    }
+    .is-size-4-touch {
+      font-size: 1.5rem !important;
+    }
+    .is-size-5-touch {
+      font-size: 1.25rem !important;
+    }
+    .is-size-6-touch {
+      font-size: 1rem !important;
+    }
+    .is-size-7-touch {
+      font-size: 0.75rem !important;
+    }
+  }
+  
+  @media screen and (min-width: 1088px) {
+    .is-size-1-desktop {
+      font-size: 3rem !important;
+    }
+    .is-size-2-desktop {
+      font-size: 2.5rem !important;
+    }
+    .is-size-3-desktop {
+      font-size: 2rem !important;
+    }
+    .is-size-4-desktop {
+      font-size: 1.5rem !important;
+    }
+    .is-size-5-desktop {
+      font-size: 1.25rem !important;
+    }
+    .is-size-6-desktop {
+      font-size: 1rem !important;
+    }
+    .is-size-7-desktop {
+      font-size: 0.75rem !important;
+    }
+  }
+  
+  @media screen and (min-width: 1280px) {
+    .is-size-1-widescreen {
+      font-size: 3rem !important;
+    }
+    .is-size-2-widescreen {
+      font-size: 2.5rem !important;
+    }
+    .is-size-3-widescreen {
+      font-size: 2rem !important;
+    }
+    .is-size-4-widescreen {
+      font-size: 1.5rem !important;
+    }
+    .is-size-5-widescreen {
+      font-size: 1.25rem !important;
+    }
+    .is-size-6-widescreen {
+      font-size: 1rem !important;
+    }
+    .is-size-7-widescreen {
+      font-size: 0.75rem !important;
+    }
+  }
+  
+  @media screen and (min-width: 1472px) {
+    .is-size-1-fullhd {
+      font-size: 3rem !important;
+    }
+    .is-size-2-fullhd {
+      font-size: 2.5rem !important;
+    }
+    .is-size-3-fullhd {
+      font-size: 2rem !important;
+    }
+    .is-size-4-fullhd {
+      font-size: 1.5rem !important;
+    }
+    .is-size-5-fullhd {
+      font-size: 1.25rem !important;
+    }
+    .is-size-6-fullhd {
+      font-size: 1rem !important;
+    }
+    .is-size-7-fullhd {
+      font-size: 0.75rem !important;
+    }
+  }
+  
+  
+  .is-text-bold {
+    font-weight: bold;
+  }
+  
+  .modal {
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+    z-index: 40;
+  }
+  
+  .modal.is-active {
+    display: flex;
+  }
+  
+  .modal-background {
+    background-color: rgba(10, 10, 10, 0.86);
+  }
+  
+  .modal-content,
+  .modal-card {
+    margin: 0 20px;
+    max-height: calc(100vh - 160px);
+    overflow: auto;
+    position: relative;
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 769px), print {
+    .modal-content,
+    .modal-card {
+      margin: 0 auto;
+      max-height: calc(100vh - 40px);
+      width: 640px;
+    }
+  }
+  
+  .modal-close {
+    background: none;
+    height: 40px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+  }
+  
+  .modal-card {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 40px);
+    overflow: hidden;
+    -ms-overflow-y: visible;
+  }
+  
+  .modal-card-head,
+  .modal-card-foot {
+    align-items: center;
+    background-color: whitesmoke;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .modal-card-head {
+    border-bottom: 1px solid #dbdbdb;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  
+  .modal-card-title {
+    color: #363636;
+    flex-grow: 1;
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  
+  .modal-card-foot {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top: 1px solid #dbdbdb;
+  }
+  
+  .modal-card-foot .button:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .modal-card-body {
+    -webkit-overflow-scrolling: touch;
+    background-color: white;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: auto;
+    padding: 20px;
+  }
+  
+  
+  .section {
+    padding: 3rem 1.5rem;
+  }
+  
+  @media screen and (min-width: 1088px) {
+    .section.is-medium {
+      padding: 9rem 1.5rem;
+    }
+    .section.is-large {
+      padding: 18rem 1.5rem;
+    }
+  }
+  
+  .footer {
+    background-color: #fafafa;
+    padding: 3rem 1.5rem 6rem;
+  }
+  /*# sourceMappingURL=bulma.css.map */
+  
+  #wrap {
+    padding: 1rem 2rem 5rem;
+  }
+  .content .table {
+    width: 100%;
+  }
+  .content .table th,
+  .content .table td {
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .table {
+    font-size: 0.875rem;
+  }
+  .table th {
+    border: 1px solid #dbdbdb;
+    border-width: 0 0 1px;
+    padding: 0.5em 0.75em;
+    vertical-align: top;
+    font-weight: normal;
+  }
+  
+  .table.is-bordered td, 
+  .table.is-bordered th {
+    border-width: 1px;
+  }
+  .content table thead td, 
+  .content table thead th {
+    border-width: 0 0 2px;
+    color: #fff;
+  }
+  .content table th {
+    color: #363636;
+    text-align: left;
+    font-size: 14px;
+  }
+  .content table td {
+    font-size: 12px;
+  }
+  
+  .content table td, 
+  .content table th {
+    border: 1px solid #dbdbdb;
+    border-width: 0 0 1px;
+    padding: 0.5em 0.75em;
+    vertical-align: top;
+    color: #909090;
+  }
+  
+  .bg-whitesmoke {
+    background: #fa4356;
+  }
+  
+  
+  
+  
+  .tag:not(body) {
+    align-items: center;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    color: #4a4a4a;
+    display: inline-flex;
+    width: 66px;
+    font-size: 11px;
+    height: 2em;
+    justify-content: center;
+    line-height: 11px;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    white-space: nowrap;
+  }
+  
+  .tag:not(body) .delete {
+    margin-left: 0.25rem;
+    margin-right: -0.375rem;
+  }
+  
+  .tag:not(body).is-success {
+    background-color: #fa4356;
+    color: #fff;
+  }
+  
+  .tag:not(body).is-going {
+    background-color: #dbdbdb;
+    color: #fff;
+  }
+  
+  
+  .tag:not(body).is-medium {
+    font-size: 1rem;
+  }
+  
+  .tag:not(body).is-large {
+    font-size: 1.25rem;
+  }
+  
+  
+  
+ 
+  
+  h1 {
+    color: #fa4356;
+  }
+  
+  .mg-t20 {
+    margin-top: 20px !important;
+  }
+
+
+.tag:not(body) .delete {
+  margin-left: 0.25rem;
+  margin-right: -0.375rem;
+}
+
+.tag:not(body).is-success {
+  background-color: #fa4356;
+  color: #fff;
+}
+
+.tag:not(body).is-going {
+  background-color: #dbdbdb;
+  color: #fff;
+}
+
+
+.tag:not(body).is-medium {
+  font-size: 1rem;
+}
+
+.tag:not(body).is-large {
+  font-size: 1.25rem;
+}
+
+
+
+.bg-col1 {
+  background: #ffffff;
+}
+.bg-col2 {
+  background: #eaeaea;
+}
+.bg-col3 {
+  background: #f0b7bd;
+  color: #fff !important;
+}
+.bg-col4 {
+  background: #fb7f8c;
+  color: #fff !important;
+}
+.bg-col5 {
+  background: #a5bfe0;
+  color: #fff !important;
+}
+.bg-col6 {
+  background: #d5ceff;
+  color: #fff !important;
+}
+
+.bg-col7 {
+  background: #fc96ff;
+  color: #fff !important;
+}
+.bg-col8 {
+  background: #bebbce;
+  color: #fff !important;
+}
+h1 {
+  color: #fa4356;
+}
+
+.mg-t20 {
+  margin-top: 20px !important;
+}
+</style>
+<body>
+
+  <div id="wrap">
+    <h1 class="is-text-bold is-size-2">작업 리스트</h1>
+    <p>작업내역 최종 업데이트: 2019.06.19</p>
+
+    <div class="content mg-t20">
+      <table class="table is-bordered">
+        <col width="80px">
+        <col width="80px">
+        <col width="120px">
+        <col width="200px">
+        <col width="85px">
+        <col width="160px">
+        <col width="*">
+        <col width="70px">
+
+        <thead>
+          <tr>
+            <th scope="col" rowspan="2" class="bg-whitesmoke">1 DEPTH</th>
+            <th scope="col" rowspan="2" class="bg-whitesmoke">2 DEPTH</th>
+            <th scope="col" rowspan="2" class="bg-whitesmoke">3 DEPTH</th>
+            <th scope="col" colspan="2" class="bg-whitesmoke">URL</th>
+            <th scope="col" rowspan="2" class="bg-whitesmoke">팝업</th>
+            <th scope="col" rowspan="2" class="bg-whitesmoke">메모</th>
+            <th scope="col" rowspan="2" class="bg-whitesmoke">수정일</th>
+          </tr>
+          <tr>
+            <th scope="col" class="bg-whitesmoke">모바일</th>
+            <th scope="col" class="bg-whitesmoke">작업 상태</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>메인</td>
+            <td class="bg-col1">메인</td>
+            <td></td>
+            <td title="url">
+              <a href="../cgv/index.html" target="_blank">
+                index.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <!-- 상태 : 완료(is-success), 진행중(is-going) -->
+              <!-- <p class="tag is-going">진행중</p> -->
+              <p class="tag is-going">진행중</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+          <tr>
+            <td>인트로</td>
+            <td class="bg-col1">인트로</td>
+            <td></td>
+            <td title="url">
+              <a href="../cgv/intro.html" target="_blank">
+                intro.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <!-- 상태 : 완료(is-success), 진행중(is-going) -->
+              <!-- <p class="tag is-going">진행중</p> -->
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+
+          <tr>
+            <td>공통</td>
+            <td class="bg-col2">로그인</td>
+            <td>로그인</td>
+            <td title="url">
+              <a href="../cgv/login/index.html" target="_blank">
+                login/index.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              - 휴대폰 인증<br />
+            </td>
+            <td title="메모">
+            </td>
+            <td title="날짜">6/19(수)</td>
+          </tr>
+          <tr>
+            <td>공통</td>
+            <td class="bg-col2">로그인</td>
+            <td>로그아웃안내</td>
+            <td title="url">
+              <a href="../cgv/login/logout.html" target="_blank">
+                login/logout.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+            </td>
+            <td title="메모">
+            </td>
+            <td title="날짜">6/19(수)</td>
+          </tr>
+
+          <tr>
+            <td>공통</td>
+            <td class="bg-col2">로그인(간편로그인 등록)</td>
+            <td>터치아이디</td>
+            <td title="url">
+              <a href="../cgv/login/touchId.html" target="_blank">
+                login/touchId.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              - 터치아이디설정팝업<br />
+            </td>
+            <td title="메모">
+            </td>
+            <td title="날짜">6/19(수)</td>
+          </tr>
+
+          <tr>
+            <td>공통</td>
+            <td class="bg-col2">로그인</td>
+            <td>페이스아이디</td>
+            <td title="url">
+              <a href="../cgv/login/faceId.html" target="_blank">
+                login/faceId.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              - FACE ID 등록팝업
+            </td>
+            <td title="메모">
+            </td>
+            <td title="날짜">6/19(수)</td>
+          </tr>
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col3">상영</td>
+            <td>상영스케쥴조회</td>
+            <td title="url">
+              <a href="../cgv/screening/schedule.html" target="_blank">
+                screening/schedule.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success"></p>
+            </td>
+            <td title="팝업유무">
+            </td>
+            <td title="메모">
+              tooltip미완료
+              tr스크롤미완료
+            </td>
+            <td title="날짜">7/10(수)</td>
+          </tr>
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col3">상영</td>
+            <td>상영영화정보</td>
+            <td title="url">
+              <a href="../cgv/screening/movieInfo.html" target="_blank">
+                screening/movieInfo.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success"></p>
+            </td>
+            <td title="팝업유무">
+            </td>
+            <td title="메모">
+              tooltop미완료
+            </td>
+            <td title="날짜">7/10(수)</td>
+          </tr>
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col3">상영</td>
+            <td>좌석판매현황<br />(좌석판매정보)</td>
+            <td title="url">
+              <a href="../cgv/screening/seatSales.html" target="_blank">
+                screening/seatSales.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+            </td>
+            <td title="메모">
+            </td>
+            <td title="날짜">6/19(수)</td>
+          </tr>
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col3">상영</td>
+            <td>VIP좌석설정</td>
+            <td title="url">
+              <a href="../cgv/screening/vipSeatSetting.html" target="_blank">
+                screening/vipSeatSetting.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-going">진행중</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모">
+              - 좌석 스크립트
+            </td>
+            <td title="날짜">6/19(수)</td>
+          </tr>
+
+          <tr class="bg-warning">
+            <td>서브</td>
+            <td class="bg-col3">상영</td>
+            <td>VIP좌석설정</td>
+            <td title="url">
+              <a href="../cgv/screening/vipSeatInfo.html" target="_blank">
+                screening/vipSeatInfo.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모">
+              <p class="txt-red">- 테이블 폼 입력 부분 디자인 재정의 예정</p>
+            </td>
+            <td title="날짜">6/19(수)</td>
+          </tr>
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col3">상영</td>
+            <td>VIP좌석설정</td>
+            <td title="url">
+              <a href="../cgv/screening/vipSaleInfo.html" target="_blank">
+                screening/vipSaleInfo.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모">
+
+            </td>
+            <td title="날짜">6/19(수)</td>
+          </tr>
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col4">고객</td>
+            <td>통합정보조회</td>
+            <td title="url">
+              <a href="../cgv/customer/intergratedInfo.html" target="_blank">
+                customer/intergratedInfo.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모">
+              - 탭3개(고객, 판매/예매번호, 상품권/쿠폰)
+            </td>
+            <td title="날짜"></td>
+          </tr>
+
+       
+          <tr>
+            <td>서브</td>
+            <td class="bg-col4">고객</td>
+            <td>고객정보<br />(VOC이력)</td>
+            <td title="url">
+              <a href="../cgv/customer/vocRecord.html" target="_blank">
+                customer/vocRecord.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모">
+              - VOC조회<br />
+              - 테이블 보더 확인<br />
+            </td>
+            <td title="날짜"></td>
+          </tr>
+
+    
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col4">고객</td>
+            <td>분실물관리</td>
+            <td title="url">
+              <a href="../cgv/customer/lostManagement.html" target="_blank">
+                customer/lostManagement.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모">- 탭2개(습득된분실물, 고객접수분실물)</td>
+            <td title="날짜"></td>
+          </tr>
+
+          <tr class="">
+            <td>서브</td>
+            <td class="bg-col4">고객</td>
+            <td>분실물관리>분실물 습득등록</td>
+            <td title="url">
+              <a href="../cgv/customer/AcquisitionRegist.html" target="_blank">
+                customer/AcquisitionRegist.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모">
+              - 분실물 습득등록(상영관)<br />
+              - 분실물 습득등록(일반)<br />
+            </td>
+            <td title="날짜"></td>
+          </tr>
+          <tr class="">
+            <td>서브</td>
+            <td class="bg-col4">고객</td>
+            <td>분실물관리>습득된분실물 상세</td>
+            <td title="url">
+              <a href="../cgv/customer/AcquisitionRegistDetail.html" target="_blank">
+                customer/AcquisitionRegistDetail.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모">
+            </td>
+            <td title="날짜"></td>
+          </tr>
+    
+          <tr>
+            <td>서브</td>
+            <td class="bg-col4">고객</td>
+            <td>분실물관리>분실물 접수등록</td>
+            <td title="url">
+              <a href="../cgv/customer/receptionRegist.html" target="_blank">
+                customer/receptionRegist.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모">
+            </td>
+            <td title="날짜"></td>
+          </tr>
+      
+          <tr>
+            <td>서브</td>
+            <td class="bg-col5">운영</td>
+            <td>업무메모-리스트</td>
+            <td title="url">
+              <a href="../cgv/businessNote/workList.html" target="_blank">
+                businessNote/workList.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              - 달력 팝업<br />
+              - 업무처리 완료 팝업<br />
+              - 업무메모 삭제 팝업<br />
+              
+            </td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+          <tr>
+            <td>서브</td>
+            <td class="bg-col5">운영</td>
+            <td>업무메모-등록폼</td>
+            <td title="url">
+              <a href="../cgv/businessNote/workRegister.html" target="_blank">
+                businessNote/workRegister.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              - 시간선택팝업<br />
+            </td>
+            <td title="메모">- 탭2</td>
+            <td title="날짜"></td>
+          </tr>
+          <tr>
+            <td>서브</td>
+            <td class="bg-col5">운영</td>
+            <td>업무메모-수정폼</td>
+            <td title="url">
+              <a href="../cgv/businessNote/workEdit.html" target="_blank">
+                businessNote/workEdit.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              - 다음 스케쥴 시간
+            </td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+          <tr>
+            <td>서브</td>
+            <td class="bg-col5">운영</td>
+            <td>업무메모-결과폼</td>
+            <td title="url">
+              <a href="../cgv/businessNote/workResult.html" target="_blank">
+                businessNote/workResult.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+          <tr>
+            <td>서브</td>
+            <td class="bg-col5">운영</td>
+            <td>업무메모-결과상세</td>
+            <td title="url">
+              <a href="../cgv/businessNote/workComplete.html" target="_blank">
+                businessNote/workComplete.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+          <tr>
+            <td>서브</td>
+            <td class="bg-col5">운영</td>
+            <td>업무메모-나의근무스케줄</td>
+            <td title="url">
+              <a href="../cgv/businessNote/myworkSchedule.html" target="_blank">
+                businessNote/myworkSchedule.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-going">진행중</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+          <tr>
+            <td>서브</td>
+            <td class="bg-col5">운영</td>
+            <td>업무메모-알림내역</td>
+            <td title="url">
+              <a href="../cgv/businessNote/alarmHistory.html" target="_blank">
+                businessNote/alarmHistory.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+          <tr>
+            <td>서브</td>
+            <td class="bg-col5">운영</td>
+            <td>업무메모-환경설정</td>
+            <td title="url">
+              <a href="../cgv/businessNote/settings.html" target="_blank">
+                businessNote/settings.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+          <tr>
+            <td>서브</td>
+            <td class="bg-col5">운영</td>
+            <td>업무메모-알림내역</td>
+            <td title="url">
+              <a href="../cgv/businessNote/notificationSettings.html" target="_blank">
+                businessNote/notificationSettings.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무"></td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col6">미소지기<br />(정직원)</td>
+            <td>입사</td>
+            <td title="url">
+              <a href="../cgv/smileEmployee/join.html" target="_blank">
+                smileEmployee/join.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              
+            </td>
+            <td title="메모">
+              - 1, 2<br/>
+            </td>
+            <td title="날짜"></td>
+          </tr>
+         
+          <tr>
+            <td>서브</td>
+            <td class="bg-col6">미소지기<br />(정직원)</td>
+            <td>조회</td>
+            <td title="url">
+              <a href="../cgv/smileEmployee/lookup.html" target="_blank">
+                smileEmployee/lookup.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              - 사원명조회팝업
+            </td>
+            <td title="메모">
+              - 조회결과
+            </td>
+            <td title="날짜"></td>
+          </tr>
+          <tr>
+            <td>서브</td>
+            <td class="bg-col6">미소지기<br />(정직원)</td>
+            <td>미소지기 정보</td>
+            <td title="url">
+              <a href="../cgv/smileEmployee/employeeInfo.html" target="_blank">
+                smileEmployee/employeeInfo.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-going">진행중</p>
+            </td>
+            <td title="팝업유무">
+              - 근무스케쥴 조회팝업
+            </td>
+            <td title="메모">
+              - 기본정보, 스케줄 정보, 근태정보
+            </td>
+            <td title="날짜"></td>
+          </tr>
+         
+         
+          <tr>
+            <td>서브</td>
+            <td class="bg-col6">미소지기<br />(정직원)</td>
+            <td>마일리지 내역</td>
+            <td title="url">
+              <a href="../cgv/smileEmployee/mileageHistory.html" target="_blank">
+                smileEmployee/mileageHistory.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              - 마일리지 지급팝업 <br/>
+              - 긴급문자발송<br/>
+              - 긴급문자발송(퇴직자)<br/>
+              - 긴급문자발송(상세)<br/>
+              - 긴급문자발송(정상)<br/>
+              - 긴급문자발송(오류)<br/>
+            </td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col6">미소지기<br />(정직원)</td>
+            <td>긴급문자발송</td>
+            <td title="url">
+              <a href="../cgv/smileEmployee/workSchedule.html" target="_blank">
+                smileEmployee/workSchedule.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              
+            </td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr> 
+
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col6">미소지기<br />(정직원)</td>
+            <td>긴급문자발송</td>
+            <td title="url">
+              <a href="../cgv/smileEmployee/emergencyMsg.html" target="_blank">
+                smileEmployee/emergencyMsg.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+             
+            </td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col6">미소지기<br />(정직원)</td>
+            <td>긴급문자발송</td>
+            <td title="url">
+              <a href="../cgv/smileEmployee/emergencyMsg02.html" target="_blank">
+                smileEmployee/emergencyMsg02.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              
+            </td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col6">미소지기<br />(정직원)</td>
+            <td>휴가신청관리</td>
+            <td title="url">
+              <a href="../cgv/smileEmployee/vacationApply.html" target="_blank">
+                smileEmployee/vacationApply.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              - 휴가신청팝업 <br/>
+            </td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+
+          <tr>
+            <td>서브</td>
+            <td class="bg-col6">미소지기<br />(정직원)</td>
+            <td>근무스케쥴 변경관리</td>
+            <td title="url">
+              <a href="../cgv/smileEmployee/scheduleManagement.html" target="_blank">
+                smileEmployee/scheduleManagement.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              - 맞교대신청 팝업-정직원 <br/>
+              - 맞교대신청 팝업-미소지기 <br/>
+              - 근무교체신청 팝업-정직원 <br/>
+              - 근무교체신청 팝업-미소지기 <br/>
+              - 근무조정신청 팝업-정직원 <br/>
+              - 근무조정신청 팝업-미소지기 <br/>
+            </td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+          <tr>
+            <td>서브</td>
+            <td class="bg-col6">미소지기<br />(정직원)</td>
+            <td>문서뷰어근로계약서</td>
+            <td title="url">
+              <a href="../cgv/smileEmployee/documentViewer.html" target="_blank">
+                smileEmployee/documentViewer.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-going">진행중</p>
+            </td>
+            <td title="팝업유무">
+              - 근로계약서 _무기<br>
+              - 근로계약서 _단기<br>
+              - 개인정보서약서<br>
+              - 범죄전력조회동의서<br>
+              - 연장근로동의서
+            </td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+
+          <tr>
+              <td>서브</td>
+              <td class="bg-col7">미소지기<br />(미소지기)</td>
+              <td>나의스케줄</td>
+              <td title="url">
+                <a href="../cgv/smileEmployee/scheduleCalendar.html" target="_blank">
+                  smileEmployee/scheduleCalendar.html
+                </a>
+              </td>
+              <td title="진행상황">
+                <p class="tag is-success">완료</p>
+              </td>
+              <td title="팝업유무">
+              </td>
+              <td title="메모"></td>
+              <td title="날짜"></td>
+            </tr>
+            <tr>
+              <td>서브</td>
+              <td class="bg-col7">미소지기<br />(미소지기)</td>
+              <td>맞교대신청</td>
+              <td title="url">
+                <a href="../cgv/smileEmployee/rotationApply.html" target="_blank">
+                  smileEmployee/rotationApply.html
+                </a>
+              </td>
+              <td title="진행상황">
+                <p class="tag is-success">완료</p>
+              </td>
+              <td title="팝업유무">
+                - 미소지기 조회 팝업<br/>
+                - 변경 근무일 선택 팝업
+              </td>
+              <td title="메모"></td>
+              <td title="날짜"></td>
+            </tr>
+            <tr>
+              <td>서브</td>
+              <td class="bg-col7">미소지기<br />(미소지기)</td>
+              <td>근무교체 신청</td>
+              <td title="url">
+                <a href="../cgv/smileEmployee/workApply01.html" target="_blank">
+                  smileEmployee/workApply01.html
+                </a>
+              </td>
+              <td title="진행상황">
+                <p class="tag is-success">완료</p>
+              </td>
+              <td title="팝업유무">
+                - 미소지기 조회 팝업
+              </td>
+              <td title="메모"></td>
+              <td title="날짜"></td>
+            </tr>
+            <tr>
+              <td>서브</td>
+              <td class="bg-col7">미소지기<br />(미소지기)</td>
+              <td>근무교체 신청</td>
+              <td title="url">
+                <a href="../cgv/smileEmployee/workApply02.html" target="_blank">
+                  smileEmployee/workApply02.html
+                </a>
+              </td>
+              <td title="진행상황">
+                <p class="tag is-success">완료</p>
+              </td>
+              <td title="팝업유무">
+              </td>
+              <td title="메모"></td>
+              <td title="날짜"></td>
+            </tr>
+            <tr>
+              <td>서브</td>
+              <td class="bg-col7">미소지기<br />(미소지기)</td>
+              <td>휴가 신청</td>
+              <td title="url">
+                <a href="../cgv/smileEmployee/vacationApply01.html" target="_blank">
+                  smileEmployee/vacationApply01.html
+                </a>
+              </td>
+              <td title="진행상황">
+                <p class="tag is-success">완료</p>
+              </td>
+              <td title="팝업유무">
+              </td>
+              <td title="메모">카메라 아이콘 미완료</td>
+              <td title="날짜"></td>
+            </tr>
+            <tr>
+              <td>서브</td>
+              <td class="bg-col7">미소지기<br />(미소지기)</td>
+              <td>스케줄 신청</td>
+              <td title="url">
+                <a href="../cgv/smileEmployee/scheduleApply.html" target="_blank">
+                  smileEmployee/scheduleApply.html
+                </a>
+              </td>
+              <td title="진행상황">
+                <p class="tag is-going">진행중</p>
+              </td>
+              <td title="팝업유무">
+                - 시간선택 팝업 <br>
+                - notice팝업
+              </td>
+              <td title="메모"></td>
+              <td title="날짜"></td>
+            </tr>
+            <tr>
+              <td>서브</td>
+              <td class="bg-col7">미소지기<br />(미소지기)</td>
+              <td>사이트 스케줄 조회</td>
+              <td title="url">
+                <a href="../cgv/smileEmployee/siteSchedule.html" target="_blank">
+                  smileEmployee/siteSchedule.html
+                </a>
+              </td>
+              <td title="진행상황">
+                <p class="tag is-success">완료</p>
+              </td>
+              <td title="팝업유무">
+                - 포지션 선택 팝업
+              </td>
+              <td title="메모">디자인 정직원으로 통일</td>
+              <td title="날짜"></td>
+            </tr>
+            <tr>
+              <td>서브</td>
+              <td class="bg-col7">미소지기<br />(미소지기)</td>
+              <td>근태 조회</td>
+              <td title="url">
+                <a href="../cgv/smileEmployee/attendanceInquiry.html" target="_blank">
+                  smileEmployee/attendanceInquiry.html
+                </a>
+              </td>
+              <td title="진행상황">
+                <p class="tag is-success">완료</p>
+              </td>
+              <td title="팝업유무">
+              </td>
+              <td title="메모">디자인 정직원으로 통일</td>
+              <td title="날짜"></td>
+            </tr>
+            <tr>
+              <td>서브</td>
+              <td class="bg-col7">미소지기<br />(미소지기)</td>
+              <td>마일리지 내역</td>
+              <td title="url">
+                <a href="../cgv/smileEmployee/mileageHistory01.html" target="_blank">
+                  smileEmployee/mileageHistory01.html
+                </a>
+              </td>
+              <td title="진행상황">
+                <p class="tag is-success">완료</p>
+              </td>
+              <td title="팝업유무">
+              </td>
+              <td title="메모">디자인 정직원으로 통일</td>
+              <td title="날짜"></td>
+            </tr>
+            <tr>
+              <td>서브</td>
+              <td class="bg-col7">미소지기<br />(미소지기)</td>
+              <td>미소지기 정보</td>
+              <td title="url">
+                <a href="../cgv/smileEmployee/joinDocument.html" target="_blank">
+                  smileEmployee/joinDocument.html
+                </a>
+              </td>
+              <td title="진행상황">
+                <p class="tag is-success">완료</p>
+              </td>
+              <td title="팝업유무">
+                - 알림 팝업 <br>  
+                - 자필서명 팝업  <br>
+                - 보고서뷰어
+              </td>
+              <td title="메모">디자인 정직원으로 통일(근로계약기간부분, 작성요청서류 작성일부분)</td>
+              <td title="날짜"></td>
+            </tr>
+
+          <tr>
+            <td>기타</td>
+            <td class="bg-col8">에러페이지</td>
+            <td>404</td>
+            <td title="url">
+              <a href="../cgv/etc/error404.html" target="_blank">
+                etc/error404.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              
+            </td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+          <tr>
+            <td>기타</td>
+            <td class="bg-col8">에러페이지</td>
+            <td>505</td>
+            <td title="url">
+              <a href="../cgv/etc/error505.html" target="_blank">
+                etc/error505.html
+              </a>
+            </td>
+            <td title="진행상황">
+              <p class="tag is-success">완료</p>
+            </td>
+            <td title="팝업유무">
+              
+            </td>
+            <td title="메모"></td>
+            <td title="날짜"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+
+</html>

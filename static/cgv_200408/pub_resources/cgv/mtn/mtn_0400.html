@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+ 
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body><!--  class="main-index" -->
+  <div class="cgv-mobile has-bottom-btn">
+
+    <!-- header -->
+    <header>
+      <div class="control-btns front">
+        <button type="button" class="btn-more"><i class="icon-more"></i></button>
+        <!-- 뒤로가기 버튼이 존재할 경우 사용 -->
+        <!-- <button type="button" class="btn-back"><i class="icon-back"></i></button> -->
+      </div>
+      <div class="header-contents">
+        <a href="." class="btn-logo"><img src="../../../resources/images/index/logo.png" alt=""></a>
+      </div>
+      <div class="control-btns end">
+        <!-- 알림이 있을때 .on 추가 -->
+        <button type="button" class="btn-noti on">
+          <i class="icon-noti"></i>
+             <!-- 190725 추가 -->
+        </button>
+        <!-- <a href="#" class="btn-search-main"><i class="icon-search-main"></i></a> -->
+      </div>
+    </header>
+    <!-- //header -->
+    
+    <section class="content-sub cms-tablet">
+      <div class="content-title">
+        <!-- cms navi -->
+        <button class="btn-cms-navi">업무게시판메뉴</button>
+
+        <!-- .open 추가시 열림 -->
+        <div class="cms-navi-box">
+          <div class="cms-navi">
+            <!-- .active 추가 시 열림 -->
+            <div class="cms-navi-menu not-content active">
+              <h3 class="tit">최신문서</h3>
+            </div>
+            <div class="cms-navi-menu ">
+              <h3 class="tit">업무게시판</h3>
+              <div class="content">
+                <ul class="navi-list">
+                  <li>
+                    <a href="#">업무가이드</a>
+                    <ul class="depth01">
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">공지사항</a>
+                    <ul class="depth01">
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">회신확인</a>
+                    <ul class="depth01">
+                      <li>
+                        <a href="#">첫번째 하위</a>         
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">사례공유</a>
+                  </li>
+                  <li>
+                    <a href="#">미소지기 공지</a>
+                  </li>
+                  <li>
+                    <a href="#">운영 자료실</a>
+                  </li>
+                  <li>
+                    <a href="#">구자료<span class="">(~2012.10.31)</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="cms-navi-menu ">
+              <h3 class="tit">운영</h3>
+              <div class="content">
+                <ul class="navi-list">
+                  <li>
+                    <a href="#">업무가이드</a>
+                    <ul class="depth01">
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">공지사항</a>
+                    <ul class="depth01">
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">회신확인</a>
+                    <ul class="depth01">
+                      <li>
+                        <a href="#">첫번째 하위</a>         
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">사례공유</a>
+                  </li>
+                  <li>
+                    <a href="#">미소지기 공지</a>
+                  </li>
+                  <li>
+                    <a href="#">운영 자료실</a>
+                  </li>
+                  <li>
+                    <a href="#">구자료<span class="">(~2012.10.31)</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="cms-navi-menu ">
+              <h3 class="tit">서비스</h3>
+              <div class="content">
+                <ul class="navi-list">
+                  <li>
+                    <a href="#">업무가이드</a>
+                    <ul class="depth01">
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">공지사항</a>
+                    <ul class="depth01">
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">회신확인</a>
+                    <ul class="depth01">
+                      <li>
+                        <a href="#">첫번째 하위</a>         
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">사례공유</a>
+                  </li>
+                  <li>
+                    <a href="#">미소지기 공지</a>
+                  </li>
+                  <li>
+                    <a href="#">운영 자료실</a>
+                  </li>
+                  <li>
+                    <a href="#">구자료<span class="">(~2012.10.31)</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="cms-navi-menu ">
+              <h3 class="tit">영사</h3>
+              <div class="content">
+                <ul class="navi-list">
+                  <li>
+                    <a href="#">업무가이드</a>
+                    <ul class="depth01">
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">공지사항</a>
+                    <ul class="depth01">
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">회신확인</a>
+                    <ul class="depth01">
+                      <li>
+                        <a href="#">첫번째 하위</a>         
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">첫번째 하위</a>
+                        <ul class="depth02">
+                          <li>
+                            <a href="#">두번째 하위</a>
+                            <ul class="depth03">
+                              <li>
+                                <a href="#">세번째 하위</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">사례공유</a>
+                  </li>
+                  <li>
+                    <a href="#">미소지기 공지</a>
+                  </li>
+                  <li>
+                    <a href="#">운영 자료실</a>
+                  </li>
+                  <li>
+                    <a href="#">구자료<span class="">(~2012.10.31)</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <button class="btn-naviclose">닫기</button>
+        </div>
+        <div class="cms-navi-dim"></div>
+        <!-- // cms navi -->
+        <div class="search-formbox">
+          <button class="btn-select">업무게시판</button>
+          <input class="input-search" />
+          <button type="button" class="btn-search">검색</button>
+        </div>
+        <!-- <div class="top-btn-list">
+          <button type="button" class="active">업무게시판</button>
+          <button type="button">운영</button>
+          <button type="button">서비스</button>
+          <button type="button">TMS</button>
+          <button type="button">영사</button>
+        </div> -->
+        <div class="table-title subinner-container">
+            <h5><i class="icon icon-cms-file"></i>최신문서</h5>
+        </div>
+      </div>
+      <div class="content-full content-list-box">
+        <div class="content-list">
+            <div class="table table-info">
+              <table class="noticeboard">
+                <colgroup>
+                  <col />
+                  <col width="27%" />
+                </colgroup>
+              <caption>최신등록문서</caption>
+              <thead class="txt-c">
+                <tr>
+                  <th scope="row" class="bd-r0">제목</th>
+                  <th scope="row">등록일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="txt-l">[아트하우스] 아트하우스 Club 시사회 안내Club 시사회 안내Club 시사회 안내</td>
+                  <td class="txt-c">2019-06-19</td>
+                </tr>
+                <tr>
+                  <td class="txt-l">[PI추진팀] 매점 키오스크 자동 시작 설정안내</td>
+                  <td class="txt-c">2019-06-19</td>
+                </tr>
+                <tr>
+                  <td class="txt-l">[아트하우스] Cinema Adult acation</td>
+                  <td class="txt-c">2019-06-19</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="paging-box">
+            <button type="button" class="prev">이전페이지</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button" class="active">4</button>
+            <button type="button">5</button>
+            <button type="button">6</button>
+            <button type="button" class="next">다음페이지</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="bottom-menu"> 
+        <ul class="menu"> <!-- 190730 순서 변경 및 알림내역 추가 -->
+          <li class="home">
+            <a href="#" class="bottom_btn">홈</a>
+          </li>
+          <li class="menu">
+            <a href="#" class="bottom_btn">전체메뉴</a>
+          </li>
+        
+          <li class="more">
+            <button type="button" class="bottom_btn">메뉴더보기</button>
+          </li>
+          <li class="search">
+            <a href="#" class="bottom_btn">고객조회</a>
+          </li>
+          <li class="push"> 
+            <a href="#" class="bottom_btn">알림내역
+                
+            </a>
+          </li>
+        </ul>
+        <div class="more-box">
+          <h4 class="tit">바로가기 <!---->
+            <button type="button" class="btn-edit">편집</button>
+          </h4>
+          <div class="swiper-container foot-slide-area"> <!-- class 변경 , 하단 스크립트 부분 class 수정-->
+            <div class="swiper-wrapper menu-slide">
+              <div class="swiper-slide slide-items">
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis1"></i>
+                    미소지기조회
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis2"></i>
+                    일일근태관리
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis3"></i>
+                    근무스케줄
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis4"></i>
+                    스케줄변경관리
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis5"></i>
+                    마일리지지급
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis6"></i>
+                    휴가승인
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis7"></i>
+                    긴급문자발송
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis8"></i>
+                    입사서류
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide slide-items">
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr1"></i>
+                    상영스케줄
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr2"></i>
+                    상영영화정보
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr3"></i>
+                    좌석판매현황
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr4"></i>
+                    VIP좌석설정
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-cut2"></i>
+                    VOC통합조회
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-cut3"></i>
+                    분실물관리
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mtn1"></i>
+                    업무메모
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mtn2"></i>
+                    나의 스케줄
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-slide-btns">
+                <div class="swiper-pagination"></div>
+                <a href="#" class="btn-menu-setting">
+                </a>
+              </div>
+          </div>
+        </div>
+        <div class="pop-bg"></div>
+      </div>
+    </footer>
+    <script>
+      var menuSlider = new Swiper('.foot-slide-area', {
+        speed: 500,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+      });
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+<body>
+  <div class="cgv-mobile has-bottom-btn"> <!-- 190711 class 추가 (페이지 일괄적용)  --> 
+    <!-- header -->
+    <header>
+      <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">습득한 분실물 상세</h3>
+      </a>
+       <!-- 190712 버튼 제거 -->
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <section class="content-sub">
+      <div class="content-full content-list-box">
+        <div class="content-list">
+          <!-- 7/17 .subinner-container 삭제 -->
+          <!-- <div class="subinner-container"> -->
+          <h3 class="skip">습득한 분실물 상세내용</h3>
+          <div class="lost-detail-list">
+            <div class="input-single-wide">
+              <h5>극장명</h5>
+              <div class="input-wrap">
+                <strong>용산아이파크몰</strong>
+              </div>
+            </div>
+            <div class="input-single-wide">
+              <h5>일시</h5>
+              <div class="input-wrap">
+                2019-05-20 13:15
+              </div>
+            </div>
+            <div class="input-single-wide">
+              <h5>습득장소</h5>
+              <div class="input-wrap">
+                3층 1관 5회차
+              </div>
+            </div>
+            <div class="input-single-wide">
+              <h5>직원명</h5>
+              <div class="input-wrap">
+                김은지
+              </div>
+            </div>
+            <div class="input-single-wide">
+              <h5>분류</h5>
+              <div class="input-wrap">
+                지갑
+                <div class="checkbox-nemo mg-l50">
+                  <input type="checkbox" id="checkid1" name="checkid1" value="체크" checked="">
+                  <label for="checkid1">
+                    <span class="txt-red txt-bold txt-13px">현금</span>
+                    <span class="customInput"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="input-single-wide">
+              <h5>습득물</h5>
+              <div class="input-wrap">
+                여자장지갑
+              </div>
+            </div>
+            <div class="input-single-wide">
+              <h5>브랜드</h5>
+              <div class="input-wrap">
+                프라다
+              </div>
+            </div>
+            <div class="input-single-wide">
+              <h5>색상</h5>
+              <div class="input-wrap flex-left">
+                <!-- 분실물 컬러 -->
+                <span class="ico-color lost-color1 mg-r8"></span>검정
+                <!-- <span class="ico-color lost-color2 mg-r8"></span>흰색
+                <span class="ico-color lost-color3 mg-r8"></span>회색
+                <span class="ico-color lost-color4 mg-r8"></span>남색
+                <span class="ico-color lost-color5 mg-r8"></span>베이지
+                <span class="ico-color lost-color6 mg-r8"></span>투명
+                <span class="ico-color lost-color7 mg-r8"></span>기타 -->
+              </div>
+            </div>
+            <div class="input-single-wide">
+              <h5>사이즈</h5>
+              <div class="input-wrap">
+                -
+              </div>
+            </div>
+            <div class="input-single-wide">
+              <h5>상세내용</h5>
+              <div class="input-wrap">
+                <p class="info-detail">영화를 보고 나오는데 의자에 지갑이 떨어져 있어서 누군지 찾아주려고 했는데 사람이 너무 많아서 찾을수가 없었어요. '기생충' 5회차였습니다. J열 10번자리에서 주웠습니다.</p>
+              </div>
+            </div>
+            <!-- 7/12 .mg-t12 .mg-b12추가 -->
+            <!-- 7/17 .mg-t12 .mg-b12삭제 .input-image-wrap 추가 -->
+            <div class="input-image-wrap">
+              <h5 class="skip">습득물 이미지</h5>
+              <ul class="input-wrap img-list mg-t24">
+                <li><span class="img-box"><img src="../../../resources/images/wallet.png" alt=""></span></li>
+                <li><span class="img-box"><img src="../../../resources/images/wallet.png" alt=""></span></li>
+                <li><span class="img-box"><img src="../../../resources/images/wallet.png" alt=""></span></li>
+              </ul>
+            </div>
+            <div class="input-single-wide">
+              <h5>처리만기일자</h5>
+              <div class="input-wrap flex-center">
+                2019-06-20 15:45
+                <span><i class="ico-warning mg-r6"></i>기한만기경과</span>
+              </div>
+            </div>
+
+            <div class="input-single-wide">
+              <h5>처리상태</h5>
+              <ul class="select-option list-4">
+                <li class="active">미처리</li>
+                <li>처리중</li>
+                <li>고객수령</li>
+                <li>기관인계</li>
+              </ul>
+            </div>
+
+            <!-- 추가 입력항목(미처리시 none) -->
+            <div class="input-single-wide">
+              <h5>고객명</h5>
+              <div class="input-wrap">
+                <input type="" name="" aria-describedby="" placeholder="" maxlength="10">
+              </div>
+            </div>
+            <div class="input-single-wide">
+              <h5>고객연락처</h5>
+              <div class="input-wrap">
+                <input type="" name="" aria-describedby="" placeholder="" maxlength="10">
+              </div>
+            </div>
+            <div class="input-single-wide">
+              <h5>처리완료일</h5>
+              <div class="input-wrap">
+                <button class="input-button w100 round-style"> <!-- 190802  -->
+                  <i class="icon icon-input-calendar"></i>
+                  <span class="mg-l2">2019-06-05</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+          <!-- 7/17 버튼위치 변경, .btn-single 추가 -->
+          <div class="btn-single">
+            <a class="">수정</a>
+          </div>
+          <!-- 저장일 경우 7/12 수정: .mg-t20 삭제
+          <div class="btn-single">
+            <a class="">저장</a>
+          </div>
+           -->  
+        </div>
+      </div>      
+    </section>
+    <footer>
+      <div class="bottom-menu"> 
+        <ul class="menu"> <!-- 190730 순서 변경 및 알림내역 추가 -->
+          <li class="home">
+            <a href="#" class="bottom_btn">홈</a>
+          </li>
+          <li class="menu">
+            <a href="#" class="bottom_btn">전체메뉴</a>
+          </li>
+        
+          <li class="more">
+            <button type="button" class="bottom_btn">메뉴더보기</button>
+          </li>
+          <li class="search">
+            <a href="#" class="bottom_btn">고객조회</a>
+          </li>
+          <li class="push"> 
+            <a href="#" class="bottom_btn">알림내역
+                
+            </a>
+          </li>
+        </ul>
+        <div class="more-box">
+          <!-- 190730 tit 추가 -->
+          <h4 class="tit">바로가기   
+            <button type="button" class="btn-edit">편집</button>
+          </h4>
+          <div class="swiper-container foot-slide-area"> <!-- class 변경 , 하단 스크립트 부분 class 수정-->
+            <div class="swiper-wrapper menu-slide">
+              <div class="swiper-slide slide-items">
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis1"></i>
+                    미소지기조회
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis2"></i>
+                    일일근태관리
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis3"></i>
+                    근무스케줄
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis4"></i>
+                    스케줄변경관리
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis5"></i>
+                    마일리지지급
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis6"></i>
+                    휴가승인
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis7"></i>
+                    긴급문자발송
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis8"></i>
+                    입사서류
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide slide-items">
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr1"></i>
+                    상영스케줄
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr2"></i>
+                    상영영화정보
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr3"></i>
+                    좌석판매현황
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr4"></i>
+                    VIP좌석설정
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-cut2"></i>
+                    VOC통합조회
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-cut3"></i>
+                    분실물관리
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mtn1"></i>
+                    업무메모
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mtn2"></i>
+                    나의 스케줄
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-slide-btns"> <!-- 190730 버튼 위치 변경 -->
+                <div class="swiper-pagination"></div>
+                <a href="#" class="btn-menu-setting">
+                </a>
+              </div>
+          </div>
+        </div>
+        <div class="pop-bg"></div>
+      </div>
+    </footer>
+    <script>
+      var menuSlider = new Swiper('.foot-slide-area', {
+        speed: 500,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+      });
+    </script>
+  </div>
+<!-- //cgv-mobile -->
+</body>
+
+</html>

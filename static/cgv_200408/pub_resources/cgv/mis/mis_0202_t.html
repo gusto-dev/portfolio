@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+ 
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+  <div class="cgv-mobile has-bottom-btn"> 
+
+    <!-- header -->
+    <header>
+      <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">미소지기 정보</h3>
+      </a>
+      <a class="nav-refresh">새로고침</a>
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <section class="content-sub">
+      <div class="content-title ">
+        <div class="banner-myinfo">
+          <div class="info-account">
+            <p class="tit wide"><strong>정*인</strong>님<i class="icon icon-man mg-l5"></i></p>
+            <div class="info-list">
+              <ul>
+                <li>미소지기</li>
+                <li>CGV 왕십리</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="info-point list-3 style02">
+            <li>
+              <p class="tit"><span class="sub">소정근로일</span></p> 
+              <p class="icn"><span class="mg-r4">12</span>일</p> 
+            </li>
+            <li>
+              <p class="tit"><span class="sub">소정근로시간</span></p> 
+              <p class="icn"><span class="mg-r4">6.3</span>시간</p> 
+            </li>
+            <li>
+              <a href="./mileageHistory.html">
+                <span class="tit"><span class="sub">보유 마일리지 <i class="icon icon-arrow gray"></i></span></span> 
+                <span class="icn"><span class="mg-r4">1000</span>P</span> 
+              </a>
+            </li>
+          </ul>
+        </div>
+        <ul class="tab-list tab-list3 mg-t16 mg-b16">
+          <li class="">기본정보</li>
+          <li class="active">스케줄정보</li>
+          <li class="">근태정보</li>
+        </ul>
+      </div>
+      <div class="content-full content-list-box tab-default">
+         <div class="swiper-container select-calendar style02"> 
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">06-03 ~ 06-09</div>
+            <div class="swiper-slide">06-10 ~ 06-15</div>
+            <div class="swiper-slide">06-16 ~ 06-21</div>
+            <div class="swiper-slide">06-22 ~ 06-27</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div class="content-list tab-content active">
+          <div class="table table-info with-border mg-t15">
+            <table class="txt-c">
+              <caption>스케줄정보</caption>
+              <thead>
+                <tr>
+                  <th class="w33" scope="row">일자</th>
+                  <th class="w33">포지션</th>
+                  <th class="w34">근무시간</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row" class="f-color02">06-01 (토)</td> 
+                  <td><i class="icon icon-store1"></i>매점1</td>
+                  <td><span class="f-color02">D-1</span> <span>(07:00 ~ 13:30)</span></td> <!-- 191022 마크업 변경 -->
+                </tr>
+                <tr>
+                  <td scope="row" class="f-color01">06-02 (일)</td>
+                  <td><i class="icon icon-store2"></i>매점2</td>
+                  <td><span class="f-color02">D-1</span> <span>(08:00 ~ 12:30)</span></td> <!-- 191022 마크업 변경 -->
+                </tr>
+                <tr class="bg">
+                  <td scope="row">06-03 (월)</td>
+                  <td><i class="icon icon-ticketing1"></i>매표1</td>
+                  <td><span class="f-color02">D-1</span> <span>(09:00 ~ 14:30)</span></td> <!-- 191022 마크업 변경 -->
+                </tr>
+                <tr class="bg">
+                  <td scope="row">06-04 (화)</td>
+                  <td><i class="icon icon-store1"></i>매점1</td>
+                  <td><span class="f-color02">D-1</span> <span>(07:00 ~ 13:30)</span></td> <!-- 191022 마크업 변경 -->
+                </tr>
+                <tr>
+                  <td scope="row">06-05 (수)</td>
+                  <td><i class="icon icon-ticketing2"></i>매표2</td>
+                  <td><span class="f-color02">D-1</span> <span>(09:00 ~ 14:30)</span></td> <!-- 191022 마크업 변경 -->
+                </tr>
+                <tr>
+                  <td scope="row">06-06 (목)</td>
+                  <td><i class="icon icon-store1"></i>매점1</td>
+                  <td><span class="f-color02">D-1</span> <span>(07:00 ~ 12:00)</span></td> <!-- 191022 마크업 변경 -->
+                </tr>
+                <tr>
+                  <td scope="row">06-07 (금)</td>
+                  <td>-</td>
+                  <td><span class="f-color02">D-1</span> <span>(07:00 ~ 13:30)</span></td> <!-- 191022 마크업 변경 -->
+                </tr>
+                <tr>
+                  <td scope="row" class="f-color02">06-08 (토)</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+                <tr class="holiday">
+                  <td scope="row">06-09 (일)</td>
+                  <td>-</td>
+                  <td><button class="btn-round" type="button" role="button">휴무</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="bottom-menu"> 
+        <ul class="menu"> 
+          <li class="home">
+            <a href="#" class="bottom_btn">홈</a>
+          </li>
+          <li class="menu">
+            <a href="#" class="bottom_btn">전체메뉴</a>
+          </li>
+        
+          <li class="more">
+            <button type="button" class="bottom_btn">메뉴더보기</button>
+          </li>
+          <li class="search">
+            <a href="#" class="bottom_btn">고객조회</a>
+          </li>
+          <li class="push"> 
+            <a href="#" class="bottom_btn">알림내역
+                
+            </a>
+          </li>
+        </ul>
+        <div class="more-box">
+          <h4 class="tit">바로가기   
+            <button type="button" class="btn-edit">편집</button>
+          </h4>
+          <div class="swiper-container foot-slide-area"> 
+            <div class="swiper-wrapper menu-slide">
+              <div class="swiper-slide slide-items">
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis1"></i>
+                    미소지기조회
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis2"></i>
+                    일일근태관리
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis3"></i>
+                    근무스케줄
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis4"></i>
+                    스케줄변경관리
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis5"></i>
+                    마일리지지급
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis6"></i>
+                    휴가승인
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis7"></i>
+                    긴급문자발송
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis8"></i>
+                    입사서류
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide slide-items">
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr1"></i>
+                    상영스케줄
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr2"></i>
+                    상영영화정보
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr3"></i>
+                    좌석판매현황
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr4"></i>
+                    VIP좌석설정
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-cut2"></i>
+                    VOC통합조회
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-cut3"></i>
+                    분실물관리
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mtn1"></i>
+                    업무메모
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mtn2"></i>
+                    나의 스케줄
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-slide-btns"> <!-- 190730 버튼 위치 변경 -->
+                <div class="swiper-pagination"></div>
+                <a href="#" class="btn-menu-setting">
+                </a>
+              </div>
+          </div>
+        </div>
+        <div class="pop-bg"></div>
+      </div>
+    </footer>
+    <script>
+      var menuSlider = new Swiper('.foot-slide-area', {
+        speed: 500,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+      });
+    </script>
+
+</body>
+
+</html>

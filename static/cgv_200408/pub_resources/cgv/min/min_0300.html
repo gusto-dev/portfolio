@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+ 
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+  <div class="cgv-mobile">
+    <!-- header -->
+    <header>
+      <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">사이트 스케줄 조회</h3>
+      </a>
+       <!-- 190712 버튼 제거 -->
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <section class="content-sub">
+      <div class="content-title">
+        <button class="btn-datepicker">2019-08-05</button>
+        <div class="top-btn-list">
+          <button type="button" class="active">전체</button>
+          <button type="button">매점</button>
+          <button type="button">매표</button>
+          <button type="button">플로어</button>
+          <button type="button">기타</button>
+        </div>
+      </div>
+
+      <div class="content-full content-list-box">
+        <div class="content-list">
+          <div class="table table-info with-border"> <!-- 190717 class "mg-t15"제거 -->
+            <table class="txt-c">
+              <caption>사이트스케줄정보</caption>
+              <thead>
+                <tr>
+                  <th scope="row">구분</th>
+                  <th scope="row">출근</th>
+                  <th scope="row">퇴근</th>
+                  <th scope="row">성명</th>
+                  <th scope="row">포지션</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="5" class="line-r">D</td>
+                  <td rowspan="5" class="f-color01 line-r">07:00</td>
+                  <td rowspan="5" class="line-r">14:05</td>
+                  <td class="schedule-phonenum" title="010-900-9302">김민지</td>
+                  <td><i class="icon icon-store1"></i>매점1</td>
+                </tr>
+                <tr>
+                  <td class="schedule-phonenum" title="010-900-9302">김지현</td>
+                  <td><i class="icon icon-ticketing1"></i>매표1</td>
+                </tr>
+                <tr>
+                  <td class="schedule-phonenum" title="010-900-9302">박지훈</td>
+                  <td><i class="icon icon-store1"></i>매점1</td>
+                </tr>
+                <tr>
+                  <td class="schedule-phonenum" title="010-900-9302">김은하</td>
+                  <td><i class="icon icon-ticketing2"></i>매표2</td>
+                </tr>
+                <tr>
+                  <td class="schedule-phonenum" title="010-900-9302">박서준</td>
+                  <td><i class="icon icon-store2"></i>매점2</td>
+                </tr>
+                <tr>
+                  <td class="line-r">D-1</td>
+                  <td class="f-color01 line-r">07:00</td>
+                  <td class="line-r">14:05</td>
+                  <td class="schedule-phonenum" title="010-900-9302">김민준</td>
+                  <td><i class="icon icon-floor"></i>플로어</td>
+                </tr>
+                <tr>
+                  <td class="line-r">M-1</td>
+                  <td class="f-color01 line-r">07:00</td>
+                  <td class="line-r">14:05</td>
+                  <td class="schedule-phonenum" title="010-900-9302">이현성</td>
+                  <td><i class="icon icon-store2"></i>매점2</td>
+                </tr>
+                <tr>
+                  <td class="line-r">M-3</td>
+                  <td class="f-color01 line-r">07:00</td>
+                  <td class="line-r">14:05</td>
+                  <td class="schedule-phonenum" title="010-900-9302">박소라</td>
+                  <td><i class="icon icon-ticketing2"></i>매표2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- //cgv-mobile -->
+  <script>
+    /*anypicker*/
+    $(function(){
+        var option = {minDate :["2019","03"], maxDate:["2020","12"] , format : "yyyy-MM"};
+      // var option = { format : "yyyy-MM-dd"};
+      // $(".anydate").dateAnyPicker(option);
+    });
+
+  </script>
+</body>
+
+</html>

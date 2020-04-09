@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+   <!-- JQUERY UI -->
+   <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+  <div class="cgv-mobile has-bottom-btn"> <!-- 190711 class 추가 (페이지 일괄적용)  --> 
+
+    <!-- header -->
+    <header>
+      <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">상영스케줄 조회</h3>
+      </a>
+       <!-- 190712 버튼 제거 -->
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <section class="content-sub">
+      <div class="content-title">
+        <div class="banner-schedule">
+          <p class="title">CGV 용산아이파크</p>
+          <p class="date">2019-06</p>
+        </div>
+        <div class="select-date-wrap">
+          <div class="swiper-container select-date">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><div><p class="date">월</p><p class="day">10</p></div></div>
+              <div class="swiper-slide"><div><p class="date">화</p><p class="day">11</p></div></div>
+              <div class="swiper-slide"><div><p class="date">수</p><p class="day">12</p></div></div>
+              <div class="swiper-slide"><div><p class="date">목</p><p class="day">13</p></div></div>
+              <div class="swiper-slide"><div><p class="date">금</p><p class="day">14</p></div></div>
+              <div class="swiper-slide"><div><p class="date">토</p><p class="day">15</p></div></div>
+              <div class="swiper-slide"><div><p class="date txt-red">일</p><p class="day txt-red">16</p></div></div>
+              <div class="swiper-slide"><div><p class="date">월</p><p class="day">17</p></div></div>
+              <div class="swiper-slide"><div><p class="date">화</p><p class="day">18</p></div></div>
+              <div class="swiper-slide"><div><p class="date">수</p><p class="day">19</p></div></div>
+              <div class="swiper-slide"><div><p class="date">목</p><p class="day">20</p></div></div>
+              <div class="swiper-slide"><div><p class="date">금</p><p class="day">21</p></div></div>
+              <div class="swiper-slide"><div><p class="date">토</p><p class="day">22</p></div></div>
+              <div class="swiper-slide"><div><p class="date txt-red">일</p><p class="day txt-red">23</p></div></div>
+              <div class="swiper-slide"><div><p class="date">월</p><p class="day">24</p></div></div>
+              <div class="swiper-slide"><div><p class="date">화</p><p class="day">25</p></div></div>
+              <div class="swiper-slide"><div><p class="date">수</p><p class="day">26</p></div></div>
+              <div class="swiper-slide"><div><p class="date">목</p><p class="day">27</p></div></div>
+              <div class="swiper-slide"><div><p class="date">금</p><p class="day">28</p></div></div>
+              <div class="swiper-slide"><div><p class="date">토</p><p class="day">29</p></div></div>
+              <div class="swiper-slide"><div><p class="date txt-red">일</p><p class="day txt-red">30</p></div></div>
+              <div class="swiper-slide"><div><p class="date">월</p><p class="day">31</p></div></div>
+              <div class="swiper-slide active"><div><p class="date">화</p><p class="day">1</p></div></div>
+              <div class="swiper-slide"><div><p class="date">수</p><p class="day">2</p></div></div>
+              <div class="swiper-slide"><div><p class="date">목</p><p class="day">3</p></div></div>
+              <div class="swiper-slide"><div><p class="date">금</p><p class="day">4</p></div></div>
+              <div class="swiper-slide"><div><p class="date">토</p><p class="day">5</p></div></div>
+              <div class="swiper-slide"><div><p class="date txt-red">일</p><p class="day txt-red">6</p></div></div>
+              <div class="swiper-slide"><div><p class="date">월</p><p class="day">7</p></div></div>
+              <div class="swiper-slide"><div><p class="date">화</p><p class="day">8</p></div></div>
+              <div class="swiper-slide"><div><p class="date">수</p><p class="day">9</p></div></div>
+              <div class="swiper-slide"><div><p class="date">목</p><p class="day">10</p></div></div>
+              <div class="swiper-slide"><div><p class="date">금</p><p class="day">11</p></div></div>
+              <div class="swiper-slide"><div><p class="date">토</p><p class="day">12</p></div></div>
+              <div class="swiper-slide"><div><p class="date txt-red">일</p><p class="day txt-red">13</p></div></div>
+              <div class="swiper-slide"><div><p class="date">월</p><p class="day">14</p></div></div>
+              <div class="swiper-slide"><div><p class="date">화</p><p class="day">15</p></div></div>
+              <div class="swiper-slide"><div><p class="date">수</p><p class="day">16</p></div></div>
+              <div class="swiper-slide"><div><p class="date">목</p><p class="day">17</p></div></div>
+              <div class="swiper-slide"><div><p class="date">금</p><p class="day">18</p></div></div>
+              <div class="swiper-slide"><div><p class="date">토</p><p class="day">19</p></div></div>
+              <div class="swiper-slide"><div><p class="date txt-red">일</p><p class="day txt-red">20</p></div></div>
+              <div class="swiper-slide"><div><p class="date">월</p><p class="day">21</p></div></div>
+              <div class="swiper-slide"><div><p class="date">화</p><p class="day">22</p></div></div>
+              <div class="swiper-slide"><div><p class="date">수</p><p class="day">23</p></div></div>
+              <div class="swiper-slide"><div><p class="date">목</p><p class="day">24</p></div></div>
+              <div class="swiper-slide"><div><p class="date">금</p><p class="day">25</p></div></div>
+              <div class="swiper-slide"><div><p class="date">토</p><p class="day">26</p></div></div>
+              <div class="swiper-slide"><div><p class="date txt-red">일</p><p class="day txt-red">27</p></div></div>
+              <div class="swiper-slide"><div><p class="date">월</p><p class="day">28</p></div></div>
+              <div class="swiper-slide"><div><p class="date">화</p><p class="day">29</p></div></div>
+              <div class="swiper-slide"><div><p class="date">수</p><p class="day">30</p></div></div>
+              <div class="swiper-slide"><div><p class="date">목</p><p class="day">1</p></div></div>
+            </div>
+            <div class="swiper-button-prev"><span class="icn"></span></div>
+            <div class="swiper-button-next"><span class="icn"></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="content-full content-list-box">
+          <!-- //풀페이지 리스트 -->
+          <!-- <div class="content-list">
+            <div class="table table-info with-border">
+                <table class="txt-c">
+                  <caption>상영 정보</caption>
+                  <thead>
+                    <tr>
+                      <th scope="row">시간</th>
+                      <th scope="row">상영관</th>
+                      <th scope="row">영화</th>
+                      <th scope="row">내용</th>
+                      <th scope="row">러닝타임</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg">
+                      <td><strong>06:50</strong></td>
+                      <td>4DX SX</td>
+                      <td><strong>알라딘</strong></td>
+                      <td>입장</td>
+                      <td>00:20:00</td>
+                    </tr>
+                    <tr class="bg">
+                      <td><strong>07:00</strong></td>
+                      <td>Salon S</td>
+                      <td><strong>기생충</strong></td>
+                      <td>입장</td>
+                      <td>00:20:00</td>
+                    </tr>
+                    <tr class="bg">
+                      <td><strong>07:03</strong></td>
+                      <td>CINE de</td>
+                      <td><strong>스파이더맨</strong></td>
+                      <td>광고</td>
+                      <td>00:06:29</td>
+                    </tr>
+                    <tr class="bg">
+                      <td><strong>07:07</strong></td>
+                      <td>TEMPUR</td>
+                      <td><strong>기생충</strong></td>
+                      <td>광고</td>
+                      <td>00:13:00</td>
+                    </tr>
+                    <tr class="bg">
+                      <td><strong>07:10</strong></td>
+                      <td>4DX SX</td>
+                      <td><strong>알라딘</strong></td>
+                      <td>본영화</td>
+                      <td>02:12:00</td>
+                    </tr>
+                    <tr class="bg">
+                      <td><strong>07:20</strong></td>
+                      <td>Salon S</td>
+                      <td><strong>비스트</strong></td>
+                      <td>입장</td>
+                      <td>02:11:00</td>
+                    </tr>
+                    <tr class="bg">
+                      <td><strong>07:40</strong></td>
+                      <td>CINE de</td>
+                      <td><strong>맨인블랙</strong></td>
+                      <td>광고</td>
+                      <td>00:20:00</td>
+                    </tr>
+                    <tr>
+                      <td><strong>08:00</strong></td>
+                      <td>4DX SX</td>
+                      <td><strong>알라딘</strong></td>
+                      <td>본영화</td>
+                      <td>02:12:00</td>
+                    </tr>
+                    <tr>
+                      <td><strong>08:10</strong></td>
+                      <td>Salon S</td>
+                      <td><strong>비스트</strong></td>
+                      <td>입장</td>
+                      <td>02:11:00</td>
+                    </tr>
+                    <tr>
+                      <td><strong>08:14</strong></td>
+                      <td>CINE de</td>
+                      <td><strong>맨인블랙</strong></td>
+                      <td>광고</td>
+                      <td>00:20:00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div> -->
+
+          <div class="table table-info with-border content-list">
+            <table id="grid"></table>
+          </div>
+          
+      </div>
+    </section>
+
+  </div>
+  <!-- //cgv-mobile -->
+  <script>
+    var colNmList = ["시간","상영관","영화","내용","러닝타임"];
+    var colModelList = [
+                {name : "time"},
+                {name : "scnNm"},
+                {name : "movNm"},
+                {name : "cont"},
+                {name : "runTm"},
+              ];
+    $(function(){
+      var data = {};
+      var dataList = [];
+      for(var i = 0 ; i < 20 ; i++){
+        data.time = "08:20"
+        data.scnNm = "상영관"+i
+        data.movNm = "영화"+i
+        data.cont = "내용"+i
+        data.runTm = "00:15:"+i
+        dataList.push(data)
+      }
+    
+      $("#grid").jqGrid({
+        search: true,
+        datatype: "local",
+        height: 200,
+        colNames: colNmList,
+        colModel:colModelList,
+        onSelectRow: function(id){
+          var rowData = jQuery("#grid").jqGrid('getRowData',id)
+        }
+      });
+      
+      $("#grid").jqGrid("clearGridData", true);
+      for(var i in dataList){
+        $("#grid").jqGrid('addRowData',i+1,dataList[i]);
+      }
+    })
+  </script>
+
+  <style>
+
+
+</style>
+</body>
+
+</html>

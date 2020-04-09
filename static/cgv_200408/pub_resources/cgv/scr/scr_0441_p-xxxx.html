@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+   <!-- JQUERY UI -->
+   <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+   <!-- 기본설정 -->
+   <link rel="stylesheet" href="../../asset/styles/reset.css" />
+ 
+   <!-- 공통사항 -->
+   <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+   <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+   <link rel="stylesheet" href="../../asset/styles/common.css" />
+   <link rel="stylesheet" href="../../asset/styles/layout.css" />
+ 
+ 
+ 
+   <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+   <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+   <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+   <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+</head>
+
+<body>
+  <div class="cgv-mobile has-bottom-btn"> <!-- 190711 class 추가 (페이지 일괄적용)  --> 
+
+    <!-- header -->
+    <header>
+      <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">좌석판매현황</h3>
+      </a>
+       <!-- 190712 버튼 제거 -->
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <section class="content-sub">
+      <div class="content-title">
+        <div class="banner-schedule">
+          <p class="title">CGV 용산아이파크</p>
+          <p class="date">2019-06</p>
+        </div>
+        <div class="select-date-wrap">
+          <div class="swiper-container select-date swiper-container-initialized swiper-container-horizontal">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-active" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">월</p><p class="day">10</p></div></div>
+              <div class="swiper-slide swiper-slide-next" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">화</p><p class="day">11</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">수</p><p class="day">12</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">목</p><p class="day">13</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">금</p><p class="day">14</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">토</p><p class="day">15</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date txt-red">일</p><p class="day txt-red">16</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">월</p><p class="day">17</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">화</p><p class="day">18</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">수</p><p class="day">19</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">목</p><p class="day">20</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">금</p><p class="day">21</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">토</p><p class="day">22</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date txt-red">일</p><p class="day txt-red">23</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">월</p><p class="day">24</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">화</p><p class="day">25</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">수</p><p class="day">26</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">목</p><p class="day">27</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">금</p><p class="day">28</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">토</p><p class="day">29</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date txt-red">일</p><p class="day txt-red">30</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">월</p><p class="day">31</p></div></div>
+              <div class="swiper-slide active" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">화</p><p class="day">1</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">수</p><p class="day">2</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">목</p><p class="day">3</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">금</p><p class="day">4</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">토</p><p class="day">5</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date txt-red">일</p><p class="day txt-red">6</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">월</p><p class="day">7</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">화</p><p class="day">8</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">수</p><p class="day">9</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">목</p><p class="day">10</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">금</p><p class="day">11</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">토</p><p class="day">12</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date txt-red">일</p><p class="day txt-red">13</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">월</p><p class="day">14</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">화</p><p class="day">15</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">수</p><p class="day">16</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">목</p><p class="day">17</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">금</p><p class="day">18</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">토</p><p class="day">19</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date txt-red">일</p><p class="day txt-red">20</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">월</p><p class="day">21</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">화</p><p class="day">22</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">수</p><p class="day">23</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">목</p><p class="day">24</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">금</p><p class="day">25</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">토</p><p class="day">26</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date txt-red">일</p><p class="day txt-red">27</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">월</p><p class="day">28</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">화</p><p class="day">29</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">수</p><p class="day">30</p></div></div>
+              <div class="swiper-slide" style="width: 47.4286px; margin-right: 10px;"><div><p class="date">목</p><p class="day">1</p></div></div>
+            </div>
+            <div class="swiper-button-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"><span class="icn"></span></div>
+            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false"><span class="icn"></span></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+      </div>
+      <div class="content-full content-list-box">
+        <div class="content-list">
+          <div class="table-title title-border-top">
+            <h4>전체</h4>
+            <ul class="">
+              <li><i class="icon icon-user"></i><span class="txt-red txt-bold">12,320명</span></li>
+              <li><i class="icon icon-graph"></i><span class="txt-red txt-bold">51.4%</span></li>
+            </ul>
+          </div>
+            <div class="table table-info with-border">
+              <table class="txt-c type-total">
+                <caption>좌석판매현황</caption>
+                <thead>
+                  <tr>
+                    <th scope="row" class="bd0">상영관</th>
+                    <th scope="row">회차</th>
+                    <th scope="row">영화명</th>
+                    <th scope="row">좌석</th>
+                    <th scope="row">판매</th>
+                    <th scope="row">객석률</th>
+                    <th scope="row">시작시간</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="7" class="line-r bd-b0">
+                      <strong class="f-up">4DX</strong><br>6층
+                    </td>
+                    <td>1</td>
+                    <td><strong>알라딘</strong></td>
+                    <td><strong>158</strong></td>
+                    <td><strong class="f-color02">24</strong></td>
+                    <td><strong class="f-color01">15%</strong></td>
+                    <td>06:10</td>
+                  </tr>
+                  <tr class="bg">
+                    <td>2</td>
+                    <td><strong>기생충</strong></td>
+                    <td><strong>158</strong></td>
+                    <td><strong class="f-color02">36</strong></td>
+                    <td><strong class="f-color01">23%</strong></td>
+                    <td>08:10</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><strong>비스트</strong></td>
+                    <td><strong>158</strong></td>
+                    <td><strong class="f-color02">42</strong></td>
+                    <td><strong class="f-color01">29%</strong></td>
+                    <td>10:20</td>
+                  </tr>
+                  <tr class="bg">
+                    <td>4</td>
+                    <td><strong>애나벨</strong></td>
+                    <td><strong>158</strong></td>
+                    <td><strong class="f-color02">34</strong></td>
+                    <td><strong class="f-color01">21.5%</strong></td>
+                    <td>12:30</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td><strong>존윅3</strong></td>
+                    <td><strong>158</strong></td>
+                    <td><strong class="f-color02">60</strong></td>
+                    <td><strong class="f-color01">38%</strong></td>
+                    <td>14:50</td>
+                  </tr>
+                  <tr class="bg">
+                    <td>6</td>
+                    <td><strong>고질라</strong></td>
+                    <td><strong>158</strong></td>
+                    <td><strong class="f-color02">78</strong></td>
+                    <td><strong class="f-color01">49.3%</strong></td>
+                    <td>17:00</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td><strong>알라딘</strong></td>
+                    <td><strong>158</strong></td>
+                    <td><strong class="f-color02">84</strong></td>
+                    <td><strong class="f-color01">53%</strong></td>
+                    <td>19:30</td>
+                  </tr>
+                </tbody>
+                <tfoot class="total">
+                  <tr>
+                    <td class="tit"><strong>합계</strong></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><strong class="f-color02">358</strong></td>
+                    <td><strong class="f-color01">51.4%</strong></td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+                  
+                </table>
+                <!-- <div class="table-amount">
+                  <p>합계</p>
+                  <ul>
+                    <li>12,320명</li>
+                    <li>51.4%</li>
+                  </ul>
+                </div> -->
+              </div>
+          </div>
+      </div>
+    </section>
+    <footer>
+      <div class="bottom-menu"> 
+        <ul class="menu"> <!-- 190730 순서 변경 및 알림내역 추가 -->
+          <li class="home">
+            <a href="#" class="bottom_btn">홈</a>
+          </li>
+          <li class="menu">
+            <a href="#" class="bottom_btn">전체메뉴</a>
+          </li>
+        
+          <li class="more">
+            <button type="button" class="bottom_btn">메뉴더보기</button>
+          </li>
+          <li class="search">
+            <a href="#" class="bottom_btn">고객조회</a>
+          </li>
+          <li class="push"> 
+            <a href="#" class="bottom_btn">알림내역
+                
+            </a>
+          </li>
+        </ul>
+        <div class="more-box">
+          <h4 class="tit">바로가기 <!---->
+            <button type="button" class="btn-edit">편집</button>
+          </h4>
+          <div class="swiper-container foot-slide-area"> <!-- class 변경 , 하단 스크립트 부분 class 수정-->
+            <div class="swiper-wrapper menu-slide">
+              <div class="swiper-slide slide-items">
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis1"></i>
+                    미소지기조회
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis2"></i>
+                    일일근태관리
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis3"></i>
+                    근무스케줄
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis4"></i>
+                    스케줄변경관리
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis5"></i>
+                    마일리지지급
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis6"></i>
+                    휴가승인
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis7"></i>
+                    긴급문자발송
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mis8"></i>
+                    입사서류
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-slide slide-items">
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr1"></i>
+                    상영스케줄
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr2"></i>
+                    상영영화정보
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr3"></i>
+                    좌석판매현황
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-scr4"></i>
+                    VIP좌석설정
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-cut2"></i>
+                    VOC통합조회
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-cut3"></i>
+                    분실물관리
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mtn1"></i>
+                    업무메모
+                  </a>
+                </div>
+                <div class="slide-item">
+                  <a href="#">
+                    <i class="icon-mtn2"></i>
+                    나의 스케줄
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-slide-btns">
+                <div class="swiper-pagination"></div>
+                <a href="#" class="btn-menu-setting">
+                </a>
+              </div>
+          </div>
+        </div>
+        <div class="pop-bg"></div>
+      </div>
+    </footer>
+    <script>
+      var menuSlider = new Swiper('.foot-slide-area', {
+        speed: 500,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+      });
+    </script>
+  </div>
+  <!-- //cgv-mobile -->
+
+  <!-- 팝업(상세내용) -->
+  <div data-pop="#saleDetail" class="pop-house-full" style="display: block">
+    <div class="pop-container">
+      <h3>판매정보<i class="icon icon-close pop-close"></i></h3>
+      <div class="tab-function tab-default">
+        <ul class="tab-list tab-list2 mg-t18 mg-b4">
+          <li class="active">판매정보</li>
+          <li class="">환불내역</li>
+        </ul>
+        <div class="tab-function tab-content active">
+          <div class="table table-info">
+            <div class="table-title mg-t10">
+              <h5>판매정보</h5>
+              <p class="go-detail"><span class="mg-r6">판매내역 종합조회</span><i class="icon icon-arrow darkgray"></i></p>
+            </div>
+            <table>
+              <caption>판매정보</caption>
+              <tbody>
+                <tr>
+                  <th class="w25" scope="row">판매정보</th>
+                  <td colspan="3">2019-0605-8082-9022</td>
+                </tr>
+                <tr>
+                  <th class="w25" scope="row">판매자</th>
+                  <td class="table-border-right">INTERNET-3</td>
+                  <th class="w25">예매처</th>
+                  <td>CJ ONE</td>
+                </tr>
+                <tr>
+                  <th class="w25" scope="row">멤버쉽<br />고객</th>
+                  <td colspan="3">정해인</td>
+                </tr>
+                <tr>
+                  <th class="w25" scope="row">판매시간</th>
+                  <td class="table-border-right">08:20:32</td>
+                  <th class="w25">판매수량</th>
+                  <td>7</td>
+                </tr>
+                <tr>
+                  <th class="w25" scope="row">예매일자</th>
+                  <td colspan="3">2019-06-05</td>
+                </tr>
+                <tr>
+                  <th class="w25" scope="row">예매번호</th>
+                  <td colspan="3">007980209102</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="table-title mg-t6">
+              <h5>결제정보</h5>
+            </div>
+            <table>
+              <caption>결제정보</caption>
+              <tbody>
+                <tr>
+                  <th class="w25" scope="row">판매금액</th>
+                  <td colspan="3">12,000</td>
+                </tr>
+                <tr>
+                  <th class="w25" scope="row">현금</th>
+                  <td colspan="3">12,000</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="table-title mg-t6">
+              <h5>티켓정보</h5>
+            </div>
+            <table>
+              <caption>티켓정보</caption>
+              <tbody>
+                <tr>
+                  <th class="w25 txt-c" scope="row">1</th>
+                  <td colspan="3">2019-06-05 2관 3층 1회 열 10번</td>
+                </tr>
+                <tr>
+                  <th class="w25 txt-c" scope="row">2</th>
+                  <td colspan="3">2019-06-05 2관 3층 1회 열 10번</td>
+                </tr>
+                <tr>
+                  <th class="w25 txt-c" scope="row">3</th>
+                  <td colspan="3">2019-06-05 2관 3층 1회 열 10번</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-content">
+          <div class="table table-info">
+            <div class="table-title mg-t6">
+              <h5>판매정보</h5>
+              <p class="go-detail"><span class="mg-r6">판매내역 종합조회</span><i class="icon icon-arrow darkgray"></i></p>
+            </div>
+            <table>
+              <caption>판매정보</caption>
+              <tbody>
+                <tr>
+                  <th class="w25 txt-c" scope="row">판매정보</th>
+                  <td colspan="3">2019-0605-8082-9022</td>
+                </tr>
+                <tr>
+                  <th class="w25 txt-c" scope="row">판매자</th>
+                  <td colspan="3">INTERNET-3</td>
+                </tr>
+                <tr>
+                  <th class="w25 txt-c" scope="row">판매시간</th>
+                  <td colspan="3">08:20:32</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="table-title mg-t6">
+              <h5>환불정보</h5>
+            </div>
+            <table>
+              <caption>환불정보</caption>
+              <tbody>
+                <tr>
+                  <th class="w25 txt-c" scope="row">환불일자</th>
+                  <td colspan="3">2019-06-05</td>
+                </tr>
+                <tr>
+                  <th class="w25 txt-c" scope="row">환불자</th>
+                  <td colspan="3">INTERNET-3</td>
+                </tr>
+                <tr>
+                  <th class="w25 txt-c" scope="row">환불시간</th>
+                  <td colspan="3">08:20:32</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+  <!-- //팝업 -->
+
+</body>
+
+</html>

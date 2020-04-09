@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body><!--  class="main-index" -->
+  <div class="cgv-mobile has-bottom-btn"> <!-- 190711 class 추가 (페이지 일괄적용)  --> 
+
+    <!-- header -->
+    <header>
+      <div class="control-btns front">
+        <button type="button" class="btn-more"><i class="icon-more"></i></button>
+        <!-- 뒤로가기 버튼이 존재할 경우 사용 -->
+        <!-- <button type="button" class="btn-back"><i class="icon-back"></i></button> -->
+      </div>
+      <div class="header-contents">
+        <!-- <a href="." class="btn-logo"><img src="../../../resources/images/index/logo.png" alt=""></a> -->
+      </div>
+      <div class="control-btns end">
+        <!-- 알림이 있을때 .on 추가 -->
+        <button type="button" class="btn-noti on">
+          <i class="icon-noti"></i>
+             <!-- 190725 추가 -->
+        </button>
+        <!-- <a href="#" class="btn-search-main"><i class="icon-search-main"></i></a> -->
+      </div>
+    </header>
+    <!-- //header -->
+    
+    <section class="content-sub">
+    </section>
+  </div>
+  <!-- //cgv-mobile -->
+  <!-- 팝업 -->
+  <!-- .show-pop 추가 시 팝업노출 -->
+  <div class="pop-dimed show-pop">
+    <div class="pop-bg"></div>
+    <div class="pop-house" data-pop="#">
+      <div class="pop-layer">
+        <div class="pop-container pop-schedule">
+          <h3 class="txt-c mg-0">검색 대상 선택</h3><i class="icon icon-close pop-close"></i></h3>
+          <ul>
+            <li class="active">운영</li>
+            <li>서비스</li>
+            <li>TMS</li>
+            <li>영사</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //팝업 -->
+</body>
+</html>

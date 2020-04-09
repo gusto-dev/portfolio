@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../resources/asset/styles/lib/jquery-ui.css" /> -->
+
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+
+<!-- 07/19 body class 삭제 -->
+<body>
+  <div class="cgv-mobile"> 
+
+    <!-- header -->
+    <header>
+      <div class="control-btns front">
+        <button type="button" class="btn-more"><i class="icon-more"></i></button>
+        <!-- 뒤로가기 버튼이 존재할 경우 사용 -->
+        <!-- <button type="button" class="btn-back"><i class="icon-back"></i></button> -->
+      </div>
+      <div class="header-contents">
+        <a href="." class="btn-logo"><img src="../../../resources/images/index/logo.png" alt=""></a>
+      </div>
+      <div class="control-btns end">
+        <!-- 알림이 있을때 .on 추가 -->
+        <button type="button" class="btn-noti on">
+          <i class="icon-noti"></i>
+             <!-- 190725 추가 -->
+        </button>
+        <a href="#" class="btn-search-main"><i class="icon-search-main"></i></a>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <!-- 07/19 main태그 -> section 태그 변경, .index-contents 삭제, .contents-sub 추가 -->
+    <section class="content-sub">
+
+    </section>
+  </div>
+  <!-- 팝업 -->
+  <!-- .show-pop 추가시 팝업 노출 -->
+  <div class="pop-dimed show-pop">
+    <div class="pop-bg"></div>
+    <div class="pop-house">
+      <div class="pop-layer pop-border">
+        <!-- 7/14 수정 h3 위치 변경 -->
+        <h3>퇴근체크<i class="icon icon-close pop-close"></i></h3>
+        <div class="pop-container">
+          <div class="pop-text-box txt-c">
+            <button class="btn-inout">
+              <img src="../../../resources/images/btn_out.png" />
+            </button>
+            <p class="sub-text02 mg-b12">*버튼을 클릭하여 퇴근 체크를 해주세요</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //팝업 -->
+  
+  <!-- 팝업 -->
+  <!-- .show-pop 추가시 팝업 노출 -->
+  <div class="pop-dimed">
+    <div class="pop-bg"></div>
+    <div data-pop="#" class="pop-house">
+      <div class="pop-layer pop-border">
+        <!-- 7/14 수정 h3 위치 변경 -->
+        <h3>퇴근확인<i class="icon icon-close pop-close"></i></h3>
+        <div class="pop-container">
+          <div class="con worker-result">
+            <p>
+              <span class="name">박서준</span> 님,<br />
+              <!-- 퇴근상태일때 .out 추가, 출근상태일 때 .in 추가 -->
+              <span class="status out">퇴근체크</span>가 정상처리 되었습니다.<br />
+            </p>
+            <p class="mg-t18">오늘도 수고하셨습니다.</p>
+          </div>
+        </div>
+        <!-- 7/17 .btn-single 추가 -->
+        <div class="btn-single">
+          <a href="#" class="pop-close">확인</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //팝업 -->
+</body>
+
+</html>

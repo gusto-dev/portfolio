@@ -1,0 +1,75 @@
+/*기본테이블*/
+.table-info {margin:0 -15px;border-bottom:1px solid #ccc;text-align:center;}
+.table-info th,
+.table-info td {table-layout: fixed; padding:10px 4px 9px;background:#fff;font-size:13px;line-height:15px;color:#4b4f56;word-break:break-all;}
+.table-info th {border-top:1px solid #666666;border-bottom:1px solid #666666;background:#f7f7f7;}
+
+.table-info .b-line {border-bottom:1px solid #ccc;}
+.table-info .r-line {border-right:1px solid #ccc;}
+.table-info .t-bold {font-weight:700;}
+.table-info .total {border-bottom:1px solid #ccc;font-weight:700;}
+.table-info .unit {font-size:10px;}
+.table-info .point-bg td,
+.table-info .point-bg th {background:#dbe9f9;}
+.table-info tr.f-color03 td {color:#9197a3 !important;}
+.table-info tbody td.movie-name {max-width:0;height: 34px;font-weight:600;overflow:hidden;text-align:left;text-overflow:ellipsis;white-space: nowrap;}
+.table-info tbody td:first-child.movie-name {padding-left:15px;}
+.table-info tbody td.movie-name.down {padding-left:27px;font-weight:400;}
+.table-info .s-font {display:block;font-size:12px;}
+/* .table-info .align-l tr td:first-child {padding-left:15px;} */
+/* .table-info .align-l .f-color03 .movie-name {padding-left:26px;} */
+
+/*라인테이블01*/
+.table-info.line-style01 td {border-top:1px solid #bdc1c8;border-right:1px solid #bdc1c8;}
+.table-info.line-style01:last-child tr td:last-child {border-right:none;} 
+.table-info.line-style01 tr:first-child td {border-top:none;} 
+
+/*라인테이블02*/
+.table-info.line-style02 th {padding:5px 2px 4px;border-bottom:1px solid #ccc;}
+.table-info.line-style02 tr td:first-child {border-right:1px solid #ccc;}
+.table-info.line-style02 thead tr:first-child th:first-child {border-right:1px solid #ccc;}
+
+/*테이블 상단고정*/
+.tbl-topfix-style {position:relative;border-top-color:transparent;margin-top:0;}
+.tbl-topfix-thead {position:absolute;top:0;left:0;right:0;}
+.tbl-topfix-thead.fixed {position: fixed;z-index:10;top:100px;}
+/* .tbl-topfix-thead.fixed:before {content:'';position: absolute;top:-16px;left:0;right:0;height:16px;background:#fff;} */
+
+/*컨텐츠 테이블과 같이 스크롤 고정 영역*/
+.sub-topfix-style {margin-top:15px;}
+.sub-topfix-style.fixed {position: fixed;z-index:10;top:100px;left:0;right:0;margin-top:0;padding:0;background:#fff;}
+.sub-topfix-style.fixed ul {border:0;}
+.sub-topfix-style.fixed ul li.active {border:0;}
+/* .sub-topfix-style.fixed ::before {display:none;} */
+
+/*팝업 테이블 상단고정*/
+.tbl-popfix-style {position: relative;}
+.tbl-popfix-style .tbl-popfix-thead {position: fixed;z-index: 10;}
+.point-row th {background: #fed7de;}
+
+/*테이블 좌측,상단 고정 플러그인*/
+#freezer-example {position:relative;width: 100vw;overflow: hidden;}
+#freezer-example table col {width: calc(100vw / 4); }
+#freezer-example .freeze-multi-scroll-left-head {border-right:1px solid #bdc1c8;} 
+#freezer-example .table-freeze-multi-clone tr td:first-child {border-right:1px solid #bdc1c8;} 
+#freezer-example table th {border-bottom:1px solid #ccc;padding:5px 2px 4px}
+#freezer-example .icon-x-scroll {display:inline-block;position:absolute;right:5px;top:10px;width:30px;height:30px;background:url(../../images/icon_x_scroll.png) no-repeat;background-size:cover;z-index:100;font-size:0;}
+
+/*툴팁*/
+.ui-tooltip {display:block;white-space:nowrap;padding:11px 17px;position:absolute;margin-top:-50px;margin-left:-24px;border-radius:40px;background-color:#fff;z-index:1000;filter:drop-shadow(0px 0px 10px rgba(0,0,0,.2));text-align:center;}
+.ui-tooltip:before {content:'';width:0;height:0;position:absolute;bottom:-11px;left:calc(50% - 8px);border-width:13px 8px 0 8px;border-style: solid;border-color: #fff transparent transparent transparent;}
+.ui-tooltip .auditorium {color:#4b4f56;font-size:11px;font-weight:400;margin-top:3px;}
+.ui-tooltip .movie {color:#fb4357;font-weight:700;font-size:13px;white-space:normal;}
+.ui-tooltip-content {font-size:14px;font-weight:bold;}
+.ui-tooltip.positionleft:before {left:12%;}
+.tooldim {position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,.2);z-index:100;}
+.movie:after {display:inline-block;width:18px;height:18px;margin-left:5px;border-radius:50%;font-weight:400;line-height:18px;color:#fff;vertical-align:middle;}
+.movie.spectators-15:after {content:'15';background:#f26522;}
+.movie.spectators-12:after {content:'12';background:#22b0f2;}
+
+/*테이블 버튼*/
+.btn-tbltoggle {margin:-5px 0;padding:1px 15px 0px 6px;border:1px solid #9197a3;border-radius:3px;font-size:13px;background:url(../../images/btn_tbl_togle.png) no-repeat right 6px center / 5px 9px #fff; }
+.btn-tbltoggle:last-child {display:none;}
+
+/*첫번째 td left 정렬*/
+.align-form01 tr td:first-child {padding-left:15px;text-align:left;}

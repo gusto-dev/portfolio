@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="uft-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="../../WebContent/resources/asset/styles/lib/ui.jqgrid.css" type="text/css" />
+<!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jqgrid/4.6.0/js/jquery.jqGrid.min.js"></script>
+
+</head>
+<body>
+	<div>
+		<!-- <h1>JQ Grid Sample</h1> -->
+		<div>
+			<table id="grid"></table>
+		</div>
+	</div>
+<script>
+	var colNmList = ["시간","상영관","영화","내용","러닝타임"];
+	var colModelList = [
+							{name : "time"},
+							{name : "scnNm"},
+							{name : "movNm"},
+							{name : "cont"},
+							{name : "runTm"},
+						];
+	$(function(){
+		var data = {};
+		var dataList = [];
+		for(var i = 0 ; i < 20 ; i++){
+			data.time = "08:20"
+			data.scnNm = "상영관"+i
+			data.movNm = "영화"+i
+			data.cont = "내용"+i
+			data.runTm = "00:15:"+i
+			dataList.push(data)
+		}
+	
+		$("#grid").jqGrid({
+			search: true,
+			datatype: "local",
+			height: 250,
+			colNames: colNmList,
+			colModel:colModelList,
+			onSelectRow: function(id){
+				var rowData = jQuery("#grid").jqGrid('getRowData',id)
+			}
+		});
+		
+		$("#grid").jqGrid("clearGridData", true);
+		for(var i in dataList){
+			$("#grid").jqGrid('addRowData',i+1,dataList[i]);
+		}
+	})
+</script>
+</body>
+</html>

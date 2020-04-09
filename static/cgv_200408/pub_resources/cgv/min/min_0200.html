@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+ 
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+   <div class="cgv-mobile"> 
+
+    <!-- header -->
+    <header>
+      <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">스케줄 신청</h3>
+      </a>
+      <a class="nav-refresh">새로고침</a>
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <section class="content-sub">
+      <div class="content-title">
+      </div>
+      <div class="content-full content-list-box"> 
+        <div class="content-list">
+          <ul class="notice-list">
+            <li class="notice">
+              <strong class="tit">Notice</strong>  
+              <p>사이트 관리자가 스케줄 요청시 입력한 내용. 사이트 관리자가 스케줄 요청시 입력한 내용.</p>
+            </li>
+            <li class="calendar">
+              <strong class="tit">신청기간</strong>  
+              <p>2019-07-08 ~ 2019-07-15</p>
+            </li>
+            <li class="calendar02">
+              <strong class="tit">대상기간</strong>  
+              <p>2019-07-08 ~ 2019-07-15</p>
+            </li>
+            <li class="calendar03">
+              <strong class="tit">소정근로</strong>  
+              <p>
+                <a class="notice-list-link">5일</a>
+                <a class="notice-list-link">6.42</a>
+              </p>
+            </li>
+          </ul>
+          <div class="btn-area"> 
+            <div class="checkbox-round">
+              <a class="btn-round w80p">증빙서류 제출</a>
+            </div>
+            <div class="checkbox-round float-r">
+              <a class="btn-round w72p">주복사</a>
+              <a class="btn-round w72p">스케줄 제출</a>
+            </div>
+          </div>
+          <div id='calendar' class="border"></div>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            var toDay  =  new Date();
+            
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+              plugins: [ 'dayGrid','interaction' ],
+              defaultDate: toDay,
+              // locale: 'ko', // the initial locale
+              editable: true,
+              // selectable: true,
+              eventLimit: true, // allow "more" link when too many events
+              defaultView:'dynamicCalendar',
+              header: {
+                left:   '',
+                center: '',
+                right:  ''
+              },
+              eventLimit: false,
+              columnHeaderText: function(date) {
+                if (date.getDay() === 1) return '월';
+                if (date.getDay() === 2) return '화';
+                if (date.getDay() === 3) return '수';
+                if (date.getDay() === 4) return '목';
+                if (date.getDay() === 5) return '금';
+                if (date.getDay() === 6) return '토';
+                if (date.getDay() === 0) return '일';
+              },
+              views: {
+                dynamicCalendar: {
+                type: 'dayGrid',
+                duration: { weeks: 6 },
+                
+                }
+              },
+              dateClick: function(info) {
+              	//초기화
+              	$(".click").removeClass("click");
+              	//해당 일자 검색
+              	$(".fc-day-top").each(function(){
+             		var date = $(this).attr("data-date");
+             		if(info.dateStr == date){
+             			//클래스추가
+             			$(this).find("span").addClass("click");
+             		}
+              	});
+                fn_test(info.dateStr);
+              },
+              eventClick: function(info) {
+                info.el.style.borderColor = 'red';
+              },
+              // businessHours: {
+              //   // days of week. an array of zero-based day of week integers (0=Sunday)
+              //   daysOfWeek: [ 0, 1, 2 ], // Monday - Thursday
+
+              //   startTime: "2019-7-14", // a start time (10am in this example)
+              //   endTime: "2019-7-13", // an end time (6pm in this example)
+              // },
+              
+              /*
+                #9197a3  회색
+                #4a90e2 파란색
+                #fb7b89 분홍색
+                #ff7a00 주황색
+              */
+              events: [
+                {
+                  title : "07:00"
+                  ,start : "2019-08-01"
+                  ,backgroundColor: "#9197a3" /*회색*/
+                  ,borderColor: "#9197a3"
+                },
+                {
+                  title : "07:00"
+                  ,start : "2019-08-02"
+                  ,backgroundColor: "#9197a3"
+                  ,borderColor: "#9197a3"
+                },
+                {
+                  title : "07:00"
+                  ,start : "2019-08-03"
+                  ,backgroundColor: "#9197a3"
+                  ,borderColor: "#9197a3"
+                },
+                {
+                  title : "07:00"
+                  ,start : "2019-08-04"
+                  ,backgroundColor: "#9197a3"
+                  ,borderColor: "#9197a3"
+                },
+                {
+                  title : "07:00"
+                  ,start : "2019-08-05"
+                  ,backgroundColor: "#9197a3"
+                  ,borderColor: "#9197a3"
+                },
+                {
+                  title : "12:00"
+                  ,start : "2019-08-06"
+                  ,backgroundColor: "#9197a3"
+                  ,borderColor: "#9197a3"
+                },
+                {
+                  title : "12:00"
+                  ,start : "2019-08-07"
+                  ,backgroundColor: "#9197a3"
+                  ,borderColor: "#9197a3"
+                },
+                {
+                  title : "12:00"
+                  ,start : "2019-08-08"
+                  ,backgroundColor: "#9197a3"
+                  ,borderColor: "#9197a3"
+                },
+                {
+                  title : "12:00"
+                  ,start : "2019-08-09"
+                  ,backgroundColor: "#9197a3"
+                  ,borderColor: "#9197a3"
+                },
+                {
+                  title : "12:00"
+                  ,start : "2019-08-10"
+                  ,backgroundColor: "#9197a3"
+                  ,borderColor: "#9197a3"
+                },
+              ]
+            });
+            calendar.render();
+            
+            function fn_test(date){
+              calendar.addEvent({
+                title: 'dynamic event',
+                start: date,
+                allDay: true
+              });
+            }
+          });
+          </script>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- //cgv-mobile -->
+</body>
+
+</html>

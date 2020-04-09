@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+   <!-- JQUERY UI -->
+   <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+  <div class="cgv-mobile">
+
+    <!-- header -->
+    <header>
+      <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">간편 로그인 등록</h3>
+      </a>
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <section class="content-sub">
+      <div class="content-full content-list-box">
+        <div class="content-list subinner-container">
+          <p class="center-info">
+            휴대폰에 등록된 지문인식 정보를 이용하여 비밀번호를 입력하지 않고 편리하게 로그인이 가능합니다.
+          </p>
+          <img class="certifyid-img" src="../../../resources/images/touchID.png" aria-label="touchID"/>
+    
+        </div>
+        <div class="btn-group btn-list2 btn-red">
+          <a class="pop-open" href="" target="_self">등록</a>
+          <a class="pop-open" href="" target="_self">취소</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <!-- //cgv-mobile -->
+
+
+  <!-- 팝업(터치아이디 설정완료) -->
+  <div class="pop-dimed">
+    <div class="pop-bg"></div>
+    <div data-pop="#popTouchId" class="pop-house">
+      <div class="pop-layer pop-alert">
+        <div class="pop-container txt-c">
+          <img class="pop-certifyid" src="../../../resources/images/touchID.png" />
+          <p class="pop-result mg-t24">Touch ID 설정이 완료되었습니다.</p>
+          <a href="#" class="pop-close btn-close">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //팝업 -->
+
+  <!-- 팝업 -->
+  <div class="pop-dimed">
+    <div class="pop-bg"></div>
+    <div data-pop="#popTouchId" class="pop-house">
+      <div class="pop-layer pop-alert">
+        <div class="pop-container txt-c">
+          <img class="pop-certifyid" src="../../../resources/images/touchID.png" />
+          <h5 class="pop-result txt-14p txt-bold mg-t16">Touch ID for "CGV Smart Office"</h5>
+          <p class="pop-result mg-t12">To access secrets</p>
+          <a href="#" class="pop-close btn-close">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //팝업 -->
+
+
+</body>
+
+</html>

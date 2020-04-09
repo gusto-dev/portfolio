@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../resources/asset/styles/lib/jquery-ui.css" /> -->
+
+  <!-- 기본설정 -->
+  <link rel="stylesheet" href="../../resources/asset/styles/reset.css" />
+
+  <!-- 공통사항 -->
+
+  <link rel="stylesheet" href="../../resources/asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../resources/asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../resources/asset/styles/common.css" />
+  <link rel="stylesheet" href="../../resources/asset/styles/layout.css" />
+
+
+  <!-- <script type="text/javascript" src="../../resources/asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../resources/asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../resources/asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../resources/asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../resources/asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../resources/asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../resources/asset/scripts/common_pub.js"></script>
+</head>
+
+
+
+<body class="main-index">
+  <div class="cgv-mobile has-bottom-btn"> <!-- 190711 class 추가 (페이지 일괄적용)  --> 
+
+    <!-- header -->
+    <header>
+      <div class="control-btns front">
+        <button type="button" class="btn-more"><i class="icon-more"></i></button>
+        <!-- 뒤로가기 버튼이 존재할 경우 사용 -->
+        <!-- <button type="button" class="btn-back"><i class="icon-back"></i></button> -->
+      </div>
+      <div class="header-contents">
+        <a href="." class="btn-logo"><img src="../../resources/images/index/logo.png" alt=""></a>
+      </div>
+      <div class="control-btns end">
+        <!-- 알림이 있을때 .on 추가 -->
+        <button type="button" class="btn-noti on">
+          <i class="icon-noti"></i>
+             <!-- 190725 추가 -->
+        </button>
+        <a href="#" class="btn-search-main"><i class="icon-search-main"></i></a>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <main class="index-contents">
+
+      <!-- 사용자 정보 -->
+      <div class="user-status-area">
+        <div class="user-information">
+          <div class="user-name-location">
+            <div class="name">박서준</div>
+            <!-- 직책이 있을때 .has-position 추가 -->
+            <div class="position-location">
+              <span class="position">점장</span>
+              <span class="location">CGV 용산아이파크</span>
+            </div>
+          </div>
+          <div class="user-day-time">
+             <i class="icon-alarm"></i>
+             <span class="day">TODAY</span>
+             <span class="time">11:00 ~ 20:00</span>
+          </div>
+        </div>
+        <div class="user-status">
+          <!-- 출근전 .before, 출근 .start, 근무중 .working, 업무종료 .done, 휴무 .dayoff -->
+          <div class="status-badge before">
+            <span><!-- 출근일때만 시간 입력! 그 외엔 내용없음 --><!-- 10:45 --></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 사용자 메뉴 슬라이드 -->
+      <div class="swiper-container menu-slide-area">
+        <div class="swiper-wrapper menu-slide">
+          <div class="swiper-slide slide-items">
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-projector"></i>
+                상영스케줄
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-ticket"></i>
+                좌석판매현황
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-start-clock"></i>
+                출퇴근
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-memo"></i>
+                업무메모
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-smile"></i>
+                미소지기조회
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-voc"></i>
+                VOC조회
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-lost"></i>
+                분실물
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-mileage"></i>
+                마일리지
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide slide-items">
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-projector"></i>
+                상영스케줄
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-ticket"></i>
+                좌석판매현황
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-start-clock"></i>
+                출퇴근
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-memo"></i>
+                업무메모
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-smile"></i>
+                미소지기조회
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-voc"></i>
+                VOC조회
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-lost"></i>
+                분실물
+              </a>
+            </div>
+            <div class="slide-item">
+              <a href="#">
+                <i class="icon-mileage"></i>
+                마일리지
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="menu-slide-btns">
+          <div class="swiper-pagination"></div>
+          <a href="#" class="btn-menu-setting">
+            <i class="icon-filter"></i>편집하기
+          </a>
+        </div>
+      </div>
+
+      <!-- 공지사항, 업무메모 표시 / 해당 오브젝트 표시 정책은 화면정의서 참고 -->
+      <div class="board-preview-area">
+        <!-- 새로운 공지가 있을시 .new 추가 -->
+        <div class="swiper-container board-preview-item new">
+          <div class="type">공지사항</div>
+          <div class="swiper-wrapper title notice-items">
+            <a href="#" class="swiper-slide">알라딘 연계 3가지 소원 콤보 판매 시작 안내1 <span class="shape-arrow"></span></a>
+            <a href="#" class="swiper-slide">알라딘 연계 3가지 소원 콤보 판매 시작 안내2 <span class="shape-arrow"></span></a>
+            <a href="#" class="swiper-slide">알라딘 연계 3가지 소원 콤보 판매 시작 안내3 <span class="shape-arrow"></span></a>
+            <a href="#" class="swiper-slide">알라딘 연계 3가지 소원 콤보 판매 시작 안내4 <span class="shape-arrow"></span></a>
+            <a href="#" class="swiper-slide">알라딘 연계 3가지 소원 콤보 판매 시작 안내5 <span class="shape-arrow"></span></a>
+          </div>
+        </div>
+        <div class="board-preview-item">
+          <div class="type">업무메모</div>
+          <a href=""# class="title"><span class="time">13:00</span> 5관 KT 단체 마이크 2개, X배너 거치대 준비 X배너 거치대 준비 <span class="shape-arrow"></span></a>
+        </div>
+      </div>
+
+      <div class="swiper-container ticketing-rate-wrap">
+        <div class="swiper-wrapper ticketing-rate-area">
+          <div class="swiper-slide ticketing-rate-items">
+            <div class="ticketing-title">
+              <p class="theater-name">CGV 용산아이파크</p>
+              <div class="theater-status">
+                <div class="day">NOW</div>
+                <div class="total-audience">
+                  <i class="icon-user"></i>
+                  12,320명
+                </div>
+                <div class="total-percentage">
+                  <i class="icon-diagram"></i>
+                  51.4%
+                </div>
+              </div>
+            </div>
+            <div class="ticketing-rate-chart">
+              <div class="chart-item">
+                <div class="movie-rate-information">
+                  <div class="theater-type">Salon S</div>
+                  <div class="movie-name">롱리브더킹</div>
+                </div>
+                <div class="movie-rate-chart">
+                  <span class="showing-time">12:25</span>
+                  <!-- 좌석수가 가장 큰 상영관은 .max 추가 (가로 100%) -->
+                  <div class="chart-box" style="width: 50%">
+                    <div class="chart-track">
+                      <div class="chart-bar" style="width: 40%">
+                        <span>70</span>명
+                      </div>
+                      <span>220</span>
+                    </div>
+                    <span class="total-rate">31.8%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-item">
+                <div class="movie-rate-information">
+                  <div class="theater-type">TEMPUR</div>
+                  <div class="movie-name">기생충</div>
+                </div>
+                <div class="movie-rate-chart">
+                  <span class="showing-time">12:45</span>
+                  <!-- 좌석수가 가장 큰 상영관은 .max 추가 (가로 100%) -->
+                  <div class="chart-box" style="width: 75%">
+                    <div class="chart-track">
+                      <div class="chart-bar" style="width: 70%">
+                        <span>155</span>명
+                      </div>
+                      <span>321</span>
+                    </div>
+                    <span class="total-rate">48.2%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-item">
+                <div class="movie-rate-information">
+                  <div class="theater-type">4DX SX</div>
+                  <div class="movie-name">스파이더맨-파 프롬 홈</div>
+                </div>
+                <div class="movie-rate-chart">
+                  <span class="showing-time">13:10</span>
+                  <!-- 좌석수가 가장 큰 상영관은 .max 추가 (가로 100%) -->
+                  <div class="chart-box max">
+                    <div class="chart-track">
+                      <div class="chart-bar" style="width: 70%">
+                        <span>302</span>명
+                      </div>
+                      <span>406</span>
+                    </div>
+                    <span class="total-rate">74.2%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide ticketing-rate-items">
+            <div class="ticketing-title">
+              <p class="theater-name">CGV 용산아이파크</p>
+              <div class="theater-status">
+                <div class="day">NOW</div>
+                <div class="total-audience">
+                  <i class="icon-user"></i>
+                  12,320명
+                </div>
+                <div class="total-percentage">
+                  <i class="icon-diagram"></i>
+                  51.4%
+                </div>
+              </div>
+            </div>
+            <div class="ticketing-rate-chart">
+              <div class="chart-item">
+                <div class="movie-rate-information">
+                  <div class="theater-type">Salon S</div>
+                  <div class="movie-name">롱리브더킹</div>
+                </div>
+                <div class="movie-rate-chart">
+                  <span class="showing-time">12:25</span>
+                  <!-- 좌석수가 가장 큰 상영관은 .max 추가 (가로 100%) -->
+                  <div class="chart-box" style="width: 50%">
+                    <div class="chart-track">
+                      <div class="chart-bar" style="width: 40%">
+                        <span>70</span>명
+                      </div>
+                      <span>220</span>
+                    </div>
+                    <span class="total-rate">31.8%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-item">
+                <div class="movie-rate-information">
+                  <div class="theater-type">TEMPUR</div>
+                  <div class="movie-name">기생충</div>
+                </div>
+                <div class="movie-rate-chart">
+                  <span class="showing-time">12:45</span>
+                  <!-- 좌석수가 가장 큰 상영관은 .max 추가 (가로 100%) -->
+                  <div class="chart-box" style="width: 75%">
+                    <div class="chart-track">
+                      <div class="chart-bar" style="width: 70%">
+                        <span>155</span>명
+                      </div>
+                      <span>321</span>
+                    </div>
+                    <span class="total-rate">48.2%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-item">
+                <div class="movie-rate-information">
+                  <div class="theater-type">4DX SX</div>
+                  <div class="movie-name">스파이더맨-파 프롬 홈</div>
+                </div>
+                <div class="movie-rate-chart">
+                  <span class="showing-time">13:10</span>
+                  <!-- 좌석수가 가장 큰 상영관은 .max 추가 (가로 100%) -->
+                  <div class="chart-box max">
+                    <div class="chart-track">
+                      <div class="chart-bar" style="width: 70%">
+                        <span>302</span>명
+                      </div>
+                      <span>406</span>
+                    </div>
+                    <span class="total-rate">74.2%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ticketing-rate-controls">
+          <button type="button" class="swiper-prev"></button>
+          <button type="button" class="swiper-next"></button>
+        </div>
+      </div>
+
+    </main>
+    <!-- //main -->
+  </div>
+
+  <script>
+    var menuSlider = new Swiper('.menu-slide-area', {
+      speed: 500,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+    });
+
+    // 공지사항 슬라이드
+    var noticeSlider = new Swiper('.board-preview-item', {
+      // effect: "cube",
+      loop: true,
+      speed: 500,
+      direction: 'vertical',
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+    });
+    var ticketingRateSlider = new Swiper('.ticketing-rate-wrap', {
+      speed: 500,
+      navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+      },
+    });
+  </script>
+</body>
+
+</html>

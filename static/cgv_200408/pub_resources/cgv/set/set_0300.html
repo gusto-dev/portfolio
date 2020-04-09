@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>CGV</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:width" content="">
+    <meta property="og:image:height" content="">
+
+    <!-- JQUERY UI -->
+    <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+    <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+    <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+    <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+    <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+    <link rel="stylesheet" href="../../asset/styles/reset.css" />
+    <link rel="stylesheet" href="../../asset/styles/common.css" />
+    <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+    <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+    <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+    <div class="cgv-mobile">
+        <!-- 190711 class 추가 (페이지 일괄적용)  -->
+
+        <!-- header -->
+        <header>
+            <a class="nav-sub">
+                <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+                <h3 class="title">알림 수신 설정</h3>
+            </a>
+            <a class="nav-refresh">새로고침</a>
+        </header>
+        <!-- //header -->
+
+        <!-- main -->
+        <section class="content-sub">
+            <div class="content-full content-list-box">
+                <div class="subinner-container content-list">
+                    <ul class="setting-list style02">
+                        <li>
+                            <div>
+                                <h3 class="setting-tit">업무메모</h3>
+                                <p class="setting-msg">근무시간에 해야 할 업무 메모 알림</p>
+                            </div>
+                            <label class="switch-button">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div>
+                                <h3 class="setting-tit">러시알림</h3>
+                                <p class="setting-msg">20분 내에 상영관 3개 이상 중복 상영, 객석률 50% 이상</p>
+                            </div>
+                            <label class="switch-button">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div>
+                                <h3 class="setting-tit">용지부족</h3>
+                                <p class="setting-msg">포토티켓 단말기 용지 부족 알림</p>
+                            </div>
+                            <label class="switch-button">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div>
+                                <h3 class="setting-tit">결제 요청</h3>
+                                <p class="setting-msg">미소지기가 스케줄 변경 및 휴가 신청할 경우</p>
+                            </div>
+                            <label class="switch-button">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div>
+                                <h3 class="setting-tit">퇴근 알림</h3>
+                                <p class="setting-msg">미소지기 퇴근 20분전 알림</p>
+                            </div>
+                            <label class="switch-button">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div>
+                                <h3 class="setting-tit">체크리스트</h3>
+                                <p class="setting-msg">오늘 해야 할 체크리스트 알림</p>
+                            </div>
+                            <label class="switch-button">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div>
+                                <h3 class="setting-tit">실적</h3>
+                                <p class="setting-msg">전일 관람객 실적 알림</p>
+                            </div>
+                            <label class="switch-button">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+
+                        <!-- 미소지기 -->
+                        <li>
+                            <div>
+                                <h3 class="setting-tit">결재 승인</h3>
+                                <p class="setting-msg">스케줄 변경 및 휴가 신청에 대한 결재 완료시</p>
+                            </div>
+                            <label class="switch-button">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div>
+                                <h3 class="setting-tit">마일리지 지급</h3>
+                                <p class="setting-msg">미소지기 마일리지 지급시</p>
+                            </div>
+                            <label class="switch-button">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div>
+                                <h3 class="setting-tit">서류 작성 요청</h3>
+                                <p class="setting-msg">계약 및 기타 작성해야 할 서류가 있을 경우</p>
+                            </div>
+                            <label class="switch-button">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                        <li>
+                            <div>
+                                <h3 class="setting-tit">건강진단서 제출</h3>
+                                <p class="setting-msg">건강진단서 제출 요청을 받은 경우</p>
+                            </div>
+                            <label class="switch-button">
+                                <input type="checkbox" checked="">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+ 
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+<div class="cgv-mobile has-bottom-btn"> <!-- 190711 class 추가 (페이지 일괄적용)  --> 
+<!-- //상단메뉴 -->
+<header>
+    <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">문서뷰어팝업</h3>
+    </a>
+</header>
+
+<!-- main -->
+<!-- //상단 메뉴가 들어가는 경우 content-sub -->
+<section class="content-sub">
+</section>
+
+</div>
+
+<!-- 190718 재직자 퇴직자 긴급문자 발송 팝업 -->
+
+<!-- .show-pop 추가시 팝업 노출 -->
+<!-- 재직자 -->
+<div class="pop-dimed show-pop">
+    <div data-pop="#document05" class="pop-house-full">
+        <div class="pop-layer">
+            <h3>재직자 긴급문자 발송<i class="icon icon-close pop-close"></i></h3>
+            <div class="pop-container">
+                    <!-- 7/14 수정 .con 추가 -->
+                <div class= "con popcontent">
+                    <p class="document-titbox">[<span class="f-color02">CGV 용산아이파크몰</span>] 리콜미소지기채용</p>
+                   <ul class="list-style01">
+                        <li>
+                            <span class="f-color02">5월 18일</span> 지원 출근 가능한 미소지기를 모집합니다.<br>
+                            (휴일근무기본급 1.5배)<br><br>
+                            <!-- 200317 연락처부분 수정 -->
+                            <span class="f-color02">김상영</span><span class="f-color03">(010-9999-0002 or 02-1234-5678)</span>님에게<br>
+                            연락주세요.
+                        </li>
+                        <li>
+                            <!-- 200317 push-area 추가 -->
+                            <div class="push-area sms-push">
+                                <div class="input-title flex-center">
+                                    <h4>발송자 연락처 노출</h4>
+                                    <div class="push-tit">
+                                        <label class="switch-button">
+                                            <input type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-single"> 
+                <button type="button">문자발송</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 퇴직자 -->
+<!-- .show-pop 추가시 팝업 노출 -->
+<div class="pop-dimed">
+    <div data-pop="#document05" class="pop-house-full">
+        <div class="pop-layer">
+            <h3>퇴직자 긴급문자 발송<i class="icon icon-close pop-close"></i></h3>
+            <div class="pop-container">
+                    <!-- 7/14 수정 .con 추가 -->
+                <div class= "con popcontent">
+                    <p class="document-titbox">[<span class="f-color02">CGV 용산아이파크몰</span>] 리콜미소지기채용</p>
+                    <ul class="list-style01">
+                        <li class="sub-text02">
+                            - <strong>근무시간 : </strong>
+                            <span class="f-color02">5월 18일 ~ 5월 31일</span>
+                        </li>
+                        <li class="sub-text02">※ 보건증소지자에 한하여 지원 가능</li>
+                        <li class="sub-text02">※ 직전 퇴직일로부터 1개월 이후 가능</li>
+                        <li class="sub-text02">
+                            - <strong>지원방법 : </strong>
+                            <span class="f-color02">abcdefg20</span>
+                            @cj.net 메일회신
+                        </li>
+                        <li class="sub-text02">
+                            - <strong>회신내용 : </strong>
+                            <p class="indent">
+                                이름/ 성별/ 생년월일/ 연락처/ 근무경험사이트명/ 근무가능일/ 근무가능시간/ 추천미소지기
+                                관련하여 궁금하신 사항은 <span class="f-color02">김상영</span>님에게 연락주세요.<br>
+                                <span class="f-color02">02-1234-5678</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-single">
+                <button type="button">문자발송</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 -->
+    
+
+</body>
+

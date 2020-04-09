@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+ 
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+<div class="cgv-mobile has-bottom-btn"> <!-- 190711 class 추가 (페이지 일괄적용)  --> 
+<!-- //상단메뉴 -->
+<header>
+    <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">문서뷰어팝업</h3>
+    </a>
+</header>
+
+<!-- main -->
+<!-- //상단 메뉴가 들어가는 경우 content-sub -->
+<section class="content-sub">
+    <div class="content-title">
+        
+    </div>
+    <div class="content-full content-list-box">
+        <!-- //풀페이지 리스트 -->
+        <div class="content-list">
+            <button type="button" class="pop-open-full" href="#document01" target="_self">근로계약서_무기</button><br>
+            <button type="button" class="pop-open-full" href="#document02" target="_self">근로계약서_단기</button><br>
+            <button type="button" class="pop-open-full" href="#document03" target="_self">개인정보서약서</button><br>
+            <button type="button" class="pop-open-full" href="#document04" target="_self">범죄전력조회동의서</button><br>
+            <button type="button" class="pop-open-full" href="#document05" target="_self">연장근로동의서</button><br>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="bottom-menu">
+        <ul class="menu">
+        <li class="home">
+            <a href="#" class="bottom_btn"></a>
+        </li>
+        <li class="movie">
+            <a href="#" class="bottom_btn"></a>
+        </li>
+        <li class="more">
+            <button type="button" class="bottom_btn"></button>
+            
+        </li>
+        <li class="search">
+            <a href="#" class="bottom_btn"></a>
+        </li>
+        <li class="menu">
+            <a href="#" class="bottom_btn"></a>
+        </li>
+        </ul>
+        <div class="more-box">
+        <img src="../../../resources/images/sample01.png" class="sample" />
+        </div>
+        <div class="pop-bg"></div>
+    </div>
+    </footer>
+</div>
+
+<!-- 팝업(근로계약서_무기) -->
+<!-- .show-pop 추가시 팝업 노출 -->
+<div class="pop-dimed">
+    <div data-pop="#document01" class="pop-house-full">
+        <!-- 7/14 수정 .pop-layer 추가 -->
+        <div class="pop-layer">
+            <!-- 7/14 수정 h3 위치 변경 -->
+            <h3>문서뷰어<i class="icon icon-close pop-close"></i></h3>
+            <div class="pop-container">
+                <!-- 7/14 수정 .con 추가 -->
+                <div class="con popcontent">
+                    <div class="document-titbox">
+                        [근로계약서1]
+                        <h4 class="tit">미소지기 근로계약서_무기</h4>
+                        <p class="txt">CJ CGV 주식회사(이하 ‘사업주’)와 <span class="f-color02">김민지</span>(이하 ‘근로자’)은 다음과 같이 근로 계약을 체결한다.</p>
+                    </div>
+                    <div class="table-title pd-0">
+                        <h5>사업주</h5>
+                    </div>
+                    <div class="table table-info line-style02">
+                        <table>
+                            <caption>사업주 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th class="w25" scope="col">사업체명</th>
+                                    <td colspan="3">CJ CGV 주식회사</td>
+                                </tr>
+                                <tr>
+                                    <th class="w25" scope="col">주소</th>
+                                    <td colspan="3">서울시 용산구 한강대로 23길 55<br>(아이파크몰 6층)</td>
+                                </tr>
+                                <tr>
+                                    <th class="w25" scope="col">대표자</th>
+                                    <td colspan="3">최병환</td>
+                                </tr>
+                                <tr>
+                                    <th class="w25" scope="col">대표전화</th>
+                                    <td colspan="3">02-371-6660</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-title pd-0">
+                        <h5>근로자</h5>
+                    </div>
+                    <div class="table table-info line-style02">
+                        <table>
+                        <caption>근로자 정보</caption>
+                        <tbody>
+                            <tr>
+                                <th class="w25" scope="col">성명</th>
+                                <td colspan="3" class="f-color02">김민지</td>
+                            </tr>
+                            <tr>
+                                <th class="w25" scope="col">주소</th>
+                                <td colspan="3" class="f-color02">서울시 마포구 마표대로 100 (마포동 123)<br>123동 3002호</td>
+                            </tr>
+                            <tr>
+                                <th class="w25" scope="col">생년월일</th>
+                                <td colspan="3" class="f-color02">1992년 4월 20일</td>
+                            </tr>
+                            <tr>
+                                <th class="w25" scope="col">연락처</th>
+                                <td colspan="3" class="f-color02">010-2888-4900</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <h6 class="document-stit">1.계약기간</h6>
+                    <p class="document-stxt">
+                        근로계약기간: <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">3</span>일 부터<br>
+                        근로조건 적용일: <span class="f-color02">2019</span>년 <span class="f-color02">8</span>월 <span class="f-color02">3</span>일 부터
+                    </p>
+                    <h6 class="document-stit">2.근무장소</h6>
+                    <p class="document-stxt">
+                        CJ <span class="f-color02">CGV 용산아이파크몰</span> 영화관<br>
+                        (단, 경영상 필요시 변경 가능)
+                    </p>
+                    <h6 class="document-stit">3.업무의 내용</h6>
+                    <p class="document-stxt">
+                        영화관(매표, 매점, 플로어 등) 고객서비스 운영에 필요한 제반 업무 및 기타 보조 업무
+                    </p>
+                    <h6 class="document-stit">4.근로일 및 근로일별 근로시간</h6>
+                    <p class="document-stxt">
+                            주<span class="f-color02">4</span>일, 일 <span class="f-color02">6.75</span>시 (근로일/ 근로일별 시업 및 종업시간/휴게 시간/주휴일은 상호 합의 및 약정한 근무스케줄표에 의한다.)
+                    </p>
+                    <p class="document-stxt">
+                        1일 소정근로시간 수는 '4주 동안의 소정근로시간을 그 기간의 통상 근로자의 총 소정근로일 수로 나눈 시간 수'로 한다.
+                    </p>
+                    <p class="document-stxt">
+                        "사업주"는 1일 4시간 이상 근무 時 30분, 8시간 이상 근무 時<br>
+                        1시간 이상의 휴게시간을 "근로자"에게 부여한다.<br>
+                        "사업주"의 업무상 필요 또는 "근로자"의 개인적 필요 時 <br>
+                        "사업주"와 "근로자"가 상호 협의하여 근로일/근로일별 시업 및 
+                        종업시간/휴게시간/주휴일 등을 변경할 수 있으며, "근로자"의 
+                        동의는 근무스케줄표에 확인 날인한 서명으로 갈음한다.
+                    </p>
+                    <h6 class="document-stit">5.임금</h6>
+                    <p class="document-stxt indent03">
+                        <span>시간급: 8,600원 (주휴수당 포함 時 10,320원 ) <br>
+                        단, 주휴수당은 통상근로자의 근로시간에 비례하여 산정</span>
+                    </p>
+                    <p class="document-stxt">
+                        임금산정 단위는 시간급을 원칙으로 하며, 일급 통상임금으로 
+                        산정할 경우에는 '1일 소정근로시간 수 × 시간급 임금'으로 
+                        산정함.
+                    </p>
+                    <p class="document-stxt">
+                        초과근로에 대한 가산임금률 : 50%
+                    </p>
+                    <p class="document-stxt indent05">
+                        <span>임금지급일 : 매월 1일부터 말일까지의 급여를 매 익월 10일 (휴일의 경우는 전일 입금)에 지급</span>
+                    </p>
+                    <p class="document-stxt">
+                        지급방법 : 근로자 명의 예금통장에 입금
+                    </p>
+                    <div class="table table-info line-style02">
+                        <table>
+                            <caption>지급 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th class="w25" scope="col">입금은행</th>
+                                    <td colspan="3" class="f-color02">신한은행</td>
+                                </tr>
+                                <tr>
+                                    <th class="w25" scope="col">예금주</th>
+                                    <td colspan="3" class="f-color02">김민지</td>
+                                </tr>
+                                <tr>
+                                    <th class="w25" scope="col">계좌번호</th>
+                                    <td colspan="3" class="f-color02">110-000-002020</td>
+                                </tr>
+                                <tr>
+                                    <th class="w25" scope="col">비고</th>
+                                    <td colspan="3">통장사본첨부</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h6 class="document-stit">6.연차유급휴가</h6>
+                    <p class="document-stxt">
+                        통상근로자의 근로시간에 비례하여 연차유급휴가 부여<br>
+                        {통상 근로자의 연차휴가일수×(단시간근로자의 1일 <br>
+                        소정근로시간 ÷ 통상근로자의 1일 소정근로시간) × 8시간}
+                    </p>
+                    <h6 class="document-stit">7.휴일</h6>
+                    <p class="document-stxt">
+                        유급 휴일은 주휴일(1주간의 소정근로일을 개근한 경우에 한하며, 구체적인 요일은  근무스케줄표에 따라 변경될 수 있다), 근로자의 날로 한다.
+                    </p>
+                    <h6 class="document-stit">8.사회보험 적용여부</h6>
+                    <p class="document-stxt">
+                        관련 법령에 따라 고용보험, 산재보험, 국민연금, 건강보험 적용
+                    </p>
+                    <h6 class="document-stit">9.근로계약서 교부</h6>
+                    <p class="document-stxt">
+                        "사업주"는 근로계약 체결 및 새로운 근무스케줄표 작성시 본 계약서와 근무스케줄표를 사본하여 '근로자'의 교부요구와 관계없이 '근로자'에게 교부함.
+                    </p>
+                    <h6 class="document-stit">10. 기타</h6>
+                    <p class="document-stxt">
+                        입사일로부터 3개월간 적성/자질/능력/태도 등 업무 적합 여부를 판단할 수 있는 수습기간을 실시함.
+                    </p>
+                    <p class="document-stxt">
+                        23시30분 이후 퇴근자에 대해서는 교통비 보조금 3,000원 지급.
+                    </p>
+                    <p class="document-stxt">
+                        퇴직시 유니폼, 명찰, 미소지기카드, 개인락커(열쇠)를 반납 하며, 분실 또는 훼손시 변상함.
+                    </p>
+                    <p class="document-stxt">
+                        이 계약에 정함이 없는 사항은 미소지기 취업규칙 및 근로기준법령에 의함.
+                    </p>
+                    <div class="document-bottom">
+                        <p class="date">
+                            <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">3</span>일
+                        </p>
+                        <p class="info">사업주: CJ CGV 주식회사</p>
+                        <p class="info stamp">대표이사: 최병환 (인)</p>
+                        <p class="info">근로자: <span class="f-color02">김민지</span></p>
+                    </div>
+                    <div class="document-titbox mg-t40">
+                        [근로계약서2]
+                        <h4 class="tit">미소지기 근로계약서_무기</h4>
+                        <p class="txt"><span class="f-color02">7</span>월 미소지기 <span class="f-color02">김민지</span>님 근로일/근로일별 시업 및 종업시간/휴게시간/주휴일</p>
+                    </div>
+                    <p class="sub-text02 dot">
+                        <strong>1주:</strong> 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">1</span>일 
+                        ~ <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">7</span>일 
+                    </p>
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>무기 근로계약서 1주</caption>
+        
+                            <thead class="txt-c">
+                                <tr>
+                                <th scope="row">요일</th>
+                                <th scope="row">근로시간</th>
+                                <th scope="row">사업</th>
+                                <th scope="row">종업</th>
+                                <th scope="row">휴게</th>
+                                </tr>
+                            </thead>
+                            <tbody class="txt-c">
+                                <tr>
+                                    <th scope="col">월</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">08:00</td>
+                                    <td class=" f-color02">15:00</td>
+                                    <td class=" f-color02">11:00 ~ 15:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">화</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">수</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">12:00</td>
+                                    <td class=" f-color02">19:00</td>
+                                    <td class=" f-color02">11:00 ~ 12:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">목</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">금</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">09:00</td>
+                                    <td class=" f-color02">16:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">토</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">10:00</td>
+                                    <td class=" f-color02">18:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="notice-txt"><span>*</span> 비고:</p>
+                    <p class="sub-text02 dot">
+                        <strong>2주:</strong> 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">8</span>일 
+                        ~ <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">14</span>일 
+                    </p>
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>무기 근로계약서 2주</caption>
+        
+                            <thead class="txt-c">
+                                <tr>
+                                <th scope="row">요일</th>
+                                <th scope="row">근로시간</th>
+                                <th scope="row">사업</th>
+                                <th scope="row">종업</th>
+                                <th scope="row">휴게</th>
+                                </tr>
+                            </thead>
+                            <tbody class="txt-c">
+                                <tr>
+                                    <th scope="col">월</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">08:00</td>
+                                    <td class=" f-color02">15:00</td>
+                                    <td class=" f-color02">11:00 ~ 15:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">화</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">수</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">12:00</td>
+                                    <td class=" f-color02">19:00</td>
+                                    <td class=" f-color02">11:00 ~ 12:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">목</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">금</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">09:00</td>
+                                    <td class=" f-color02">16:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">토</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">10:00</td>
+                                    <td class=" f-color02">18:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="notice-txt"><span>*</span> 비고:</p>
+                    <p class="sub-text02 dot">
+                        <strong>3주:</strong> 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">15</span>일 
+                        ~ <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">21</span>일 
+                    </p>
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>무기 근로계약서 3주</caption>
+        
+                            <thead class="txt-c">
+                                <tr>
+                                <th scope="row">요일</th>
+                                <th scope="row">근로시간</th>
+                                <th scope="row">사업</th>
+                                <th scope="row">종업</th>
+                                <th scope="row">휴게</th>
+                                </tr>
+                            </thead>
+                            <tbody class="txt-c">
+                                <tr>
+                                    <th scope="col">월</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">08:00</td>
+                                    <td class=" f-color02">15:00</td>
+                                    <td class=" f-color02">11:00 ~ 15:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">화</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">수</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">12:00</td>
+                                    <td class=" f-color02">19:00</td>
+                                    <td class=" f-color02">11:00 ~ 12:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">목</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">금</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">09:00</td>
+                                    <td class=" f-color02">16:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">토</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">10:00</td>
+                                    <td class=" f-color02">18:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="notice-txt"><span>*</span> 비고:</p>
+                    <p class="sub-text02 dot">
+                        <strong>4주:</strong> 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">22</span>일 
+                        ~ <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">28</span>일 
+                    </p>
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>무기 근로계약서 4주</caption>
+        
+                            <thead class="txt-c">
+                                <tr>
+                                <th scope="row">요일</th>
+                                <th scope="row">근로시간</th>
+                                <th scope="row">사업</th>
+                                <th scope="row">종업</th>
+                                <th scope="row">휴게</th>
+                                </tr>
+                            </thead>
+                            <tbody class="txt-c">
+                                <tr>
+                                    <th scope="col">월</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">08:00</td>
+                                    <td class=" f-color02">15:00</td>
+                                    <td class=" f-color02">11:00 ~ 15:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">화</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">수</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">12:00</td>
+                                    <td class=" f-color02">19:00</td>
+                                    <td class=" f-color02">11:00 ~ 12:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">목</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">금</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">09:00</td>
+                                    <td class=" f-color02">16:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">토</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">10:00</td>
+                                    <td class=" f-color02">18:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="notice-txt"><span>*</span> 비고:</p>
+                    <p class="sub-text02 dot">
+                        <strong>5주:</strong> 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">29</span>일 
+                        ~ <span class="f-color02">2019</span>년 <span class="f-color02">8</span>월 <span class="f-color02">4</span>일 
+                    </p>
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>무기 근로계약서 5주</caption>
+        
+                            <thead class="txt-c">
+                                <tr>
+                                <th scope="row">요일</th>
+                                <th scope="row">근로시간</th>
+                                <th scope="row">사업</th>
+                                <th scope="row">종업</th>
+                                <th scope="row">휴게</th>
+                                </tr>
+                            </thead>
+                            <tbody class="txt-c">
+                                <tr>
+                                    <th scope="col">월</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">08:00</td>
+                                    <td class=" f-color02">15:00</td>
+                                    <td class=" f-color02">11:00 ~ 15:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">화</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">수</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">12:00</td>
+                                    <td class=" f-color02">19:00</td>
+                                    <td class=" f-color02">11:00 ~ 12:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">목</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">금</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">09:00</td>
+                                    <td class=" f-color02">16:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">토</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">10:00</td>
+                                    <td class=" f-color02">18:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="notice-txt"><span>*</span> 비고:</p>
+                    <p class="sub-text02 dot">
+                        <strong>6주:</strong> 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">8</span>월 <span class="f-color02">5</span>일 
+                        ~ <span class="f-color02">2019</span>년 <span class="f-color02">8</span>월 <span class="f-color02">11</span>일 
+                    </p>
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>무기 근로계약서 6주</caption>
+        
+                            <thead class="txt-c">
+                                <tr>
+                                <th scope="row">요일</th>
+                                <th scope="row">근로시간</th>
+                                <th scope="row">사업</th>
+                                <th scope="row">종업</th>
+                                <th scope="row">휴게</th>
+                                </tr>
+                            </thead>
+                            <tbody class="txt-c">
+                                <tr>
+                                    <th scope="col">월</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">08:00</td>
+                                    <td class=" f-color02">15:00</td>
+                                    <td class=" f-color02">11:00 ~ 15:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">화</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">수</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">12:00</td>
+                                    <td class=" f-color02">19:00</td>
+                                    <td class=" f-color02">11:00 ~ 12:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">목</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">금</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">09:00</td>
+                                    <td class=" f-color02">16:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">토</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">10:00</td>
+                                    <td class=" f-color02">18:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="notice-txt"><span>*</span> 비고:</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 팝업(근로계약서_단기) -->
+<!-- .show-pop 추가시 팝업 노출 -->
+<div class="pop-dimed">
+    <div data-pop="#document02" class="pop-house-full">
+        <!-- 7/14 수정 .pop-layer 추가 -->
+        <div class="pop-layer">
+            <!-- 7/14 수정 h3 위치 변경 -->
+            <h3>문서뷰어<i class="icon icon-close pop-close"></i></h3>
+            <div class="pop-container">
+                <!-- 7/14 수정 .con 추가 -->
+                <div class="con popcontent">
+                    <div class="document-titbox">
+                        [근로계약서1]
+                        <h4 class="tit">미소지기 근로계약서_단기</h4>
+                        <p class="txt">CJ CGV 주식회사(이하 ‘사업주’)와 <span class="f-color02">김민지</span>(이하 ‘근로자’)은 다음과 같이 근로 계약을 체결한다.</p>
+                    </div>
+                    <div class="table-title pd-0">
+                        <h5>사업주</h5>
+                    </div>
+                    <div class="table table-info line-style02">
+                        <table>
+                            <caption>사업주 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th class="w25" scope="col">사업체명</th>
+                                    <td colspan="3">CJ CGV 주식회사</td>
+                                </tr>
+                                <tr>
+                                    <th class="w25" scope="col">주소</th>
+                                    <td colspan="3">서울시 용산구 한강대로 23길 55<br>(아이파크몰 6층)</td>
+                                </tr>
+                                <tr>
+                                    <th class="w25" scope="col">대표자</th>
+                                    <td colspan="3">최병환</td>
+                                </tr>
+                                <tr>
+                                    <th class="w25" scope="col">대표전화</th>
+                                    <td colspan="3">02-371-6660</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-title pd-0">
+                        <h5>근로자</h5>
+                    </div>
+                    <div class="table table-info line-style02">
+                        <table>
+                        <caption>근로자 정보</caption>
+                        <tbody>
+                            <tr>
+                                <th class="w25" scope="col">성명</th>
+                                <td colspan="3" class="f-color02">김민지</td>
+                            </tr>
+                            <tr>
+                                <th class="w25" scope="col">주소</th>
+                                <td colspan="3" class="f-color02">서울시 마포구 마표대로 100 (마포동 123)<br>123동 3002호</td>
+                            </tr>
+                            <tr>
+                                <th class="w25" scope="col">생년월일</th>
+                                <td colspan="3" class="f-color02">1992년 4월 20일</td>
+                            </tr>
+                            <tr>
+                                <th class="w25" scope="col">연락처</th>
+                                <td colspan="3" class="f-color02">010-2888-4900</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <h6 class="document-stit">1.계약기간</h6>
+                    <p class="document-stxt">
+                        근로계약기간: 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">3</span>일 ~
+                        <span class="f-color02">2019</span>년 <span class="f-color02">8</span>월 <span class="f-color02">4</span>일
+                    </p>
+                    <h6 class="document-stit">2.근무장소</h6>
+                    <p class="document-stxt">
+                        CJ <span class="f-color02">CGV 용산아이파크몰</span> 영화관<br>
+                        (단, 경영상 필요시 변경 가능)
+                    </p>
+                    <h6 class="document-stit">3.업무의 내용</h6>
+                    <p class="document-stxt">
+                        영화관(매표, 매점, 플로어 등) 고객서비스 운영에 필요한 제반 업무 및 기타 보조 업무
+                    </p>
+                    <h6 class="document-stit">4.근로일 및 근로일별 근로시간</h6>
+                    <p class="document-stxt">
+                        주 <span class="f-color02">4</span>일, 일 <span class="f-color02">6.75</span>시 (근로일/ 근로일별 시업 및 종업시간/휴게 시간/주휴일은 상호 합의 및 약정한 근무스케줄표에 의한다.)
+                    </p>
+                    <p class="document-stxt">
+                        1일 소정근로시간 수는 '4주 동안의 소정근로시간을 그 기간의 통상 근로자의 총 소정근로일 수로 나눈 시간 수'로 한다.
+                    </p>
+                    <p class="document-stxt">
+                        "사업주"는 1일 4시간 이상 근무 時 30분, 8시간 이상 근무 時<br>
+                        1시간 이상의 휴게시간을 "근로자"에게 부여한다.<br>
+                        "사업주"의 업무상 필요 또는 "근로자"의 개인적 필요 時 <br>
+                        "사업주"와 "근로자"가 상호 협의하여 근로일/근로일별 시업 및 
+                        종업시간/휴게시간/주휴일 등을 변경할 수 있으며, "근로자"의 
+                        동의는 근무스케줄표에 확인 날인한 서명으로 갈음한다.
+                    </p>
+                    <h6 class="document-stit">5.임금</h6>
+                    <p class="document-stxt">
+                        시간급: <span class="f-color02">8,600</span>원
+                    </p>
+                    <p class="document-stxt">
+                        임금산정 단위는 시간급을 원칙으로 하며, 일급 통상임금으로 
+                        산정할 경우에는 '1일 소정근로시간 수 × 시간급 임금'으로 
+                        산정함.
+                    </p>
+                    <p class="document-stxt">
+                        초과근로에 대한 가산임금률 : 50%
+                    </p>
+                    <p class="document-stxt indent05">
+                        <span>임금지급일 : 매월 1일부터 말일까지의 급여를 매 익월 10일 (휴일의 경우는 전일 입금)에 지급</span>
+                    </p>
+                    <p class="document-stxt">
+                        지급방법 : 근로자 명의 예금통장에 입금
+                    </p>
+                    <div class="table table-info line-style02">
+                        <table>
+                            <caption>지급 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th class="w25" scope="col">입금은행</th>
+                                    <td colspan="3" class="f-color02">신한은행</td>
+                                </tr>
+                                <tr>
+                                    <th class="w25" scope="col">예금주</th>
+                                    <td colspan="3" class="f-color02">김민지</td>
+                                </tr>
+                                <tr>
+                                    <th class="w25" scope="col">계좌번호</th>
+                                    <td colspan="3" class="f-color02">110-000-002020</td>
+                                </tr>
+                                <tr>
+                                    <th class="w25" scope="col">비고</th>
+                                    <td colspan="3">통장사본첨부</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h6 class="document-stit">6.사회보험 적용여부</h6>
+                    <p class="document-stxt">
+                        관련 법령에 따라 고용보험, 산재보험, 국민연금, 건강보험 적용
+                    </p>
+                    <h6 class="document-stit">7.근로계약서 교부</h6>
+                    <p class="document-stxt">
+                        "사업주"는 근로계약 체결 및 새로운 근무스케줄표 작성시 본 계약서와 근무스케줄표를 사본하여 '근로자'의 교부요구와 관계없이 '근로자'에게 교부함.
+                    </p>
+                    <h6 class="document-stit">8.사회보험 적용여부</h6>
+                    <p class="document-stxt">
+                        관련 법령에 따라 고용보험, 산재보험, 국민연금, 건강보험 적용
+                    </p>
+                    <h6 class="document-stit">9.근로계약서 교부</h6>
+                    <p class="document-stxt">
+                        "사업주"는 근로계약 체결 및 새로운 근무스케줄표 작성시 본 계약서와 근무스케줄표를 사본하여 '근로자'의 교부요구와 관계없이 '근로자'에게 교부함.
+                    </p>
+                    <h6 class="document-stit">10. 기타</h6>
+                    <p class="document-stxt">
+                        4주간 평균하여 1주 소정근로시간이 15시간 단기 근로자의 근로조건(근기법 제 18조), 퇴직급여제도(근기법 제 34조),유급휴일규정(근기법 제 55조), 연차휴가규정(근기법 제60~62조)에 의거하여 주휴수당, 유급휴일, 연차휴가, 퇴직금을 적용받지 아니함.
+                    </p>
+                    <p class="document-stxt">
+                        23시30분 이후 퇴근자에 대해서는 교통비 보조금 3,000원 지급.
+                    </p>
+                    <p class="document-stxt">
+                        퇴직시 유니폼, 명찰, 미소지기카드, 개인락커(열쇠)를 반납 하며, 분실 또는 훼손시 변상함.
+                    </p>
+                    <p class="document-stxt">
+                        이 계약에 정함이 없는 사항은 미소지기 취업규칙 및 근로기준법령에 의함.
+                    </p>
+                    <div class="document-bottom">
+                        <p class="date">
+                            <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">3</span>일
+                        </p>
+                        <p class="info">사업주: CJ CGV 주식회사</p>
+                        <p class="info stamp">대표이사: 최병환 (인)</p>
+                        <p class="info">근로자: <span class="f-color02">김민지</span></p>
+                    </div>
+                    <div class="document-titbox mg-t40">
+                        [근로계약서2]
+                        <h4 class="tit">미소지기 근로계약서_단기</h4>
+                        <p class="txt"><span class="f-color02">7</span>월 미소지기 <span class="f-color02">김민지</span>님 근로일/근로일별 시업 및 종업시간/휴게시간/주휴일</p>
+                    </div>
+                    <p class="sub-text02 dot">
+                        <strong>1주:</strong> 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">1</span>일 
+                        ~ <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">7</span>일 
+                    </p>
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>단기 근로계약서 1주</caption>
+        
+                            <thead class="txt-c">
+                                <tr>
+                                <th scope="row">요일</th>
+                                <th scope="row">근로시간</th>
+                                <th scope="row">사업</th>
+                                <th scope="row">종업</th>
+                                <th scope="row">휴게</th>
+                                </tr>
+                            </thead>
+                            <tbody class="txt-c">
+                                <tr>
+                                    <th scope="col">월</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">08:00</td>
+                                    <td class=" f-color02">15:00</td>
+                                    <td class=" f-color02">11:00 ~ 15:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">화</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">수</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">12:00</td>
+                                    <td class=" f-color02">19:00</td>
+                                    <td class=" f-color02">11:00 ~ 12:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">목</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">금</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">09:00</td>
+                                    <td class=" f-color02">16:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">토</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">10:00</td>
+                                    <td class=" f-color02">18:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="notice-txt"><span>*</span> 비고:</p>
+                    <p class="sub-text02 dot">
+                        <strong>2주:</strong> 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">8</span>일 
+                        ~ <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">14</span>일 
+                    </p>
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>단기 근로계약서 2주</caption>
+        
+                            <thead class="txt-c">
+                                <tr>
+                                <th scope="row">요일</th>
+                                <th scope="row">근로시간</th>
+                                <th scope="row">사업</th>
+                                <th scope="row">종업</th>
+                                <th scope="row">휴게</th>
+                                </tr>
+                            </thead>
+                            <tbody class="txt-c">
+                                <tr>
+                                    <th scope="col">월</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">08:00</td>
+                                    <td class=" f-color02">15:00</td>
+                                    <td class=" f-color02">11:00 ~ 15:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">화</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">수</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">12:00</td>
+                                    <td class=" f-color02">19:00</td>
+                                    <td class=" f-color02">11:00 ~ 12:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">목</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">금</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">09:00</td>
+                                    <td class=" f-color02">16:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">토</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">10:00</td>
+                                    <td class=" f-color02">18:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="notice-txt"><span>*</span> 비고:</p>
+                    <p class="sub-text02 dot">
+                        <strong>3주:</strong> 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">15</span>일 
+                        ~ <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">21</span>일 
+                    </p>
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>단기 근로계약서 3주</caption>
+        
+                            <thead class="txt-c">
+                                <tr>
+                                <th scope="row">요일</th>
+                                <th scope="row">근로시간</th>
+                                <th scope="row">사업</th>
+                                <th scope="row">종업</th>
+                                <th scope="row">휴게</th>
+                                </tr>
+                            </thead>
+                            <tbody class="txt-c">
+                                <tr>
+                                    <th scope="col">월</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">08:00</td>
+                                    <td class=" f-color02">15:00</td>
+                                    <td class=" f-color02">11:00 ~ 15:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">화</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">수</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">12:00</td>
+                                    <td class=" f-color02">19:00</td>
+                                    <td class=" f-color02">11:00 ~ 12:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">목</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">금</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">09:00</td>
+                                    <td class=" f-color02">16:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">토</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">10:00</td>
+                                    <td class=" f-color02">18:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="notice-txt"><span>*</span> 비고:</p>
+                    <p class="sub-text02 dot">
+                        <strong>4주:</strong> 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">22</span>일 
+                        ~ <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">28</span>일 
+                    </p>
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>단기 근로계약서 4주</caption>
+        
+                            <thead class="txt-c">
+                                <tr>
+                                <th scope="row">요일</th>
+                                <th scope="row">근로시간</th>
+                                <th scope="row">사업</th>
+                                <th scope="row">종업</th>
+                                <th scope="row">휴게</th>
+                                </tr>
+                            </thead>
+                            <tbody class="txt-c">
+                                <tr>
+                                    <th scope="col">월</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">08:00</td>
+                                    <td class=" f-color02">15:00</td>
+                                    <td class=" f-color02">11:00 ~ 15:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">화</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">수</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">12:00</td>
+                                    <td class=" f-color02">19:00</td>
+                                    <td class=" f-color02">11:00 ~ 12:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">목</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">금</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">09:00</td>
+                                    <td class=" f-color02">16:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">토</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">10:00</td>
+                                    <td class=" f-color02">18:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="notice-txt"><span>*</span> 비고:</p>
+                    <p class="sub-text02 dot">
+                        <strong>5주:</strong> 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">29</span>일 
+                        ~ <span class="f-color02">2019</span>년 <span class="f-color02">8</span>월 <span class="f-color02">4</span>일 
+                    </p>
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>단기 근로계약서 5주</caption>
+        
+                            <thead class="txt-c">
+                                <tr>
+                                <th scope="row">요일</th>
+                                <th scope="row">근로시간</th>
+                                <th scope="row">사업</th>
+                                <th scope="row">종업</th>
+                                <th scope="row">휴게</th>
+                                </tr>
+                            </thead>
+                            <tbody class="txt-c">
+                                <tr>
+                                    <th scope="col">월</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">08:00</td>
+                                    <td class=" f-color02">15:00</td>
+                                    <td class=" f-color02">11:00 ~ 15:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">화</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">수</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">12:00</td>
+                                    <td class=" f-color02">19:00</td>
+                                    <td class=" f-color02">11:00 ~ 12:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">목</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">금</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">09:00</td>
+                                    <td class=" f-color02">16:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">토</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">10:00</td>
+                                    <td class=" f-color02">18:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="notice-txt"><span>*</span> 비고:</p>
+                    <p class="sub-text02 dot">
+                        <strong>6주:</strong> 
+                        <span class="f-color02">2019</span>년 <span class="f-color02">8</span>월 <span class="f-color02">5</span>일 
+                        ~ <span class="f-color02">2019</span>년 <span class="f-color02">8</span>월 <span class="f-color02">11</span>일 
+                    </p>
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>단기 근로계약서 6주</caption>
+        
+                            <thead class="txt-c">
+                                <tr>
+                                <th scope="row">요일</th>
+                                <th scope="row">근로시간</th>
+                                <th scope="row">사업</th>
+                                <th scope="row">종업</th>
+                                <th scope="row">휴게</th>
+                                </tr>
+                            </thead>
+                            <tbody class="txt-c">
+                                <tr>
+                                    <th scope="col">월</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">08:00</td>
+                                    <td class=" f-color02">15:00</td>
+                                    <td class=" f-color02">11:00 ~ 15:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">화</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">수</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">12:00</td>
+                                    <td class=" f-color02">19:00</td>
+                                    <td class=" f-color02">11:00 ~ 12:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">목</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">금</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">09:00</td>
+                                    <td class=" f-color02">16:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">토</th>
+                                    <td><span class="f-color02">6.75</span>시간</td>
+                                    <td class=" f-color02">10:00</td>
+                                    <td class=" f-color02">18:00</td>
+                                    <td class=" f-color02">12:00 ~ 13:00</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">일</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="notice-txt"><span>*</span> 비고:</p>
+                    <p class="document-stxt indent01">
+                        <span>※ 약정한 근로일/근로일별 시업 및 종업시간/휴게시간에 대하여 사업주와 근로자가 상호 확인 날인 후 근로계약서에 첨부.</span>
+                    </p>
+                    <p class="document-stxt indent01">
+                        <span>※ 근로자 사정에 의한 지각/ 조퇴가 발생할 경우  '지각/ 조퇴 확인서'를 제출하여 실 근로시간 변경이 있었음을 확인함.</span>
+                    </p>
+                    <p class="document-stxt indent01">
+                        <span>※ 근로자 사정에 의한 근로일 또는 근로시간 변경이 필요한 경우 '근무스케줄 변경 신청서'를 제출하여 실 근로일 또는 근로시간 변경이 있었음을 확인함.</span>
+                    </p>
+                    <p class="document-stxt indent01">
+                        <span>※  휴게시간은 시업시간과 종업시간 사이에 정하되 휴게시작과 종료 시간은 사업주와 근로자간 상호 합의에 의해 변경 가능함.</span>
+                    </p>
+                    <div class="document-bottom">
+                        <p class="date">
+                            <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">3</span>일
+                        </p>
+                        <p class="info">사업주: CJ CGV 주식회사</p>
+                        <p class="info stamp">대표이사: 최병환 (인)</p>
+                        <p class="info">근로자: <span class="f-color02">김민지</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 팝업(개인정보서약서) -->
+<!-- .show-pop 추가시 팝업 노출 -->
+<div class="pop-dimed show-pop">
+    <div data-pop="#document03" class="pop-house-full">
+        <!-- 7/14 수정 .pop-layer 추가 -->
+        <div class="pop-layer">
+            <!-- 7/14 수정 h3 위치 변경 -->
+            <h3>문서뷰어<i class="icon icon-close pop-close"></i></h3>
+            <div class="pop-container">
+                    <!-- 7/14 수정 .con 추가 -->
+                <div class="con popcontent">
+                    <div class="document-titbox">
+                        [별첨 1]
+                        <h4 class="tit">개인정보 취급자에 대한 개인정보보호 서약서</h4>
+                        <p class="txt">본인은 CJ CGV와 연관된 업무를 수행하면서 취급 및 지득한 CJ CGV 내부자와 외부고객들의 개인정보를 개인적인 목적으로 사용하지 않으며, 관련 개인정보를 내부지침에 따라 안전하게 관리할 것이고 이를 위반하여 발생하는 형·민사 상의 모든 책임은 본인이 감수할 것으로 서약합니다.</p>
+                    </div>
+            
+                    <div class="document-bottom">
+                        <p class="date">
+                            <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">3</span>일
+                        </p>
+                        <p class="info">소 속: <span class="f-color02"> CJ CGV 주식회사</span></p>
+                        <p class="info">직 급: <span class="f-color02"> 미소지기</span></p>
+                        <p class="info">핸드폰: <span class="f-color02"> 010-1111-9980</span></p>
+                        <p class="info">성 명: <span class="f-color02 mg-r5"> 김 민 지</span> (인)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 팝업(범죄전력조회동의서) -->
+<!-- .show-pop 추가시 팝업 노출 -->
+<div class="pop-dimed">
+    <div data-pop="#document04" class="pop-house-full">
+        <!-- 7/14 수정 .pop-layer 추가 -->
+        <div class="pop-layer">
+            <!-- 7/14 수정 h3 위치 변경 -->
+            <h3>문서뷰어<i class="icon icon-close pop-close"></i></h3>
+            <div class="pop-container">
+                <!-- 7/14 수정 .con 추가 -->
+                <div class="con popcontent">
+                    <div class="document-titbox">
+                        <h4 class="tit mg-t0">성범죄 경력조회 및<br>아동학대관련범죄 전력 조회 동의서</h4>
+                    </div>
+                    <div class="table-title pd-0 mg-t20">
+                        <h5>대상자</h5>
+                    </div>
+                    <div class="table table-info">
+                        <table>
+                            <caption>범죄전역조회 대상자 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th class="w35" scope="col" rowspan="2" colspan="2">성명</th>
+                                    <td colspan="2">한글 <span class="f-color02 mg-l10">김민지</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한자</td>
+                                    <td>영문</td>
+                                </tr>
+                                <tr>
+                                    <th class="w35" scope="col" colspan="2">주민등록번호</th>
+                                    <td colspan="2" class="f-color02">920307-2924567</td>
+                                </tr>
+                                <tr>
+                                    <th class="w35" scope="col" colspan="2">여권번호 또는 외국인등록번호</th>
+                                    <td colspan="2" class="f-color02">국적: 미국<br>외국인등록번호: 123456-2929291</td>
+                                </tr>
+                                <tr>
+                                    <th class="w35" scope="col" colspan="2">주소</th>
+                                    <td colspan="2" class="f-color02">서울시 마포구 마포대로 123 (마포동)<br>123동 1405호</td>
+                                </tr>
+                                <tr>
+                                    <th scope="colgroup" rowspan="2">전화</th>
+                                    <th scope="col">자택</th>
+                                    <td colspan="2" class="f-color02">02-402-9940</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">H.P</th>
+                                    <td colspan="2" class="f-color02">02-402-9940</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="document-stxt">
+                        본인은<br>
+                        <span class="f-color02">CGV 용산아이파크몰</span> 기관(시설) (예: 유치원,어린이집, 아동
+                        복지시설, 청소년쉼터, 청소년활동시설, 의료기관 등)을 운영
+                        하려는 자, 취업(예정)자 또는 노무 제공(예정)자로서,「아동, 
+                        청소년의 성보호에 관한 법률」 제56조 및 같은 법 시행령 제25조
+                        에 따른성범죄경력 조회, 「아동복지법」제29조의3에 따른 아동
+                        학대범죄전력 조회 신청에 동의합니다.
+                    </p>
+                    <div class="document-bottom style02">
+                        <p class="date">
+                            <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">3</span>일
+                        </p>
+                        <p class="info">동의자: <span class="f-color02"> 김민지</span></p>
+                        <p class="source">경찰서장 귀하</p>
+                    </div>
+                    <h6 class="document-stit">유의사항</h6>
+                    <ul class="document-list">
+                        <li>1. 개인정보 수집항목 : *표 항목(성명, 주민등록번호, 외국인 경우 외국인등록번호)</li>
+                        <li>2. 대상자가 외국인인 경우 성명(영문), 외국인등록번호를 적습니다.</li>
+                        <li>3. 개인정보 제공 거부에 따른 제한사항 : 귀하는 개인정보 제공 동의를 거부할 권리가 있으나, 동의 거부 시에는 취업에 제한을 받을 수 있습니다.</li>
+                        <li>4. 개인정보의 보유 : 수집된 고객의 개인정보는 성범죄,아동학대 관련 범죄 경력 조회 신청 등을 위하여 사용됩니다.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 팝업(연장근로동의서) -->
+<!-- .show-pop 추가시 팝업 노출 -->
+<div class="pop-dimed">
+    <div data-pop="#document05" class="pop-house-full">
+        <!-- 7/14 수정 .pop-layer 추가 -->
+        <div class="pop-layer">
+            <!-- 7/14 수정 h3 위치 변경 -->
+            <h3>문서뷰어<i class="icon icon-close pop-close"></i></h3>
+            <div class="pop-container">
+                    <!-- 7/14 수정 .con 추가 -->
+                <div class= "con popcontent">
+                    <div class="document-titbox">
+                        <h4 class="tit mg-t0">연장·야간·휴일 근로 동의서</h4>
+                    </div>
+                    <div class="document-bottom">
+                        <p class="info">성 명: <span class="f-color02"> 김 민 지</span></p>
+                        <p class="info">소 속: <span class="f-color02"> CGV 용산아이파크몰</span></p>
+                        <p class="info">주민등록번호: <span class="f-color02"> 9000901-1234567</span></p>
+                    </div>
+
+                    <ul class="document-list mg-t40">
+                        <li>1. 상기인은 회사로부터 근로시간 외 추가로 연장근로 및 야간, 휴일근로를 실시할 수 있다는 내용에 대하여 충분히 설명을 들었으며, 연장근로 및 야간, 휴일근로를 실시함에 동의합니다.</li>
+                        <li class="mg-t25">2. 연장 및 야간, 휴일근로에 대해 문제제기를 하지 않겠습니다.</li>
+                    </ul>
+                    <div class="document-bottom txt-c">
+                        <p class="info"> <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">3</span>일</p>
+                        <p class="info"><span class="f-color02"> CJ CGV</span>(주) 귀하</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //팝업 -->
+</body>
+

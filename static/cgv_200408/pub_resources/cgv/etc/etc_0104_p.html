@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+ 
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+<div class="cgv-mobile">
+  <!-- header -->
+  <header>
+    <a class="nav-sub">
+      <img onclick="goBack()" class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+      <h3 class="title">업무 메모</h3>
+    </a>
+    <a class="show-sidebar" href="#">
+      <i></i>
+      <i></i>
+      <i></i>
+    </a>
+  </header>
+  <!-- //header -->
+  <!-- main -->
+  <section class="content-sub">
+    <div class="content-list-box">
+      <div class="content-list">
+
+        <h1>dateAnyPicker</h1>
+        <form class="search-form search-input-border">
+          <input class="anydate input-search" value="2019-08">       
+        </form>
+
+        <h1 class="mg-t25">timeAnyPicker</h1>
+        <form class="search-form search-input-border">
+          <input class="anytime input-search" value="09:00">       
+        </form>
+
+      </div>
+    </div>
+  </section>
+</div>
+<!-- //cgv-mobile -->
+<script type="text/javascript">
+  $(function(){
+       var option = {minDate :["2019","03"], maxDate:["2020","12"] , format : "yyyy-MM"};
+      // var option = { format : "yyyy-MM-dd"};
+     $(".anydate").dateAnyPicker(option);
+     $(".anytime").timeAnyPicker();
+  });
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+  <div class="cgv-mobile has-bottom-btn">
+    <!-- 190711 class 추가 (페이지 일괄적용)  -->
+
+    <!-- header -->
+    <header>
+      <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">좌석판매현황</h3>
+      </a>
+      <!-- 190712 버튼 제거 -->
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <section class="content-sub">
+      <div class="content-title">
+      </div>
+      <div class="content-full content-list-box">
+      </div>
+    </section>
+  </div>
+  <!-- //cgv-mobile -->
+
+  <!-- 팝업(상세내용) -->
+  <!-- .pop-dimed -->
+  <!-- .show-pop 추가시 팝업 노출 -->
+  <div class="pop-dimed show-pop">
+    <div data-pop="#saleDetail" class="pop-layer pop-house-full">
+      <div class="pop-layer">
+        <h3>발매통제범위<i class="icon icon-close pop-close"></i></h3>
+        <div class="pop-container">
+          <div class="con">
+            <div class="sale-control">
+              <div class="table-title">
+                <h4 class="date">상영관</h4>
+              </div>
+              <ul class="info-box">
+                <li>1관 6층, 2관 6층, 4관(SCREENX) 8층 동시상영</li>
+              </ul>
+              <div class="exposure-box work-info">
+                <div class="checkbox-wrap">
+                  <input type="checkbox" id="check" name="check" checked>
+                  <label for="check">
+                    <span class="customInput"></span>
+                    <strong class="">스케줄 노출여부 <span>(체크:스케줄 노출 / 해제: 스케줄 비노출)</span></strong>
+                  </label>
+                </div>
+              </div>
+              <div class="chk-box">
+                <h4>발매 통제 범위를 선택하세요.</h4>
+                <ul class="chk-list work-info">
+                  <li>
+                    <div class="checkbox-wrap">
+                      <input type="checkbox" id="checked1" name="checked">
+                      <label for="checked1">
+                        <span class="customInput"></span>
+                        <strong class="">ALL</strong>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox-wrap">
+                      <input type="checkbox" id="checked2" name="checked">
+                      <label for="checked2">
+                        <span class="customInput"></span>
+                        <strong class="">오프라인 (POS)</strong>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox-wrap">
+                      <input type="checkbox" id="checked3" name="checked">
+                      <label for="checked3">
+                        <span class="customInput"></span>
+                        <strong class="">티켓 판매기</strong>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox-wrap">
+                      <input type="checkbox" id="checked4" name="checked">
+                      <label for="checked4">
+                        <span class="customInput"></span>
+                        <strong class="">인터넷 예매 전체 (CP + 홈페이지)</strong>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox-wrap">
+                      <input type="checkbox" id="checked5" name="checked">
+                      <label for="checked5">
+                        <span class="customInput"></span>
+                        <strong class="">CP 전체 (홈페이지 제외)</strong>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox-wrap">
+                      <input type="checkbox" id="checked6" name="checked">
+                      <label for="checked6">
+                        <span class="customInput"></span>
+                        <strong class="">제휴대관</strong>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox-wrap">
+                      <input type="checkbox" id="checked7" name="checked">
+                      <label for="checked7">
+                        <span class="customInput"></span>
+                        <strong class="">맥스무비</strong>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox-wrap">
+                      <input type="checkbox" id="checked8" name="checked">
+                      <label for="checked8">
+                        <span class="customInput"></span>
+                        <strong class="">YES24</strong>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox-wrap">
+                      <input type="checkbox" id="checked9" name="checked">
+                      <label for="checked9">
+                        <span class="customInput"></span>
+                        <strong class="">인터파크</strong>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox-wrap">
+                      <input type="checkbox" id="checked10" name="checked">
+                      <label for="checked10">
+                        <span class="customInput"></span>
+                        <strong class="">CJ올리브네트웍스</strong>
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-single">
+          <button type="button">저장</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //팝업 -->
+
+</body>
+
+</html>

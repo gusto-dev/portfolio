@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>CGV</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:width" content="">
+    <meta property="og:image:height" content="">
+
+    <!-- JQUERY UI -->
+    <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+    <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+    <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+    <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+    <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+    <link rel="stylesheet" href="../../asset/styles/reset.css" />
+    <link rel="stylesheet" href="../../asset/styles/common.css" />
+    <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+    <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+    <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+    <div class="cgv-mobile has-bottom-btn">
+        <!-- 190711 class 추가 (페이지 일괄적용)  -->
+
+        <!-- header -->
+        <header>
+            <a class="nav-sub">
+                <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+                <h3 class="title">입사서류</h3>
+            </a>
+            <a class="nav-refresh">새로고침</a>
+        </header>
+        <!-- //header -->
+
+        <!-- main -->
+        <section class="content-sub">
+            <div class="content-title">
+                <div class="banner-schedule iconstyle">
+                    <p class="title">
+                        <!-- 190722 위치아이콘 제거 -->
+                        용산 아이파크몰
+                        <i class="icon icon-scr-search"></i>
+                    </p>
+                </div>
+                <!-- 200311 checkbox-round 변경 -->
+                <div class="flex-center space-modi">
+                    <div class="checkbox-round tbl-top-radio">
+                        <input type="radio" id="no" name="radioStyle" value="체크" checked>
+                        <label for="no">
+                            <span class="customInput"></span>
+                            <span>일반</span>
+                        </label>
+                        <input type="radio" id="sh" name="radioStyle" value="체크">
+                        <label for="sh">
+                            <span class="customInput"></span>
+                            <span>단기</span>
+                        </label>
+                        <input type="radio" id="re" name="radioStyle" value="체크">
+                        <label for="re">
+                            <span class="customInput"></span>
+                            <span>리콜</span>
+                        </label>
+                    </div>
+                    <div class="top-text-box">
+                        <i class="icon icon-user"></i>
+                        <p><span class="txt-red txt-bold">10명</span> 선택</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-full content-list-box"><!-- 200311 클래스 삭제 -->
+                <div class="content-list">
+                    <div class="table table-info with-border">
+                        <table class="txt-c">
+                            <caption>미소지기 입사</caption>
+                            <thead>
+                                <tr>
+                                    <th class="w10" scope="row">
+                                        <div class="checkbox-table">
+                                            <input type="checkbox" id="checkedAll" name="checkedAll" value="체크"
+                                                checked="">
+                                            <label for="checkedAll">
+                                                <span class="customInput"></span>
+                                            </label>
+                                        </div>
+                                    </th>
+                                    <th class="w20">사원번호</th>
+                                    <th>그룹</th>
+                                    <th>성명</th>
+                                    <th>생년월일</th> <!-- 190715 생년월일 -->
+                                    <th>입사일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">
+                                        <div class="checkbox-table">
+                                            <input type="checkbox" id="checked1" name="checked1" value="체크" checked>
+                                            <label for="checked1">
+                                                <span class="customInput"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>B1000093767</td>
+                                    <td>일반</td>
+                                    <td>박서준</td>
+                                    <td>880306</td>
+                                    <td>190505</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">
+                                        <div class="checkbox-table">
+                                            <input type="checkbox" id="checked2" name="checked2" value="체크">
+                                            <label for="checked2">
+                                                <span class="customInput"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>B1000093768</td>
+                                    <td>일반</td>
+                                    <td>정해인</td>
+                                    <td>870302</td>
+                                    <td>181212</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">
+                                        <div class="checkbox-table">
+                                            <input type="checkbox" id="checked3" name="checked3" value="체크">
+                                            <label for="checked3">
+                                                <span class="customInput"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>B1000093769</td>
+                                    <td>일반</td>
+                                    <td>송중기</td>
+                                    <td>820310</td>
+                                    <td>190304</td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">
+                                        <div class="checkbox-table">
+                                            <input type="checkbox" id="checked4" name="checked4" value="체크">
+                                            <label for="checked4">
+                                                <span class="customInput"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>B1000093770</td>
+                                    <td>일반</td>
+                                    <td>조인성</td>
+                                    <td>800305</td>
+                                    <td>190401</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 200311 삭제
+                    <div class="table-title mg-t25">
+                        <h4>작성 대상자</h4>
+                    </div>
+                    <p class="sub-text">박서준, 정해인, 송중기, 조인성, 변요한, 한지민, 한효주, 박보영, 박나래, 김숙</p>
+                    -->
+
+                    <div class="table-title mg-t20">
+                        <h4>근로계약기간</h4>
+                    </div>
+
+                    <!-- 타입 01-->
+                    <!--input 하나일때 bg-none 추가-->
+                    <div class="date-type-wrap" data-mod="no">
+                        <div class="date-input-type style03">
+                            <input type="text" class="start w100"  value="2019-06-10" readonly/>
+                        </div>
+                    </div>
+
+                    <!-- 타입 02-->
+                    <!--input 하나일때 bg-none 추가-->
+                    <div class="date-type-wrap" data-mod="sh">
+                        <div class="date-input-type style02">
+                            <input type="text" class="start" value="2019-06-01" readonly>
+                            <input type="text" class="end" value="2019-06-01" readonly>
+                        </div>
+                        <button class="btn-style01">종료일반영</button>
+                    </div>
+                    
+                    <!-- 타입 03-->
+                    <!--input 하나일때 bg-none 추가-->
+                    <div class="date-type-wrap" data-mod="re">
+                        <div class="date-input-type style02">
+                            <input type="text" class="start" value="2019-06-01" readonly>
+                            <input type="text" class="end readonly" value="2019-06-01" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="table-title mg-t12">
+                        <!-- 190717 class" no-indent" 제거 -->
+                        <h4>작성 요청서류</h4>
+                        <div class="inline-flex flex-center">
+                            <h4 class="mg-r10">요청일</h4>
+                            <!-- 190716 변경 감싸고 있는 button 태그 추가 -->
+                            <button type="button">
+                                <i class="icon icon-calendar02"></i>
+                                <span class="txt-bold mg-l5">2019-06-05</span>
+                            </button>
+                            <!-- // 190716 변경 감싸고 있는 button 태그 추가 -->
+                        </div>
+                    </div>
+
+                    <div class="table table-info with-border">
+                        <table>
+                            <caption>작성요청서류</caption>
+                            <colgroup>
+                                <col width="30px" />
+                                <col width="" />
+                                <col width="50px" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="checkbox-table">
+                                            <input type="checkbox" id="checked" name="checked" value="체크">
+                                            <label for="checked1">
+                                                <span class="customInput"></span>
+                                            </label>
+                                        </div>
+                                    </th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">
+                                        <div class="checkbox-table">
+                                            <input type="checkbox" id="checked1" name="checked1" value="체크">
+                                            <label for="checked1">
+                                                <span class="customInput"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>근로계약서 (초단시간 미소지기)</td>
+                                    <td><i class="icon icon-view"></i></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">
+                                        <div class="checkbox-table">
+                                            <input type="checkbox" id="checked2" name="checked2" value="체크">
+                                            <label for="checked2">
+                                                <span class="customInput"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>근로계약서 (시급제 무기계약직)</td>
+                                    <td><i class="icon icon-view"></i></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">
+                                        <div class="checkbox-table">
+                                            <input type="checkbox" id="checked3" name="checked3" value="체크">
+                                            <label for="checked3">
+                                                <span class="customInput"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>연장, 야간 휴일 근로 동의서</td>
+                                    <td><i class="icon icon-view"></i></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">
+                                        <div class="checkbox-table">
+                                            <input type="checkbox" id="checked4" name="checked4" value="체크">
+                                            <label for="checked4">
+                                                <span class="customInput"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>개인정보보호 서약서</td>
+                                    <td><i class="icon icon-view"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- </div> -->
+                    <div class="btn-single">
+                        <a href="" class="pop-open">서류작성요청</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="bottom-menu">
+                <ul class="menu">
+                    <!-- 190730 순서 변경 및 알림내역 추가 -->
+                    <li class="home">
+                        <a href="#" class="bottom_btn">홈</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="bottom_btn">전체메뉴</a>
+                    </li>
+
+                    <li class="more">
+                        <button type="button" class="bottom_btn">메뉴더보기</button>
+                    </li>
+                    <li class="search">
+                        <a href="#" class="bottom_btn">고객조회</a>
+                    </li>
+                    <li class="push">
+                        <a href="#" class="bottom_btn">알림내역
+
+                        </a>
+                    </li>
+                </ul>
+                <div class="more-box">
+                    <!-- 190730 tit 추가 -->
+                    <h4 class="tit">바로가기
+                        <button type="button" class="btn-edit">편집</button>
+                    </h4>
+                    <div class="swiper-container foot-slide-area">
+                        <!-- class 변경 , 하단 스크립트 부분 class 수정-->
+                        <div class="swiper-wrapper menu-slide">
+                            <div class="swiper-slide slide-items">
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis1"></i>
+                                        미소지기조회
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis2"></i>
+                                        일일근태관리
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis3"></i>
+                                        근무스케줄
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis4"></i>
+                                        스케줄변경관리
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis5"></i>
+                                        마일리지지급
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis6"></i>
+                                        휴가승인
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis7"></i>
+                                        긴급문자발송
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis8"></i>
+                                        입사서류
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide-items">
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-scr1"></i>
+                                        상영스케줄
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-scr2"></i>
+                                        상영영화정보
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-scr3"></i>
+                                        좌석판매현황
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-scr4"></i>
+                                        VIP좌석설정
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-cut2"></i>
+                                        VOC통합조회
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-cut3"></i>
+                                        분실물관리
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mtn1"></i>
+                                        업무메모
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mtn2"></i>
+                                        나의 스케줄
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide-items">
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-result1"></i>
+                                        실적
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-scr5"></i>
+                                        발매통제
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-new02"></i>
+                                        체크리스트
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-new03"></i>
+                                        지각·희망조회
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-new04"></i>
+                                        사이트게시판
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-new05"></i>
+                                        비상연락망
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-new06"></i>
+                                        매점콘텐츠
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide-items">
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-new07"></i>
+                                        온라인매점판매
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-new08"></i>
+                                        미소지기운영
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-slide-btns">
+                            <!-- 190730 버튼 위치 변경 -->
+                            <div class="swiper-pagination"></div>
+                            <a href="#" class="btn-menu-setting">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop-bg"></div>
+            </div>
+        </footer>
+        <script>
+            var menuSlider = new Swiper('.foot-slide-area', {
+                speed: 500,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
+            });
+            
+            (function () {
+                var inpName = $('input[name=radioStyle]');
+                var dataMod = $('.date-type-wrap');
+
+                inpName.change(function() {
+                    for (var i=0;i<inpName.length;i++) {
+                        if (inpName[i].checked) {
+                            dataMod.hide();
+                            dataMod.eq(i).show();
+                        }
+                    }
+                });
+                inpName.change();
+            })();
+        </script>
+    </div>
+    <!-- //cgv-mobile -->
+    <!-- 팝업 -->
+    <div class="pop-dimed">
+        <div class="pop-bg"></div>
+        <div data-pop="#confirmPop" class="pop-house">
+            <div class="pop-layer">
+                <div class="pop-container">
+                    <h3>알림<i class="icon icon-close pop-close"></i></h3>
+                    <div class="con">
+                        <p class="message pd-t32">
+                            해당 미소지기에게 서류 작성을<br />
+                            요청하시겠습니까?
+                        </p>
+                        <p class="charger mg-t28">업무처리자: 김무비</p>
+                    </div>
+                </div>
+                <div class="btn-group btn-list2">
+                    <a href="#" class="">네</button>
+                        <a href="#" class="pop-close">아니오</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 -->
+
+    <!-- 팝업 -->
+    <div class="pop-dimed">
+        <div class="pop-bg"></div>
+        <div data-pop="#" class="pop-house">
+            <div class="pop-layer">
+                <div class="pop-container">
+                    <h3>알림<i class="icon icon-close pop-close"></i></h3>
+                    <div class="con min-height-auto">
+                        <p class="message pd-t32 mg-b40">
+                            서류 작성 요청이 완료 되었습니다.
+                        </p>
+                    </div>
+                </div>
+                <!-- 7/17 버튼위치 변경, .btn-single 추가 -->
+                <div class="btn-single">
+                    <a href="#" class="pop-close">확인</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //팝업 -->
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+ 
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+  <div class="cgv-mobile"> 
+
+    <!-- header -->
+    <header>
+      <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">알림내역</h3>
+      </a>
+       <!-- 190712 버튼 제거 -->
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <section class="content-sub">
+      <div class="content-title">
+        
+        <!-- 191204 마크업 변경 -->
+        <div class="subinner-container">
+          <h5 class="al-type">
+            <span class="">전체</span> <span class="badge">10</span> <span class="memo">*최근 10일의 알림만 조회됩니다.</span>
+          </h5>
+          <p><i class="icon icon-setting"></i></p>
+        </div>
+        <!-- // 191204 마크업 변경 -->
+
+      </div>
+      <div class="cotent-full content-list-box">
+        <div class="content-list">
+          <ul class="alarm-list">
+            <!-- 정직원 아이콘 -->
+            <li>
+              <i class="SA00000001"></i> <!-- 191125 정직원(포토티켓용지부족) -->
+              <div>
+                <p class="noti-tit">1번 포토티켓 용지가 3% 남았습니다.</p>
+                <span class="noti-date">2019-06-28 13:00</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000002"></i> <!-- 191125 정직원(업무메모) -->
+              <div>
+                <p class="noti-tit">‘기생충’ 관람 고객 대상 매표소에서 실물티켓 인증시 경품 선착순 배포</p>
+                <p class="noti-msg">업무시작시간: 2019-06-28 20:30</p>
+                <span class="noti-date">2019-06-28 18:30</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000003"></i> <!-- 191125 정직원(러시알림) -->
+              <div>
+                <p class="noti-tit">5분후 ‘기생충’, ‘롱리브더킹’,’애나벨3’가 순차적으로 상영을 시작합니다. 매표/ 매점 혼잡이 예상되오니 준비해주시기 바랍니다.</p>
+                <span class="noti-date">2019-10-29 13:00</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000004"></i> <!-- 191125 정직원(스케줄 변경 결제 요청) -->
+              <div>
+                <p class="noti-tit">미소지기 김민정님이 휴가를 변경했습니다.</p>
+                <span class="noti-date">2019-06-22 12:00</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000009"></i> <!-- 191125 정직원(휴가 신청) -->
+              <div>
+                <p class="noti-tit">미소지기 김민정님이 휴가를 신청했습니다.</p>
+                <span class="noti-date">2019-06-22 12:00</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000013"></i> <!-- 191125 정직원(지각,희망조퇴 확인서 제출) -->
+              <div>
+                <p class="noti-tit">미소지기 김민정님이 희망조퇴 확인서를 제출했습니다.</p>
+                <span class="noti-date">2019-06-22 12:00</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000014"></i> <!-- 191125 정직원(퇴근알림) -->
+              <div>
+                <p class="noti-tit">퇴근 20분전 입니다.</p>
+                <span class="noti-date">2019-06-29 12:00</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000011"></i> <!-- 191125 정직원(체크리스트) -->
+              <div>
+                <p class="noti-tit">체크리스트 알림입니다.</p>
+                <p class="noti-msg">업무시작시간: 2019-06-28 20:30<br />
+                  상영시간표를 확인하시고 차질 없이 준비해주세요.
+                </p>
+                <span class="noti-date">2019-06-28 13:00</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000015"></i> <!-- 191125 정직원(실적) -->
+              <div>
+                <p class="noti-tit">11/12(화) 관람객 115,550명(계획비 115%), 관객 MS 48.5%</p>
+                <span class="noti-date">2019-06-29 12:00</span>
+              </div>
+            </li>
+
+            <!-- 미소지기 아이콘 -->
+            <li>
+              <i class="SA00000005"></i> <!-- 191125 미소지기(스케줄 변경 및 휴가 결재) -->
+              <div>
+                <p class="noti-tit">김민정님이 신청하신 휴가가 승인되었습니다.</p>
+                <span class="noti-date">2019-06-22 12:00</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000010"></i> <!-- 191125 미소지기(스케줄 변경 합의 요청) -->
+              <div>
+                <p class="noti-tit">김민정님과 박수진님의 맞교대가 승인되었습니다.</p>
+                <span class="noti-date">2019-06-22 12:00</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000006"></i> <!-- 191125 미소지기(마일리지 지급) -->
+              <div>
+                  <p class="noti-tit">김민정님 고객칭찬으로 마일리지 3000점 지급</p>
+                  <p class="noti-msg">늘 노력하는 모습 고맙습니다.</p>
+                  <span class="noti-date">2019-06-22 12:00</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000008"></i> <!-- 191125 미소지기(서류작성 요청) -->
+              <div>
+                <p class="noti-tit">김민정님 작성해야할 서류가 있습니다.</p>
+                <span class="noti-date">2019-06-21 13:00</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000012"></i> <!-- 191125 미소지기(지각,희망조퇴 확인서 제출 요청) -->
+              <div>
+                <p class="noti-tit">김민정님 작성해야할 서류가 있습니다.</p>
+                <span class="noti-date">2019-06-21 13:00</span>
+              </div>
+            </li>
+            <li>
+              <i class="SA00000007"></i> <!-- 191125 미소지기(건강진단서 제출 요청) -->
+              <div>
+                <p class="noti-tit">김민정님 보건증 만료가 30일 남았습니다.</p>
+                <p class="noti-msg">2019-08-01까지 보건증을 제출해주세요.</p>
+                <span class="noti-date">2019-06-30 12:00</span>
+              </div>
+            </li>
+            <!-- // 미소미소 아이콘 적용 -->
+          </ul>
+        </div>
+      </div>
+    </body>
+
+</html>

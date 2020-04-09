@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>CGV</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:image:width" content="">
+    <meta property="og:image:height" content="">
+
+    <!-- JQUERY UI -->
+    <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+    <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+    <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+    <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+    <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+    <link rel="stylesheet" href="../../asset/styles/reset.css" />
+    <link rel="stylesheet" href="../../asset/styles/common.css" />
+    <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+    <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+    <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+    <div class="cgv-mobile has-bottom-btn">
+
+        <!-- header -->
+        <header>
+            <a class="nav-sub">
+                <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+                <h3 class="title">체크리스트 상세</h3>
+            </a>
+            <a class="nav-refresh">새로고침</a>
+        </header>
+        <!-- //header -->
+
+        <!-- main -->
+        <section class="content-sub">
+            <div class="content-title">
+                <div class="banner-schedule">
+                    <p class="txt01">[안전] 2019년 연휴 성수시 운영 점검 체크</p>
+                    <p class="txt02">금년도 연휴/성수시 운영 점검이 진행될 예정입니다.</p>
+                </div>
+            </div>
+
+            <div class="content-full content-list-box">
+                <div class="content-list">
+
+                    <ul class="listbox-style01">
+                        <li class="check-type">
+                            <div class="noec-txt">
+                                <dl>
+                                    <dt>1. 냉장/라벨/유효기간 표시하였는가?</dt>
+                                    <dd class="division">
+                                        <span class="item">정해인</span>
+                                        <span class="item">2019-08-12 14:15</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="r-box">
+                                <div class="radio-area">
+                                    <input type="radio" id="radio1" name="radioStyle01">
+                                    <label for="radio1">
+                                        <span class="customInput"></span>
+                                        <span>예</span>
+                                    </label>
+                                </div>
+                                <div class="radio-area">
+                                    <input type="radio" id="radio2" name="radioStyle01">
+                                    <label for="radio2">
+                                        <span class="customInput"></span>
+                                        <span>아니오</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="check-type">
+                            <div class="noec-txt">
+                                <dl>
+                                    <dt>2. ‘식품위생법상 한글표시’가 있는가?</dt>
+                                    <dd class="division">
+                                        <span class="item">정해인</span>
+                                        <span class="item">2019-08-12 14:15</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="r-box">
+                                <div class="radio-area">
+                                    <input type="radio" id="radio3" name="radioStyle03">
+                                    <label for="radio3">
+                                        <span class="customInput"></span>
+                                        <span>예</span>
+                                    </label>
+                                </div>
+                                <div class="radio-area">
+                                    <input type="radio" id="radio4" name="radioStyle03">
+                                    <label for="radio4">
+                                        <span class="customInput"></span>
+                                        <span>아니오</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="check-type">
+                            <div class="noec-txt">
+                                <dl>
+                                    <dt>3. 재료의 원산지 표기는 되어 있는가?</dt>
+                                    <dd class="division">
+                                        <span class="item">정해인</span>
+                                        <span class="item">2019-08-12 14:15</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="r-box">
+                                <div class="radio-area">
+                                    <input type="radio" id="radio5" name="radioStyle05">
+                                    <label for="radio5">
+                                        <span class="customInput"></span>
+                                        <span>예</span>
+                                    </label>
+                                </div>
+                                <div class="radio-area">
+                                    <input type="radio" id="radio6" name="radioStyle05">
+                                    <label for="radio6">
+                                        <span class="customInput"></span>
+                                        <span>아니오</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="input-type">
+                            <div class="noec-txt">
+                                <dl>
+                                    <dt>4. 냉장실 온도는 2~4℃를 유지하고 있는가?</dt>
+                                    <dd class="division">
+                                        <input type="text" class="input w80p" />
+                                        <span class="unit">℃</span>
+                                        <span class="sub-text05">기타 의견을 작성해 주세요</span>
+                                        <input type="text" class="input" />
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="input-type">
+                            <div class="noec-txt">
+                                <dl>
+                                    <dt>5.냉장/라벨/유효기간 표시하였는가?</dt>
+                                    <dd class="division">
+                                        <input type="text" class="input" />
+                                        <span class="sub-text05">기타 의견을 작성해 주세요</span>
+                                        <input type="text" class="input" />
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="input-single-block lost-picture">
+                                <ul class="flex-center"> 
+                                    <li class="">
+                                        <!-- [D] 이미지가 추가되면 li에 active클래스 추가(input, label 지워짐/ 이미지 박스와 버튼이 생김) -->
+                                        <div class="attach_img">
+                                            <div class="img">
+                                            <label for="img_1" class="lab-img"><span class="skip">이미지추가</span><i class="icon icon-zoom"></i></label>
+                                            <input type="button" id="img_1" class="skip">
+                                            <span class="img-box">
+                                                <img src="../../../resources/images/wallet.png">
+                                            </span>
+                                            </div>
+                                            <!-- 닫기 버튼 -->
+                                            <button type="button" class="btn-delete"><i class="icon icon-close small">추가 취소</i></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="input-type">
+                            <div class="noec-txt">
+                                <dl>
+                                    <dt>6.냉장/라벨/유효기간 표시하였는가?</dt>
+                                    <dd class="division">
+                                        <input type="text" class="input" />
+                                        <span class="sub-text05">기타 의견을 작성해 주세요</span>
+                                        <input type="text" class="input" />
+                                    </dd>
+                                    <dd class="division">
+                                        <span class="item">정해인</span>
+                                        <span class="item">2019-08-12 14:15</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li class="check-type">
+                            <div class="noec-txt">
+                                <dl>
+                                    <dt>7. 재료의 원산지 표기는 되어 있는가?</dt>
+                                </dl>
+                            </div>
+                            <div class="r-box">
+                                <div class="radio-area">
+                                    <input type="radio" id="radio7" name="radioStyle07">
+                                    <label for="radio7">
+                                        <span class="customInput"></span>
+                                        <span>예</span>
+                                    </label>
+                                </div>
+                                <div class="radio-area">
+                                    <input type="radio" id="radio8" name="radioStyle07">
+                                    <label for="radio8">
+                                        <span class="customInput"></span>
+                                        <span>아니오</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-single-block lost-picture">
+                                <ul class="flex-center"> 
+                                    <li class="active">
+                                        <!-- [D] 이미지가 추가되면 li에 active클래스 추가(input, label 지워짐/ 이미지 박스와 버튼이 생김) -->
+                                        <div class="attach_img">
+                                            <div class="img">
+                                            <label for="img_1" class="lab-img"><span class="skip">이미지추가</span><i class="icon icon-zoom"></i></label>
+                                            <input type="button" id="img_1" class="skip">
+                                            <span class="img-box">
+                                                <img src="../../../resources/images/wallet.png">
+                                            </span>
+                                            </div>
+                                            <!-- 닫기 버튼 -->
+                                            <button type="button" class="btn-delete"><i class="icon icon-close small">추가 취소</i></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="check-type">
+                            <div class="noec-txt">
+                                <dl>
+                                    <dt>8. 재료의 원산지 표기는 되어 있는가?</dt>
+                                     <dd class="division remark-type">
+                                        <span class="sub-text05">기타 의견을 작성해 주세요</span>
+                                        <input type="text" class="input" />
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="r-box">
+                                <div class="radio-area">
+                                    <input type="radio" id="radio9" name="radioStyle09">
+                                    <label for="radio9">
+                                        <span class="customInput"></span>
+                                        <span>예</span>
+                                    </label>
+                                </div>
+                                <div class="radio-area">
+                                    <input type="radio" id="radio10" name="radioStyle09">
+                                    <label for="radio10">
+                                        <span class="customInput"></span>
+                                        <span>아니오</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="input-single-block lost-picture">
+                                <ul class="flex-center"> 
+                                    <li class="">
+                                        <!-- [D] 이미지가 추가되면 li에 active클래스 추가(input, label 지워짐/ 이미지 박스와 버튼이 생김) -->
+                                        <div class="attach_img">
+                                            <div class="img">
+                                            <label for="img_1" class="lab-img"><span class="skip">이미지추가</span><i class="icon icon-zoom"></i></label>
+                                            <input type="button" id="img_1" class="skip">
+                                            <span class="img-box">
+                                                <img src="../../../resources/images/wallet.png">
+                                            </span>
+                                            </div>
+                                            <!-- 닫기 버튼 -->
+                                            <button type="button" class="btn-delete"><i class="icon icon-close small">추가 취소</i></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <li class="input-type">
+                                <div class="noec-txt">
+                                    <dl>
+                                        <dt>6.냉장/라벨/유효기간 표시하였는가?</dt>
+                                        <dd class="division">
+                                            <input type="text" class="input" />
+                                            <span class="sub-text05">기타 의견을 작성해 주세요</span>
+                                            <input type="text" class="input" />
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="input-single-block lost-picture">
+                                    <ul class="flex-center"> 
+                                        <li class="active">
+                                            <!-- [D] 이미지가 추가되면 li에 active클래스 추가(input, label 지워짐/ 이미지 박스와 버튼이 생김) -->
+                                            <div class="attach_img">
+                                                <div class="img">
+                                                <label for="img_1" class="lab-img"><span class="skip">이미지추가</span><i class="icon icon-zoom"></i></label>
+                                                <input type="button" id="img_1" class="skip">
+                                                <span class="img-box">
+                                                    <img src="../../../resources/images/wallet.png">
+                                                </span>
+                                                </div>
+                                                <!-- 닫기 버튼 -->
+                                                <button type="button" class="btn-delete"><i class="icon icon-close small">추가 취소</i></button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </li>
+                    </ul>
+
+                    <div class="btn-single">
+                        <button href="#" class="">저장</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="bottom-menu">
+                <ul class="menu">
+                    <li class="home">
+                        <a href="#" class="bottom_btn">홈</a>
+                    </li>
+                    <li class="menu">
+                        <a href="#" class="bottom_btn">전체메뉴</a>
+                    </li>
+
+                    <li class="more">
+                        <button type="button" class="bottom_btn">메뉴더보기</button>
+                    </li>
+                    <li class="search">
+                        <a href="#" class="bottom_btn">고객조회</a>
+                    </li>
+                    <li class="push">
+                        <a href="#" class="bottom_btn">알림내역
+
+                        </a>
+                    </li>
+                </ul>
+                <div class="more-box">
+                    <h4 class="tit">바로가기
+                        <!---->
+                        <button type="button" class="btn-edit">편집</button>
+                    </h4>
+                    <div class="swiper-container foot-slide-area">
+                        <!-- class 변경 , 하단 스크립트 부분 class 수정-->
+                        <div class="swiper-wrapper menu-slide">
+                            <div class="swiper-slide slide-items">
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis1"></i>
+                                        미소지기조회
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis2"></i>
+                                        일일근태관리
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis3"></i>
+                                        근무스케줄
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis4"></i>
+                                        스케줄변경관리
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis5"></i>
+                                        마일리지지급
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis6"></i>
+                                        휴가승인
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis7"></i>
+                                        긴급문자발송
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mis8"></i>
+                                        입사서류
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide slide-items">
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-scr1"></i>
+                                        상영스케줄
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-scr2"></i>
+                                        상영영화정보
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-scr3"></i>
+                                        좌석판매현황
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-scr4"></i>
+                                        VIP좌석설정
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-cut2"></i>
+                                        VOC통합조회
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-cut3"></i>
+                                        분실물관리
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mtn1"></i>
+                                        업무메모
+                                    </a>
+                                </div>
+                                <div class="slide-item">
+                                    <a href="#">
+                                        <i class="icon-mtn2"></i>
+                                        나의 스케줄
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-slide-btns">
+                            <div class="swiper-pagination"></div>
+                            <a href="#" class="btn-menu-setting">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pop-bg"></div>
+            </div>
+        </footer>
+        <script>
+            var menuSlider = new Swiper('.foot-slide-area', {
+                speed: 500,
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
+            });
+        </script>
+    </div>
+    <!-- //cgv-mobile -->
+
+        
+       
+</body>
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+<script>
+    $(function () {
+        $("#selectable").selectable();
+    });
+</script>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>CGV</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:width" content="">
+  <meta property="og:image:height" content="">
+
+  <!-- JQUERY UI -->
+  <!-- <link rel="stylesheet" href="../../asset/styles/lib/jquery-ui.css" /> -->
+
+ 
+  <!-- css -->
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.core-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/fullcalendar.daygrid-4.2.0.main.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/swiper.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/multifreezer.css" />
+  <link rel="stylesheet" href="../../asset/styles/lib/anypicker-all.min.css" />
+  <link rel="stylesheet" href="../../asset/styles/reset.css" />
+  <link rel="stylesheet" href="../../asset/styles/common.css" />
+  <link rel="stylesheet" href="../../asset/styles/layout.css" />
+
+  <!-- <script type="text/javascript" src="../../asset/scripts/lib/jquery-3.4.1.js"></script> -->
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.core-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.daygrid-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/fullcalendar.interaction-4.2.0.main.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/multifreezer.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/jquery.lineProgressbar.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/anypicker.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/lib/swiper.min.js"></script>
+  <script type="text/javascript" src="../../asset/scripts/common_pub.js"></script>
+
+
+</head>
+
+<body>
+<div class="cgv-mobile has-bottom-btn"> <!-- 190711 class 추가 (페이지 일괄적용)  --> 
+<!-- //상단메뉴 -->
+<header>
+    <a class="nav-sub">
+        <img class="icn-page-prev" src="../../../resources/images/icon_page_prev.png" aria-label="이전으로" />
+        <h3 class="title">문서뷰어팝업</h3>
+    </a>
+</header>
+
+<!-- main -->
+<!-- //상단 메뉴가 들어가는 경우 content-sub -->
+<section class="content-sub">
+</section>
+<!-- 팝업(범죄전력조회동의서) -->
+<!-- .show-pop 추가시 팝업 노출 -->
+<div class="pop-dimed show-pop">
+    <div data-pop="#document04" class="pop-house-full">
+        <!-- 7/14 수정 .pop-layer 추가 -->
+        <div class="pop-layer">
+            <!-- 7/14 수정 h3 위치 변경 -->
+            <h3>문서뷰어<i class="icon icon-close pop-close"></i></h3>
+            <div class="pop-container">
+                <!-- 7/14 수정 .con 추가 -->
+                <div class="con popcontent">
+                    <div class="document-titbox">
+                        <h4 class="tit mg-t0">성범죄 경력조회 및<br>아동학대관련범죄 전력 조회 동의서</h4>
+                    </div>
+                    <div class="table-title pd-0 mg-t20">
+                        <h5>대상자</h5>
+                    </div>
+                    <div class="table table-info">
+                        <table>
+                            <caption>범죄전역조회 대상자 정보</caption>
+                            <tbody>
+                                <tr>
+                                    <th class="w35" scope="col" rowspan="2" colspan="2">성명</th>
+                                    <td colspan="2">한글 <span class="f-color02 mg-l10">김민지</span></td>
+                                </tr>
+                                <tr>
+                                    <td>한자</td>
+                                    <td>영문</td>
+                                </tr>
+                                <tr>
+                                    <th class="w35" scope="col" colspan="2">주민등록번호</th>
+                                    <td colspan="2"> <!-- 190716 td class 삭제 -->
+                                        <span class="f-color02">920307-2924567</span> <!-- 190716 span 추가 --> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="w35" scope="col" colspan="2">여권번호 또는 외국인등록번호</th>
+                                    <td colspan="2"> <!-- 190716 td class 삭제 -->
+                                        <span class="f-color02">국적: 미국<br>외국인등록번호: 123456-2929291</span> <!-- 190716 span 추가 --> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="w35" scope="col" colspan="2">주소</th>
+                                    <td colspan="2"> <!-- 190716 td class 삭제 -->
+                                        <span class="f-color02">서울시 마포구 마포대로 123 (마포동)<br>123동 1405호</span> <!-- 190716 span 추가 --> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="colgroup" rowspan="2">전화</th>
+                                    <th scope="col">자택</th>
+                                    <td colspan="2"> <!-- 190716 td class 삭제 -->
+                                        <span class="f-color02">02-402-9940</span> <!-- 190716 span 추가 --> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">H.P</th>
+                                    <td colspan="2"> <!-- 190716 td class 삭제 -->
+                                        <span class="f-color02">02-402-9940</span> <!-- 190716 span 추가 --> 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="document-stxt">
+                        본인은<br>
+                        <span class="f-color02">CGV 용산아이파크몰</span> 기관(시설) (예: 유치원,어린이집, 아동
+                        복지시설, 청소년쉼터, 청소년활동시설, 의료기관 등)을 운영
+                        하려는 자, 취업(예정)자 또는 노무 제공(예정)자로서,「아동, 
+                        청소년의 성보호에 관한 법률」 제56조 및 같은 법 시행령 제25조
+                        에 따른성범죄경력 조회, 「아동복지법」제29조의3에 따른 아동
+                        학대범죄전력 조회 신청에 동의합니다.
+                    </p>
+                    <div class="document-bottom style02">
+                        <p class="date">
+                            <span class="f-color02">2019</span>년 <span class="f-color02">7</span>월 <span class="f-color02">3</span>일
+                        </p>
+                        <p class="info">동의자: <span class="f-color02"> 김민지</span></p>
+                        <p class="source"><span class="line"></span>경찰서장 귀하</p> <!-- 190716 span class="line" 추가  -->
+                    </div>
+                    <h6 class="document-stit">유의사항</h6>
+                    <ul class="document-list">
+                        <li>1. 개인정보 수집항목 : *표 항목(성명, 주민등록번호, 외국인 경우 외국인등록번호)</li>
+                        <li>2. 대상자가 외국인인 경우 성명(영문), 외국인등록번호를 적습니다.</li>
+                        <li>3. 개인정보 제공 거부에 따른 제한사항 : 귀하는 개인정보 제공 동의를 거부할 권리가 있으나, 동의 거부 시에는 취업에 제한을 받을 수 있습니다.</li>
+                        <li>4. 개인정보의 보유 : 수집된 고객의 개인정보는 성범죄,아동학대 관련 범죄 경력 조회 신청 등을 위하여 사용됩니다.</li>
+                    </ul>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- //팝업 -->
+</body>
+
