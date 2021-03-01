@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
-@import url('./reset.css');
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap");
+@import url("./reset.css");
 
-.App{
+.App {
   position: relative;
   margin: 80px;
   text-align: center;
 }
 
-nav{
+nav {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 1px;
 }
-nav ul{
+nav ul {
   overflow: hidden;
   position: relative;
   top: -60px;
@@ -22,50 +22,50 @@ nav ul{
   max-width: 1120px;
   margin: 0 auto;
 }
-nav ul li{
+nav ul li {
   float: right;
   margin-left: 20px;
   padding-bottom: 5px;
   border-bottom: 1px solid #333;
 }
 
-nav ul li a{
+nav ul li a {
   font-size: 14px;
   text-decoration: none;
 }
 
-header h1{
+header h1 {
   margin-bottom: 60px;
   font-size: 40px;
 }
 
-.lists{
+.lists {
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
 }
-.lists p{
+.lists p {
   font-size: 14px;
   color: #666;
   text-align: left;
   line-height: 1.4;
   word-break: keep-all;
 }
-.table-wrap{
+.table-wrap {
   margin-top: 20px;
   display: table;
   width: 100%;
 }
-.table-wrap .group-item{
+.table-wrap .group-item {
   display: table-row;
 }
-.table-wrap .group-item.tit span{
+.table-wrap .group-item.tit span {
   font-size: 15px;
   color: #333;
   border-top: 1px solid #dadce0;
-  background: rgba(0,0,0,.2);
+  background: rgba(0, 0, 0, 0.2);
 }
-.table-wrap .group-item span{
+.table-wrap .group-item span {
   display: table-cell;
   vertical-align: middle;
   padding: 10px 20px;
@@ -76,14 +76,14 @@ header h1{
   border-right: 1px solid #dadce0;
   border-bottom: 1px solid #dadce0;
 }
-.table-wrap .group-item span:first-child{
+.table-wrap .group-item span:first-child {
   text-align: left;
   border-left: 1px solid #dadce0;
 }
-.table-wrap .group-item.tit span:first-child{
+.table-wrap .group-item.tit span:first-child {
   text-align: center;
 }
-.table-wrap .group-item a{
+.table-wrap .group-item a {
   display: inline-block;
   margin: 3px 0;
   padding: 3px 5px;
@@ -96,62 +96,62 @@ header h1{
 }
 
 @media screen and (max-width: 720px) {
-  .App{
+  .App {
     margin: 60px 30px;
   }
 
-  nav ul{
+  nav ul {
     top: -40px;
   }
 
-  header h1{
+  header h1 {
     margin-bottom: 30px;
   }
 
-  .table-wrap .group-item span{
+  .table-wrap .group-item span {
     padding: 8px 10px;
     font-size: 13px;
   }
-  .table-wrap .group-item.tit span{
+  .table-wrap .group-item.tit span {
     font-size: 14px;
   }
-  .table-wrap .group-item a{
+  .table-wrap .group-item a {
     font-size: 13px;
   }
 }
 
 @media screen and (max-width: 425px) {
-  .App{
+  .App {
     margin: 40px 20px;
   }
 
-  nav ul{
+  nav ul {
     top: -20px;
   }
-  nav ul li a{
+  nav ul li a {
     font-size: 12px;
     padding-bottom: 3px;
   }
 
-  header h1{
+  header h1 {
     margin-bottom: 15px;
     font-size: 20px;
   }
 
-  .lists p{
+  .lists p {
     font-size: 12px;
   }
-  .table-wrap{
+  .table-wrap {
     margin-top: 10px;
   }
-  .table-wrap .group-item span{
+  .table-wrap .group-item span {
     padding: 5px 10px;
     font-size: 12px;
   }
-  .table-wrap .group-item.tit span{
+  .table-wrap .group-item.tit span {
     font-size: 13px;
   }
-  .table-wrap .group-item a{
+  .table-wrap .group-item a {
     font-size: 12px;
   }
 }

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-class HEADER extends Component{
-  render(){
+class HEADER extends Component {
+  render() {
     return (
       <header>
         <h1>{this.props.title}</h1>
