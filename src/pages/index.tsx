@@ -10,7 +10,9 @@ interface IProps {
   url: string;
   note?: string;
 }
-export default function Home() {
+export default function Home({ data }: any) {
+  const newData = data.reverse();
+
   return (
     <>
       <Head>
@@ -54,7 +56,7 @@ export default function Home() {
               </tr>
             </thead>
             <tbody>
-              {/* {newData.map((item: IProps) => (
+              {newData.map((item: IProps) => (
                 <tr key={item.id}>
                   <td>{item.name}</td>
                   <td>{item.description}</td>
@@ -69,7 +71,7 @@ export default function Home() {
                   </td>
                   <td>{item.note}</td>
                 </tr>
-              ))} */}
+              ))}
             </tbody>
           </table>
         </div>
@@ -78,13 +80,13 @@ export default function Home() {
   );
 }
 
-// export async function getStaticProps() {
-//   const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/portfolio`);
-//   const data = res.data;
+export async function getStaticProps() {
+  const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/portfolio`);
+  const data = res.data;
 
-//   return {
-//     props: {
-//       data,
-//     },
-//   };
-// }
+  return {
+    props: {
+      data,
+    },
+  };
+}
