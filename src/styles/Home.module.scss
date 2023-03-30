@@ -1,6 +1,4 @@
 .main {
-  width: 100%;
-  height: 100%;
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -8,34 +6,107 @@
 }
 
 .title {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 768px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  text-align: center;
+
   h1 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
+    color: #000;
+    text-align: center;
+  }
+  p {
+    font-size: 14px;
+    color: #666;
+  }
+  &_links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    a {
+      display: flex;
+      width: 36px;
+      height: 36px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
   }
 }
 
 .content {
-  margin: 16px auto;
+  position: relative;
+  margin: 32px auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 768px;
   display: flex;
   flex-direction: column;
   gap: 12px;
 
-  &_filter {
-    text-align: right;
-    p {
+  &_table {
+    th,
+    td {
+      padding: 8px 16px;
+      text-align: center;
+    }
+    th {
+      background: #42444e;
+      color: #fff;
+    }
+    tr:first-child th:first-child {
+      border-top-left-radius: 6px;
+    }
+    tr:first-child th:last-child {
+      border-top-right-radius: 6px;
+    }
+    td {
+      border-right: 1px solid #c6c9cc;
+      border-bottom: 1px solid #c6c9cc;
+      background-color: #fff;
+    }
+    td:first-child {
+      border-left: 1px solid #c6c9cc;
+      text-align: left;
+    }
+    tr:nth-child(even) td {
+      background: #eaeaed;
+    }
+    tr:last-child td:first-child {
+      border-bottom-left-radius: 6px;
+    }
+    tr:last-child td:last-child {
+      border-bottom-right-radius: 6px;
+    }
+    a {
+      display: inline-block;
+      padding: 2px 12px;
+      border-radius: 4px;
+      background-color: #428bca;
       font-size: 14px;
+      color: #fff;
+      transition: background-color 0.2s ease-out;
+    }
+    a:hover {
+      background-color: #1c78c9;
+    }
+    a + a {
+      margin-left: 4px;
+    }
+    span {
+      font-size: 14px;
+      color: #666;
     }
   }
+}
 
-  &_list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
+.github {
+  background-image: url('../../public/github.svg');
 }

@@ -8,8 +8,11 @@ interface IProps {
   name: string;
   description: string;
   url: string;
+  note?: string;
 }
 export default function Home({ data }: any) {
+  const newData = data.reverse();
+
   return (
     <>
       <Head>
@@ -21,21 +24,56 @@ export default function Home({ data }: any) {
 
       <main className={styles.main}>
         <div className={styles.title}>
-          <h1>Portfolio List</h1>
+          <h1>참여 프로젝트 목록</h1>
+          <p>
+            * 최근 작업순서에 따라 정렬되어 있으며, 최소 50%이상 기여한
+            프로젝트만 기재했습니다.
+            <br />* 시간이 지남에 따라 작업한 내용에서 변화가 있을 수 있습니다.
+            (최대한 제외 하고 있습니다)
+          </p>
+          <div className={styles.title_links}>
+            <a
+              href="https://github.com/gusto-dev"
+              target="_blank"
+              className={styles.github}
+            ></a>
+          </div>
         </div>
         <div className={styles.content}>
-          <div className={styles.content_filter}>
-            <p>최신순</p>
-          </div>
-          <ul className={styles.content_list}>
-            {data.map((item: IProps) => (
-              <li key={item.id}>
-                <span>{item.name}</span>
-                <span>{item.description}</span>
-                <span>{item.url}</span>
-              </li>
-            ))}
-          </ul>
+          <table className={styles.content_table}>
+            <colgroup>
+              <col width="*" />
+              <col width="120px" />
+              <col width="120px" />
+              <col width="120px" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>프로젝트명</th>
+                <th>종류</th>
+                <th>URL</th>
+                <th>비고</th>
+              </tr>
+            </thead>
+            <tbody>
+              {newData.map((item: IProps) => (
+                <tr key={item.id}>
+                  <td>{item.name}</td>
+                  <td>{item.description}</td>
+                  <td>
+                    {item.url === '' ? (
+                      <span>내부 프로젝트</span>
+                    ) : (
+                      <a href={item.url} target="_blank">
+                        링크
+                      </a>
+                    )}
+                  </td>
+                  <td>{item.note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </main>
     </>
