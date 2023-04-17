@@ -2,5 +2,6 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "javascript.suggest.paths": false,
-  "typescript.suggest.paths": false
+  "typescript.suggest.paths": false,
+  "cSpell.words": ["heegeun"]
 }
