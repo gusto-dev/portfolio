@@ -26,5 +26,8 @@
     "@types/uuid": "9.0.1",
     "sass": "1.60.0",
     "typescript-plugin-css-modules": "5.0.0"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
