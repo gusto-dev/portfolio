@@ -172,7 +172,7 @@ export default function handler(
       id: uuid4(),
       name: "오케스트로 CMP",
       description: "일부 반응형",
-      url: "내부 프로젝트",
+      url: "",
       note: "vue.js",
     },
   ]);
